@@ -4,9 +4,25 @@ func main() {
     var H, P, F, D int
     fmt.Scan(&H, &P, &F, &D)
 
-    if D == -1{
-        fmt.Println("S")
-    } else if D == 1{
-        fmt.Println("N")
+    for {
+        F += D
+
+        if F == 16{
+            F = 0
+        } else if F == -1 {
+            F = 15
+        }
+
+        if F == H{
+            fmt.Println("S")
+            break
+        }
+
+        if F == P{
+            fmt.Println("N")
+            break
+        }
     }
-}
+}        
+    
+

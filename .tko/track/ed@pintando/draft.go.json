@@ -1,0 +1,49 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-14_19-11-31",
+            "content": "@@ -17,236 +17,52 @@\n ort \n-(%0A    %22fmt%22%0A    %22math%22%0A)%0Afunc main() %7B%0A    var a float64%0A    var b float64%0A    var c float64%0A    fmt.Scan(&a, &b, &c)%0A%0A    p := (a + b + c) / 2%0A    area := math.Sqrt(p * (p - a) * (p - b) * (p - c))%0A    fmt.Printf(%22%25.2f%5Cn%22, area\n+%22fmt%22%0Afunc main() %7B%0A    fmt.Println(%22qxcode%22\n )%0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-03-14_19-31-14",
+            "content": "@@ -17,374 +17,236 @@\n ort \n-%22fmt%22%0Afunc main() %7B%0A    var H, P, F, D int%0A    fmt.Scan(&H, &P, &F, &D)%0A%0A    for %7B%0A        F += D%0A%0A        if F == 16%7B%0A            F = 0%0A        %7D else if F == -1 %7B%0A            F = 15%0A        %7D%0A%0A        if F == H%7B%0A            fmt.Println(%22S%22)%0A            break%0A        %7D%0A%0A        if F == P%7B%0A            fmt.Println(%22N%22)%0A            break%0A        %7D%0A    %7D%0A%7D        %0A    %0A\n+(%0A    %22fmt%22%0A    %22math%22%0A)%0Afunc main() %7B%0A    var a float64%0A    var b float64%0A    var c float64%0A    fmt.Scan(&a, &b, &c)%0A%0A    p := (a + b + c) / 2%0A    area := math.Sqrt(p * (p - a) * (p - b) * (p - c))%0A    fmt.Printf(%22%25.2f%5Cn%22, area)%0A%7D\n %0A\n",
+            "lines": "15"
+        },
+        {
+            "label": "2026-03-17_10-31-41",
+            "content": "@@ -45,139 +45,125 @@\n var \n-pessoa string%0A    var idade int%0A    fmt.Scan(&pessoa, &idade)%0A    if idade %3C 12 %7B%0A        fmt.Println(pessoa, %22eh%22, %22crianca%22)%0A\n+H, P, F, D int%0A    fmt.Scan(&H, &P, &F, &D)%0A%0A    for %7B%0A        F += D%0A%0A        if F == 16%7B%0A            F = 0%0A   \n     \n+ \n %7D el\n@@ -172,129 +172,78 @@\n  if \n-idade %3E= 12 && idade %3C 18 %7B%0A        fmt.Println(pessoa, %22eh%22, %22jovem%22)%0A    %7D else if idade %3E= 18 && idade %3C 65 %7B%0A\n+F == -1 %7B%0A            F = 15%0A        %7D%0A%0A        if F == H%7B%0A   \n         \n fmt.\n@@ -230,32 +230,33 @@\n = H%7B%0A           \n+ \n fmt.Println(pess\n@@ -255,181 +255,136 @@\n tln(\n-pessoa, %22eh%22, %22adulto%22)%0A    %7D else if idade %3E= 65 && idade %3C 1000 %7B%0A        fmt.Println(pessoa, %22eh%22, %22idoso%22)%0A    %7D else %7B%0A        fmt.Println(pessoa, %22eh%22, %22mumia%22)%0A    %7D%0A%0A%7D\n+%22S%22)%0A            break%0A        %7D%0A%0A        if F == P%7B%0A            fmt.Println(%22N%22)%0A            break%0A        %7D%0A    %7D%0A%7D        %0A    \n %0A%0A\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-03-17_10-31-41",
+            "content": "@@ -40,145 +40,40 @@\n %0A   \n-var N int %0A    fmt.Scan(&N)%0A    var melhorPontuacao int = 101   %0A    var vencedor int = -1%0A%0A    for i := 0; i %3C N; i++ %7B%0A   \n+ var pessoa string%0A\n     \n- \n var \n-a, b\n+idade\n  int\n@@ -73,28 +73,24 @@\n ade int%0A    \n-    \n fmt.Scan(&a,\n@@ -91,107 +91,128 @@\n an(&\n-a, &b)%0A%0A        if a %3E= 10 && b %3E= 10 %7B%0A            pontuacao := a - b%0A            if pontuacao %3C 0\n+pessoa, &idade)%0A    if idade %3C 12 %7B%0A        fmt.Println(pessoa, %22eh%22, %22crianca%22)%0A    %7D else if idade %3E= 12 && idade %3C 18\n  %7B%0A \n@@ -222,260 +222,170 @@\n     \n-        pontuacao = -pontuacao%0A            %7D   %0A%0A            if vencedor == -1 %7C%7C pontuacao %3C melhorPontuacao %7B%0A                melhorPontuacao = pontuacao%0A                vencedor = i%0A            %7D%0A            %0A        %7D %0A%0A    %7D%0A%0A    if vencedor == -1\n+fmt.Println(pessoa, %22eh%22, %22jovem%22)%0A    %7D else if idade %3E= 18 && idade %3C 65 %7B%0A        fmt.Println(pessoa, %22eh%22, %22adulto%22)%0A    %7D else if idade %3E= 65 && idade %3C 1000\n  %7B%0A \n@@ -407,21 +407,28 @@\n tln(\n-%22sem ganhador\n+pessoa, %22eh%22, %22idoso\n %22)%0A \n@@ -463,66 +463,37 @@\n tln(\n-vencedor)%0A    %7D%0A    // mudando o commit para testar o envio\n+pessoa, %22eh%22, %22mumia%22)%0A    %7D%0A\n %0A%7D%0A\n+%0A\n",
+            "lines": "20"
+        },
+        {
+            "label": "2026-03-17_10-31-41",
+            "content": "@@ -17,32 +17,13 @@\n ort \n-(%0A    %22fmt%22%0A    %22math%22%0A)\n+%22fmt%22\n %0Afun\n@@ -40,194 +40,660 @@\n %0A   \n- \n var \n-a float64%0A    var b float64%0A    var c float64%0A    fmt.Scan(&a, &b, &c)%0A%0A    p\n+N int %0A    fmt.Scan(&N)%0A    var melhorPontuacao int = 101   %0A    var vencedor int = -1%0A%0A    for i := 0; i %3C N; i++ %7B%0A        var a, b int%0A        fmt.Scan(&a, &b)%0A%0A        if a %3E= 10 && b %3E= 10 %7B%0A            pontuacao\n  := \n-(\n a \n-+ b + c) / 2%0A    area := math.Sqrt(p * (p - a) * (p - b) * (p - c))%0A    fmt.Printf(%22%25.2f%5Cn%22, area)\n+- b%0A            if pontuacao %3C 0 %7B%0A                pontuacao = -pontuacao%0A            %7D   %0A%0A            if vencedor == -1 %7C%7C pontuacao %3C melhorPontuacao %7B%0A                melhorPontuacao = pontuacao%0A                vencedor = i%0A            %7D%0A            %0A        %7D %0A%0A    %7D%0A%0A    if vencedor == -1 %7B%0A        fmt.Println(%22sem ganhador%22)%0A    %7D else %7B%0A        fmt.Println(vencedor)%0A    %7D%0A    // mudando o commit para testar o envio\n %0A%7D%0A\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-03-17_10-31-46",
+            "content": "@@ -17,374 +17,236 @@\n ort \n-%22fmt%22%0Afunc main() %7B%0A    var H, P, F, D int%0A    fmt.Scan(&H, &P, &F, &D)%0A%0A    for %7B%0A        F += D%0A%0A        if F == 16%7B%0A            F = 0%0A        %7D else if F == -1 %7B%0A            F = 15%0A        %7D%0A%0A        if F == H%7B%0A            fmt.Println(%22S%22)%0A            break%0A        %7D%0A%0A        if F == P%7B%0A            fmt.Println(%22N%22)%0A            break%0A        %7D%0A    %7D%0A%7D        %0A    %0A\n+(%0A    %22fmt%22%0A    %22math%22%0A)%0Afunc main() %7B%0A    var a float64%0A    var b float64%0A    var c float64%0A    fmt.Scan(&a, &b, &c)%0A%0A    p := (a + b + c) / 2%0A    area := math.Sqrt(p * (p - a) * (p - b) * (p - c))%0A    fmt.Printf(%22%25.2f%5Cn%22, area)%0A%7D\n %0A\n",
+            "lines": "15"
+        },
+        {
+            "label": "2026-03-17_10-31-46",
+            "content": "@@ -45,139 +45,125 @@\n var \n-pessoa string%0A    var idade int%0A    fmt.Scan(&pessoa, &idade)%0A    if idade %3C 12 %7B%0A        fmt.Println(pessoa, %22eh%22, %22crianca%22)%0A\n+H, P, F, D int%0A    fmt.Scan(&H, &P, &F, &D)%0A%0A    for %7B%0A        F += D%0A%0A        if F == 16%7B%0A            F = 0%0A   \n     \n+ \n %7D el\n@@ -172,129 +172,78 @@\n  if \n-idade %3E= 12 && idade %3C 18 %7B%0A        fmt.Println(pessoa, %22eh%22, %22jovem%22)%0A    %7D else if idade %3E= 18 && idade %3C 65 %7B%0A\n+F == -1 %7B%0A            F = 15%0A        %7D%0A%0A        if F == H%7B%0A   \n         \n fmt.\n@@ -230,32 +230,33 @@\n = H%7B%0A           \n+ \n fmt.Println(pess\n@@ -255,181 +255,136 @@\n tln(\n-pessoa, %22eh%22, %22adulto%22)%0A    %7D else if idade %3E= 65 && idade %3C 1000 %7B%0A        fmt.Println(pessoa, %22eh%22, %22idoso%22)%0A    %7D else %7B%0A        fmt.Println(pessoa, %22eh%22, %22mumia%22)%0A    %7D%0A%0A%7D\n+%22S%22)%0A            break%0A        %7D%0A%0A        if F == P%7B%0A            fmt.Println(%22N%22)%0A            break%0A        %7D%0A    %7D%0A%7D        %0A    \n %0A%0A\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-03-17_10-31-46",
+            "content": "@@ -40,145 +40,40 @@\n %0A   \n-var N int %0A    fmt.Scan(&N)%0A    var melhorPontuacao int = 101   %0A    var vencedor int = -1%0A%0A    for i := 0; i %3C N; i++ %7B%0A   \n+ var pessoa string%0A\n     \n- \n var \n-a, b\n+idade\n  int\n@@ -73,28 +73,24 @@\n ade int%0A    \n-    \n fmt.Scan(&a,\n@@ -91,107 +91,128 @@\n an(&\n-a, &b)%0A%0A        if a %3E= 10 && b %3E= 10 %7B%0A            pontuacao := a - b%0A            if pontuacao %3C 0\n+pessoa, &idade)%0A    if idade %3C 12 %7B%0A        fmt.Println(pessoa, %22eh%22, %22crianca%22)%0A    %7D else if idade %3E= 12 && idade %3C 18\n  %7B%0A \n@@ -222,260 +222,170 @@\n     \n-        pontuacao = -pontuacao%0A            %7D   %0A%0A            if vencedor == -1 %7C%7C pontuacao %3C melhorPontuacao %7B%0A                melhorPontuacao = pontuacao%0A                vencedor = i%0A            %7D%0A            %0A        %7D %0A%0A    %7D%0A%0A    if vencedor == -1\n+fmt.Println(pessoa, %22eh%22, %22jovem%22)%0A    %7D else if idade %3E= 18 && idade %3C 65 %7B%0A        fmt.Println(pessoa, %22eh%22, %22adulto%22)%0A    %7D else if idade %3E= 65 && idade %3C 1000\n  %7B%0A \n@@ -407,21 +407,28 @@\n tln(\n-%22sem ganhador\n+pessoa, %22eh%22, %22idoso\n %22)%0A \n@@ -463,66 +463,37 @@\n tln(\n-vencedor)%0A    %7D%0A    // mudando o commit para testar o envio\n+pessoa, %22eh%22, %22mumia%22)%0A    %7D%0A\n %0A%7D%0A\n+%0A\n",
+            "lines": "20"
+        },
+        {
+            "label": "2026-03-17_10-31-46",
+            "content": "package main\nimport \"fmt\"\nfunc main() {\n   var N int \n    fmt.Scan(&N)\n    var melhorPontuacao int = 101   \n    var vencedor int = -1\n\n    for i := 0; i < N; i++ {\n        var a, b int\n        fmt.Scan(&a, &b)\n\n        if a >= 10 && b >= 10 {\n            pontuacao := a - b\n            if pontuacao < 0 {\n                pontuacao = -pontuacao\n            }   \n\n            if vencedor == -1 || pontuacao < melhorPontuacao {\n                melhorPontuacao = pontuacao\n                vencedor = i\n            }\n            \n        } \n\n    }\n\n    if vencedor == -1 {\n        fmt.Println(\"sem ganhador\")\n    } else {\n        fmt.Println(vencedor)\n    }\n    // mudando o commit para testar o envio\n}\n",
+            "lines": "34"
+        }
+    ]
+}

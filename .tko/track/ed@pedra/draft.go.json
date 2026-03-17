@@ -1,0 +1,69 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-15_12-14-06",
+            "content": "@@ -40,229 +40,29 @@\n %0A   \n-var N int %0A    fmt.Scan(&N)%0A%0A    for i := 0; i %3C N; i++ %7B%0A        var a, b int%0A        fmt.Scan(&a, &b)%0A%0A        var pontuacao int = a - b%0A%0A    %7D%0A    if a %3C 10 %7C%7C b %3C 10 %7B%0A        fmt.Println(%22desclassificado%22)%0A    %7D%0A%0A    \n+ fmt.Println(%22qxcode%22)\n %0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-03-15_12-14-16",
+            "content": "@@ -141,24 +141,61 @@\n a, &b)%0A%0A    \n+    var pontuacao int = a - b%0A%0A    %7D%0A\n     if a %3C 1\n@@ -256,86 +256,9 @@\n    %7D\n- else %7B%0A        var pontuacao int = a - b%0A        fmt.Println(i)%0A%0A    %7D%0A%0A    %7D\n+%0A\n %0A   \n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-03-15_12-21-52",
+            "content": "@@ -67,80 +67,8 @@\n (&N)\n-%0A    var melhorpontuacao int = 101   %0A    var vencedor int = -1%0A    var \n %0A%0A  \n@@ -154,18 +154,17 @@\n    if a \n-%3E=\n+%3C\n  10 %7C%7C b\n@@ -168,10 +168,9 @@\n %7C b \n-%3E=\n+%3C\n  10 \n@@ -183,76 +183,60 @@\n     \n-    pontuacao := a - b%0A            if pontuacao %3C 0%7B%0A       \n+fmt.Println(%22desclassificado%22)%0A    %7D else %7B%0A\n         \n  pon\n@@ -231,16 +231,19 @@\n         \n+var\n  pontuac\n@@ -249,115 +249,44 @@\n cao \n-= -pontuacao%0A            %7D   %0A            %0A        %7D else %7B%0A            fmt.Println(%22desclassificado%22)%0A    \n+int = a - b%0A        fmt.Println(i)%0A%0A\n     \n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-03-15_12-38-44",
+            "content": "@@ -304,17 +304,16 @@\n acao %3C 0\n- \n %7B%0A      \n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-03-15_12-39-09",
+            "content": "@@ -386,16 +386,75 @@\n       %7D \n+else %7B%0A            fmt.Println(%22desclassificado%22)%0A        %7D\n %0A%0A    %7D%0A\n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-03-15_12-40-16",
+            "content": "@@ -126,16 +126,25 @@\n int = -1\n+%0A    var \n %0A%0A    fo\n",
+            "lines": "24"
+        },
+        {
+            "label": "2026-03-15_12-47-15",
+            "content": "@@ -357,159 +357,8 @@\n %7D   \n-%0A%0A            if vencedor == -1 %7C%7C pontuacao %3C melhorPontuacao %7B%0A                melhorPontuacao = pontuacao%0A                vencedor = i%0A            %7D\n %0A   \n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-03-15_12-48-40",
+            "content": "@@ -74,25 +74,25 @@\n   var melhor\n-P\n+p\n ontuacao int\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-03-15_12-49-58",
+            "content": "@@ -539,118 +539,8 @@\n    %7D\n-%0A%0A    if vencedor == -1 %7B%0A        fmt.Println(%22sem ganhador%22)%0A    %7D else %7B%0A        fmt.Println(vencedor)%0A    %7D\n %0A   \n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-03-15_12-50-48",
+            "content": "@@ -141,17 +141,17 @@\n or i := \n-1\n+0\n ; i %3C N;\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-03-15_18-02-30",
+            "content": "@@ -141,17 +141,17 @@\n or i := \n-0\n+1\n ; i %3C N;\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-03-15_18-05-02",
+            "content": "@@ -227,10 +227,10 @@\n  10 \n-&&\n+%7C%7C\n  b %3E\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-03-15_18-13-12",
+            "content": "package main\nimport \"fmt\"\nfunc main() {\n   var N int \n    fmt.Scan(&N)\n    var melhorPontuacao int = 101   \n    var vencedor int = -1\n\n    for i := 0; i < N; i++ {\n        var a, b int\n        fmt.Scan(&a, &b)\n\n        if a >= 10 && b >= 10 {\n            pontuacao := a - b\n            if pontuacao < 0 {\n                pontuacao = -pontuacao\n            }   \n\n            if vencedor == -1 || pontuacao < melhorPontuacao {\n                melhorPontuacao = pontuacao\n                vencedor = i\n            }\n            \n        } \n\n    }\n\n    if vencedor == -1 {\n        fmt.Println(\"sem ganhador\")\n    } else {\n        fmt.Println(vencedor)\n    }\n    \n}\n",
+            "lines": "34"
+        }
+    ]
+}

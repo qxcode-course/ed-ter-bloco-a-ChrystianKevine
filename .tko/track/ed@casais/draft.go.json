@@ -1,0 +1,29 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-17_11-30-53",
+            "content": "@@ -41,161 +41,28 @@\n     \n-%0A    var tvetor int%0A    fmt.Scan(&tvetor) %0A%0A    animais := make(%5B%5D int, tvetor)%0A%0A    for i := 0; i %3C tvetor; i++ %7B%0A        fmt.Scan(&animais%5Bi%5D)%0A    %7D    \n+fmt.Println(%22qxcode%22)\n %0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-03-18_21-13-51",
+            "content": "@@ -135,9 +135,9 @@\n  := \n-1\n+0\n ; i \n",
+            "lines": "13"
+        },
+        {
+            "label": "2026-03-18_21-16-57",
+            "content": "@@ -135,9 +135,9 @@\n  := \n-0\n+1\n ; i \n@@ -177,16 +177,19 @@\n &animais\n+%5Bi%5D\n )%0A    %7D \n",
+            "lines": "13"
+        },
+        {
+            "label": "2026-03-18_21-20-37",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import %22\n@@ -19,17 +19,16 @@\n t %22fmt%22%0A\n-%0A\n func mai\n@@ -33,16 +33,21 @@\n ain() %7B%0A\n+    %0A\n     var \n@@ -78,16 +78,17 @@\n &tvetor)\n+ \n %0A%0A    an\n@@ -103,16 +103,17 @@\n  make(%5B%5D\n+ \n int, tve\n@@ -120,48 +120,8 @@\n tor)\n-%0A    var solteiros %5B%5Dint%0A    pares := 0 \n %0A%0A  \n@@ -181,518 +181,18 @@\n mais\n-%5Bi%5D\n )%0A    %7D\n-%0A%0A\n     \n-for i := 0; i %3C tvetor; i++ %7B%0A        if animais%5Bi%5D == 0 %7B%0A            continue%0A        %7D%0A%0A        achoupar := false%0A%0A        for j := i + 1; j %3C tvetor; j++ %7B%0A            if animais%5Bi%5D == -animais%5Bj%5D %7B%0A                animais%5Bi%5D = 0 %0A                animais%5Bj%5D = 0 %0A                achoupar = true%0A                pares++ %0A                break %0A            %7D%0A        %7D%0A%0A        if achoupar == false %7B%0A            solteiros = append(solteiros, animais%5Bi%5D)%0A        %7D%0A    %7D%0A%0A    fmt.Println(pares)\n %0A%7D\n+%0A\n",
+            "lines": "13"
+        },
+        {
+            "label": "2026-03-18_22-15-22",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n    var tvetor int\n    fmt.Scan(&tvetor)\n\n    animais := make([]int, tvetor)\n    var solteiros []int\n    pares := 0 \n\n    for i := 0; i < tvetor; i++ {\n        fmt.Scan(&animais[i])\n    }\n\n    for i := 0; i < tvetor; i++ {\n        if animais[i] == 0 {\n            continue\n        }\n\n        achoupar := false\n\n        for j := i + 1; j < tvetor; j++ {\n            if animais[i] == -animais[j] {\n                animais[i] = 0 \n                animais[j] = 0 \n                achoupar = true\n                pares++ \n                break \n            }\n        }\n\n        if achoupar == false {\n            solteiros = append(solteiros, animais[i])\n        }\n    }\n\n    fmt.Println(pares)\n}",
+            "lines": "40"
+        }
+    ]
+}

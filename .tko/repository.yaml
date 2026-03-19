@@ -13,9 +13,14 @@ sources:
   quests: null
   tasks: null
 expanded:
-- ed@main-quest
 - ed@revisão
-tasks: {}
+- ed@main-quest
+tasks:
+  ed@pintando: '{self:1, rate:100, study:20, concept:1}'
+  ed@mumia: '{self:1, rate:100, study:15, concept:1}'
+  ed@fuga: '{self:1, rate:100, study:25, concept:1, refactor:1}'
+  ed@pedra: '{self:1, rate:100, study:45, concept:1, debug:1, refactor:1}'
+  ed@casais: '{self:1, rate:100, study:60, concept:1, refactor:1}'
 flags:
   painel: 0
   quests: 0
@@ -24,4 +29,4 @@ flags:
   task_graph_mode: 0
   show_time: 0
 lang: go
-selected: ed@pintando
+selected: ed@casais

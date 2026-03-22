@@ -1,0 +1,54 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-22_09-51-03",
+            "content": "@@ -1,48 +1,32 @@\n-package main%0Aimport %22fmt%22%0Afunc main() %7B\n+@@ -41,344 +41,35 @@\n %0A    \n+ %0A-\n var \n@@ -32,25 +32,27 @@\n  tfalbum int\n-%0A\n+%250A\n     var tfba\n@@ -59,17 +59,19 @@\n ruel int\n-%0A\n+%250A\n     fmt.\n@@ -84,17 +84,19 @@\n tfalbum)\n-%0A\n+%250A\n     fmt.\n@@ -110,18 +110,22 @@\n fbaruel)\n-%0A%0A\n+%250A%250A\n     fbar\n@@ -136,18 +136,22 @@\n := make(\n-%5B%5D\n+%255B%255D\n int, tfb\n@@ -156,17 +156,19 @@\n fbaruel)\n-%0A\n+%250A\n     var \n@@ -183,50 +183,14 @@\n  int\n-%0A%0A    album := make(%5B%5Dbool, tfalbum + 1)%0A%0A\n+%250A%250A\n     \n@@ -195,33 +195,35 @@\n   for i := 0; i \n-%3C\n+%253C\n  tfbaruel; i++ %7B\n@@ -213,34 +213,38 @@\n C tfbaruel; i++ \n-%7B%0A\n+%257B%250A\n         fmt.Scan\n@@ -256,20 +256,32 @@\n ruel\n-%5Bi%5D)%0A    %7D%0A%0A\n+%255Bi%255D)%250A    %257D%250A%250A\n     \n@@ -290,25 +290,27 @@\n r i := 1; i \n-%3C\n+%253C\n  tfbaruel; i\n@@ -302,32 +302,43 @@\n %253C tfbaruel\n-; i++ %7B%0A\n+%255B0%255D; i++ %257B%250A\n         if f\n@@ -343,19 +343,23 @@\n  fbaruel\n-%5Bi%5D\n+%255Bi%255D\n  == fbar\n@@ -365,16 +365,24 @@\n ruel\n-%5Bi-1%5D %7B%0A\n+%255Bi-1%255D %257B%250A\n     \n@@ -403,259 +403,79 @@\n da++\n-%0A        %7D%0A    %7D  %0A%0A    for i := 0; i %3C tfbaruel; i++ %7B%0A        numeroDaFigurinha := fbaruel%5Bi%5D%0A        album%5BnumeroDaFigurinha%5D = true%0A    %7D%0A%0A    for i := 1; i %3C= tfalbum; i++ %7B%0A        if album%5Bi%5D == false %7B%0A            fmt.Println(i)%0A        %7D%0A    %7D%0A%7D\n+%250A        %257D%250A    %257D  %250A%0A+fmt.Println(%2522Hello, World!%2522)%0A %250A%257D%250A\n %0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-03-22_10-26-44",
+            "content": "@@ -386,34 +386,18 @@\n     \n-fmt.Print(fbaruel%5Bi%5D, %22 %22)\n+repetida++\n %0A   \n@@ -609,24 +609,25 @@\n %0A           \n+ \n fmt.Print(i,\n@@ -627,15 +627,12 @@\n rint\n+ln\n (i\n-, %22 %22\n )%0A  \n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-03-22_10-29-19",
+            "content": "@@ -158,20 +158,37 @@\n fbaruel)\n+%0A\n     \n+var repetida int\n %0A%0A    al\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-03-22_10-29-37",
+            "content": "@@ -415,27 +415,8 @@\n   %0A%0A\n-    fmt.Println()%0A%0A\n     \n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-03-22_10-30-06",
+            "content": "@@ -665,28 +665,10 @@\n %7D%0A    %7D%0A\n-    fmt.Println()%0A\n %7D%0A\n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-03-22_10-30-23",
+            "content": "@@ -381,24 +381,29 @@\n t(fbaruel%5Bi%5D\n+, %22 %22\n )%0A        %7D%0A\n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-03-22_10-30-45",
+            "content": "@@ -385,21 +385,16 @@\n aruel%5Bi%5D\n-, %22 %22\n )%0A      \n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-03-22_10-30-53",
+            "content": "@@ -10,39 +10,21 @@\n ain%0A\n-%0A\n import \n-(%0A%09\n %22fmt%22%0A\n-%09%22strings%22%0A)%0A%0A\n func\n@@ -33,17 +33,20 @@\n ain() %7B%0A\n-%09\n+    \n var tfal\n@@ -48,17 +48,28 @@\n  tfalbum\n-,\n+ int%0A    var\n  tfbarue\n@@ -74,17 +74,20 @@\n uel int%0A\n-%09\n+    \n fmt.Scan\n@@ -95,18 +95,31 @@\n &tfalbum\n-, \n+)%0A    fmt.Scan(\n &tfbarue\n@@ -122,17 +122,20 @@\n aruel)%0A%0A\n-%09\n+    \n fbaruel \n@@ -158,18 +158,66 @@\n fbaruel)\n-%0A%09\n+    %0A%0A    album := make(%5B%5Dbool, tfalbum + 1)%0A%0A    \n for i :=\n@@ -240,18 +240,24 @@\n ; i++ %7B%0A\n-%09%09\n+        \n fmt.Scan\n@@ -274,34 +274,19 @@\n i%5D)%0A\n-%09%7D%0A%0A%09var repetidas %5B%5Dint%0A%09\n+    %7D%0A%0A    \n for \n@@ -313,18 +313,24 @@\n ; i++ %7B%0A\n-%09%09\n+        \n if fbaru\n@@ -357,237 +357,212 @@\n %5D %7B%0A\n-%09%09%09repetidas = append(repetidas, fbaruel%5Bi%5D)%0A%09%09%7D%0A%09%7D%0A%09fmt.Println(strings.Trim(fmt.Sprint(repetidas), %22%5B%5D%22))%0A%0A%09album := make(%5B%5Dbool, tfalbum+1)%0A%09for i := 0; i %3C tfbaruel; i++ %7B%0A%09%09album%5Bfbaruel%5Bi%5D%5D = true%0A%09%7D%0A%0A%09var faltantes %5B%5Dint%0A%09\n+            fmt.Print(fbaruel%5Bi%5D, %22 %22)%0A        %7D%0A    %7D  %0A%0A    fmt.Println()%0A%0A    for i := 0; i %3C tfbaruel; i++ %7B%0A        numeroDaFigurinha := fbaruel%5Bi%5D%0A        album%5BnumeroDaFigurinha%5D = true%0A    %7D%0A%0A    \n for \n@@ -593,14 +593,19 @@\n + %7B%0A\n-%09%09\n+        \n if \n-!\n albu\n@@ -613,106 +613,80 @@\n %5Bi%5D \n-%7B%0A%09%09%09faltantes = append(faltantes, i)%0A%09%09%7D%0A%09%7D%0A%09fmt.Println(strings.Trim(fmt.Sprint(faltantes), %22%5B%5D%22)\n+== false %7B%0A           fmt.Print(i, %22 %22)%0A        %7D%0A    %7D%0A    fmt.Println(\n )%0A%7D\n+%0A\n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-03-22_10-35-56",
+            "content": "@@ -350,66 +350,8 @@\n %09%7D%0A%09\n-%0A%09if len(repetidas) == 0 %7B%0A%09%09fmt.Println(%22N%22)%0A%09%7D else %7B%0A%09%09\n fmt.\n@@ -400,19 +400,16 @@\n , %22%5B%5D%22))\n-%0A%09%7D\n %0A%0A%09album\n@@ -619,66 +619,8 @@\n %09%7D%0A%09\n-%0A%09if len(faltantes) == 0 %7B%0A%09%09fmt.Println(%22N%22)%0A%09%7D else %7B%0A%09%09\n fmt.\n@@ -670,12 +670,9 @@\n  %22%5B%5D%22))%0A\n-%09%7D%0A\n %7D\n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-03-22_10-37-18",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n\t\"strings\"\n)\n\nfunc main() {\n\tvar tfalbum, tfbaruel int\n\tfmt.Scan(&tfalbum, &tfbaruel)\n\n\tfbaruel := make([]int, tfbaruel)\n\tfor i := 0; i < tfbaruel; i++ {\n\t\tfmt.Scan(&fbaruel[i])\n\t}\n\n\tvar repetidas []int\n\tfor i := 1; i < tfbaruel; i++ {\n\t\tif fbaruel[i] == fbaruel[i-1] {\n\t\t\trepetidas = append(repetidas, fbaruel[i])\n\t\t}\n\t}\n\t\n\tif len(repetidas) == 0 {\n\t\tfmt.Println(\"N\")\n\t} else {\n\t\tfmt.Println(strings.Trim(fmt.Sprint(repetidas), \"[]\"))\n\t}\n\n\talbum := make([]bool, tfalbum+1)\n\tfor i := 0; i < tfbaruel; i++ {\n\t\talbum[fbaruel[i]] = true\n\t}\n\n\tvar faltantes []int\n\tfor i := 1; i <= tfalbum; i++ {\n\t\tif !album[i] {\n\t\t\tfaltantes = append(faltantes, i)\n\t\t}\n\t}\n\t\n\tif len(faltantes) == 0 {\n\t\tfmt.Println(\"N\")\n\t} else {\n\t\tfmt.Println(strings.Trim(fmt.Sprint(faltantes), \"[]\"))\n\t}\n}",
+            "lines": "47"
+        }
+    ]
+}

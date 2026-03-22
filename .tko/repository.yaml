@@ -21,12 +21,13 @@ tasks:
   ed@fuga: '{self:1, rate:100, study:25, concept:1, refactor:1}'
   ed@pedra: '{self:1, rate:100, study:45, concept:1, debug:1, refactor:1}'
   ed@casais: '{self:1, rate:100, study:60, concept:1, refactor:1}'
+  ed@baruel: '{self:1, rate:100, study:50, concept:1, debug:1, refactor:1}'
 flags:
-  painel: 0
+  painel: 1
   quests: 0
   tracks: 0
   tasks: 0
   task_graph_mode: 0
   show_time: 0
 lang: go
-selected: ed@casais
+selected: ed@baruel

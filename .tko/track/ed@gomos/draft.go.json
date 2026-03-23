@@ -1,0 +1,9 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-22_23-04-29",
+            "content": "package main\n\nimport \"fmt\"\n\ntype Point struct {\n\tX, Y int\n}\n\nfunc main() {\n\tvar Q int\n\tvar D rune\n\tfmt.Scanf(\"%d %c\\n\", &Q, &D)\n\n\tgomas := make([]Point, Q)\n\tfor i := 0; i < Q; i++ {\n\t\tfmt.Scanf(\"%d %d\\n\", &gomas[i].X, &gomas[i].Y)\n\t}\n\n\tfor i := Q - 1; i > 0; i-- {\n\t\tgomas[i] = gomas[i-1]\n\t}\n\n\tswitch D {\n\tcase 'L':\n\t\tgomas[0].X--\n\tcase 'R':\n\t\tgomas[0].X++\n\tcase 'U':\n\t\tgomas[0].Y--\n\tcase 'D':\n\t\tgomas[0].Y++\n\t}\n\n\tfor _, gomo := range gomas {\n\t\tfmt.Printf(\"%d %d\\n\", gomo.X, gomo.Y)\n\t}\n}\n",
+            "lines": "37"
+        }
+    ]
+}

@@ -13,8 +13,9 @@ sources:
   quests: null
   tasks: null
 expanded:
-- ed@revisão
-- ed@main-quest
+- '@ed@revisao-basic-basic_sem_quest'
+- ed@analise-map_set-map_set-basic
+- '@ed@analise-map_set-map_set-basic_sem_quest'
 tasks:
   ed@pintando: '{self:1, rate:100, study:20, concept:1}'
   ed@mumia: '{self:1, rate:100, study:15, concept:1}'
@@ -23,6 +24,7 @@ tasks:
   ed@casais: '{self:1, rate:100, study:60, concept:1, refactor:1}'
   ed@baruel: '{self:1, rate:100, study:50, concept:1, debug:1, refactor:1}'
   ed@gomos: '{self:1, rate:100, study:60, concept:1, problem:1, refactor:1}'
+  ed@princesa: '{self:1, rate:100, study:70, concept:1, problem:1, debug:1, refactor:1}'
 flags:
   painel: 1
   quests: 0
@@ -31,4 +33,4 @@ flags:
   task_graph_mode: 0
   show_time: 0
 lang: go
-selected: ed@baruel
+selected: ed@apagando

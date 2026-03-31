@@ -1,0 +1,19 @@
+2026-03-31 08:13:14, MOVE, v:1, k:ed@princesa, mode:DOWN
+2026-03-31 08:13:19, MOVE, v:1, k:ed@princesa, mode:DOWN
+2026-03-31 08:13:54, MOVE, v:1, k:ed@princesa, mode:DOWN
+2026-03-31 08:13:56, MOVE, v:1, k:ed@princesa, mode:PICK
+2026-03-31 08:28:02, EXEC, v:1, k:ed@princesa, mode:FULL, rate:0, size:11
+2026-03-31 08:28:07, MOVE, v:1, k:ed@princesa, mode:BACK
+2026-03-31 08:28:09, MOVE, v:1, k:ed@princesa, mode:PICK
+2026-03-31 08:34:22, EXEC, v:1, k:ed@princesa, mode:FULL, size:13, fail:COMP
+2026-03-31 08:34:28, MOVE, v:1, k:ed@princesa, mode:BACK
+2026-03-31 08:34:29, MOVE, v:1, k:ed@princesa, mode:PICK
+2026-03-31 08:59:43, EXEC, v:1, k:ed@princesa, mode:FULL, rate:0, size:17
+2026-03-31 09:00:07, EXEC, v:1, k:ed@princesa, mode:FULL, rate:0, size:17
+2026-03-31 09:00:37, MOVE, v:1, k:ed@princesa, mode:BACK
+2026-03-31 09:00:39, MOVE, v:1, k:ed@princesa, mode:PICK
+2026-03-31 09:09:25, EXEC, v:1, k:ed@princesa, mode:FULL, rate:0
+2026-03-31 09:11:21, EXEC, v:1, k:ed@princesa, mode:FULL, rate:0, size:18
+2026-03-31 09:24:08, EXEC, v:1, k:ed@princesa, mode:FULL, rate:100, size:42
+2026-03-31 09:24:28, MOVE, v:1, k:ed@princesa, mode:BACK
+2026-03-31 09:24:57, SELF, v:1, k:ed@princesa, self:1, rate:100, study:70, concept:1, problem:1, debug:1, refactor:1

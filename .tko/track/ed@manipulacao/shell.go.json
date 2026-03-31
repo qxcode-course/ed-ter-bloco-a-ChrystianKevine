@@ -1,0 +1,54 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-30_23-30-59",
+            "content": "@@ -403,223 +403,15 @@\n  %7B%0A%09\n-n := len(vet)%0A%09novo := make(%5B%5Dint, n)%0A%09copy(novo, vet)%0A%0A%09for i := 0; i %3C n; i++ %7B%0A%09%09for j := 0; j %3C n-1-i; j++ %7B%0A%09%09%09if novo%5Bj%5D %3E novo%5Bj+1%5D %7B%0A%09%09%09%09aux := novo%5Bj%5D%0A%09%09%09%09novo%5Bj%5D = novo%5Bj+1%5D%0A%09%09%09%09novo%5Bj+1%5D = aux%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D\n+_ = vet\n %0A%09re\n@@ -420,11 +420,10 @@\n rn n\n-ovo\n+il\n %0A%7D%0A%0A\n@@ -462,125 +462,27 @@\n  %7B%0A%09\n-n := len(vet)%0A%09invertido := make(%5B%5Dint, n)%0A%09for i := 0; i %3C n; i++ %7B%0A%09%09invertido%5Bi%5D = vet%5Bn-1-i%5D%0A%09%7D%0A%09return invertido\n+_ = vet%0A%09return nil\n %0A%7D%0A%0A\n",
+            "lines": "116"
+        },
+        {
+            "label": "2026-03-30_23-34-34",
+            "content": "@@ -398,16 +398,31 @@\n %5B%5Dint %7B%0A\n+%09n := len(vet)%0A\n %09novo :=\n@@ -434,24 +434,17 @@\n (%5B%5Dint, \n-len(vet)\n+n\n )%0A%09copy(\n@@ -458,24 +458,168 @@\n et)%0A\n-%09sort.Ints(novo)\n+%0A%09for i := 0; i %3C n; i++ %7B%0A%09%09for j := 0; j %3C n-1-i; j++ %7B%0A%09%09%09if novo%5Bj%5D %3E novo%5Bj+1%5D %7B%0A%09%09%09%09aux := novo%5Bj%5D%0A%09%09%09%09novo%5Bj%5D = novo%5Bj+1%5D%0A%09%09%09%09novo%5Bj+1%5D = aux%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D\n %0A%09re\n@@ -825,314 +825,15 @@\n  %7B%0A%09\n-n := len(vet)%0A%09novo := make(%5B%5Dint, n)%0A%09copy(novo, vet)%0A%0A%09for i := 0; i %3C n; i++ %7B%0A%09%09for j := 0; j %3C n-1-i; j++ %7B%0A%09%09%09v1 := novo%5Bj%5D%0A%09%09%09if v1 %3C 0 %7B%0A%09%09%09%09v1 = -v1%0A%09%09%09%7D%0A%09%09%09v2 := novo%5Bj+1%5D%0A%09%09%09if v2 %3C 0 %7B%0A%09%09%09%09v2 = -v2%0A%09%09%09%7D%0A%0A%09%09%09if v1 %3E v2 %7B%0A%09%09%09%09aux := novo%5Bj%5D%0A%09%09%09%09novo%5Bj%5D = novo%5Bj+1%5D%0A%09%09%09%09novo%5Bj+1%5D = aux%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D\n+_ = vet\n %0A%09re\n@@ -830,35 +830,34 @@\n  = vet%0A%09return n\n-ovo\n+il\n %0A%7D%0A%0Afunc unique(\n",
+            "lines": "132"
+        },
+        {
+            "label": "2026-03-30_23-43-19",
+            "content": "@@ -669,24 +669,34 @@\n %5Dint %7B%0A%09\n-invertid\n+n := len(vet)%0A%09nov\n o := mak\n@@ -704,25 +704,36 @@\n (%5B%5Dint, \n-len(\n+n)%0A%09copy(novo, \n vet)\n-)\n+%0A\n %0A%09for i \n@@ -742,24 +742,17 @@\n  0; i %3C \n-len(vet)\n+n\n ; i++ %7B%0A\n@@ -757,61 +757,298 @@\n %7B%0A%09%09\n-invertido%5Bi%5D = vet%5Blen(vet)-1-i%5D%0A%09%7D%0A%09return invertido\n+for j := 0; j %3C n-1-i; j++ %7B%0A%09%09%09v1 := novo%5Bj%5D%0A%09%09%09if v1 %3C 0 %7B%0A%09%09%09%09v1 = -v1%0A%09%09%09%7D%0A%09%09%09v2 := novo%5Bj+1%5D%0A%09%09%09if v2 %3C 0 %7B%0A%09%09%09%09v2 = -v2%0A%09%09%09%7D%0A%0A%09%09%09if v1 %3E v2 %7B%0A%09%09%09%09aux := novo%5Bj%5D%0A%09%09%09%09novo%5Bj%5D = novo%5Bj+1%5D%0A%09%09%09%09novo%5Bj+1%5D = aux%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A%09return novo%0A%7D%0A%0Afunc unique(vet %5B%5Dint) %5B%5Dint %7B%0A%09_ = vet%0A%09return nil\n %0A%7D%0A%0A\n",
+            "lines": "143"
+        },
+        {
+            "label": "2026-03-30_23-43-50",
+            "content": "@@ -398,31 +398,16 @@\n %5B%5Dint %7B%0A\n-%09n := len(vet)%0A\n %09novo :=\n@@ -419,17 +419,24 @@\n (%5B%5Dint, \n-n\n+len(vet)\n )%0A%09copy(\n@@ -450,168 +450,24 @@\n et)%0A\n-%0A%09for i := 0; i %3C n; i++ %7B%0A%09%09for j := 0; j %3C n-1-i; j++ %7B%0A%09%09%09if novo%5Bj%5D %3E novo%5Bj+1%5D %7B%0A%09%09%09%09aux := novo%5Bj%5D%0A%09%09%09%09novo%5Bj%5D = novo%5Bj+1%5D%0A%09%09%09%09novo%5Bj+1%5D = aux%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D\n+%09sort.Ints(novo)\n %0A%09re\n@@ -800,63 +800,8 @@\n %0A%7D%0A%0A\n-func unique(vet %5B%5Dint) %5B%5Dint %7B%0A%09_ = vet%0A%09return nil%0A%7D%0A%0A\n func\n",
+            "lines": "120"
+        },
+        {
+            "label": "2026-03-30_23-44-47",
+            "content": "@@ -398,16 +398,31 @@\n %5B%5Dint %7B%0A\n+%09n := len(vet)%0A\n %09novo :=\n@@ -434,24 +434,17 @@\n (%5B%5Dint, \n-len(vet)\n+n\n )%0A%09copy(\n@@ -458,24 +458,168 @@\n et)%0A\n-%09sort.Ints(novo)\n+%0A%09for i := 0; i %3C n; i++ %7B%0A%09%09for j := 0; j %3C n-1-i; j++ %7B%0A%09%09%09if novo%5Bj%5D %3E novo%5Bj+1%5D %7B%0A%09%09%09%09aux := novo%5Bj%5D%0A%09%09%09%09novo%5Bj%5D = novo%5Bj+1%5D%0A%09%09%09%09novo%5Bj+1%5D = aux%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D\n %0A%09re\n",
+            "lines": "135"
+        },
+        {
+            "label": "2026-03-30_23-46-56",
+            "content": "@@ -398,31 +398,16 @@\n %5B%5Dint %7B%0A\n-%09n := len(vet)%0A\n %09novo :=\n@@ -419,17 +419,24 @@\n (%5B%5Dint, \n-n\n+len(vet)\n )%0A%09copy(\n@@ -450,168 +450,24 @@\n et)%0A\n-%0A%09for i := 0; i %3C n; i++ %7B%0A%09%09for j := 0; j %3C n-1-i; j++ %7B%0A%09%09%09if novo%5Bj%5D %3E novo%5Bj+1%5D %7B%0A%09%09%09%09aux := novo%5Bj%5D%0A%09%09%09%09novo%5Bj%5D = novo%5Bj+1%5D%0A%09%09%09%09novo%5Bj+1%5D = aux%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D\n+%09sort.Ints(novo)\n %0A%09re\n",
+            "lines": "125"
+        },
+        {
+            "label": "2026-03-30_23-47-11",
+            "content": "@@ -816,39 +816,24 @@\n nt) %5B%5Dint %7B%0A\n-%09n := len(vet)%0A\n %09invertido :\n@@ -838,33 +838,40 @@\n  := make(%5B%5Dint, \n-n\n+len(vet)\n )%0A%09for i := 0; i\n@@ -865,33 +865,40 @@\n for i := 0; i %3C \n-n\n+len(vet)\n ; i++ %7B%0A%09%09invert\n@@ -902,33 +902,40 @@\n ertido%5Bi%5D = vet%5B\n-n\n+len(vet)\n -1-i%5D%0A%09%7D%0A%09return\n",
+            "lines": "135"
+        },
+        {
+            "label": "2026-03-30_23-48-26",
+            "content": "@@ -674,35 +674,40 @@\n %09n := len(vet)%0A%09\n-nov\n+invertid\n o := make(%5B%5Dint,\n@@ -710,34 +710,16 @@\n int, n)%0A\n-%09copy(novo, vet)%0A%0A\n %09for i :\n@@ -742,227 +742,33 @@\n %7B%0A%09%09\n-for j := 0; j %3C n-1-i; j++ %7B%0A%09%09%09v1 := novo%5Bj%5D%0A%09%09%09if v1 %3C 0 %7B%0A%09%09%09%09v1 = -v1%0A%09%09%09%7D%0A%09%09%09v2 := novo%5Bj+1%5D%0A%09%09%09if v2 %3C 0 %7B%0A%09%09%09%09v2 = -v2%0A%09%09%09%7D%0A%0A%09%09%09if v1 %3E v2 %7B%0A%09%09%09%09aux := novo%5Bj%5D%0A%09%09%09%09novo%5Bj%5D = novo%5Bj+1%5D%0A%09%09%09%09novo%5Bj+1%5D = aux%0A%09%09%09%7D%0A%09%09%7D\n+invertido%5Bi%5D = vet%5Bn-1-i%5D\n %0A%09%7D%0A\n@@ -767,35 +767,40 @@\n 1-i%5D%0A%09%7D%0A%09return \n-nov\n+invertid\n o%0A%7D%0A%0Afunc revers\n@@ -978,204 +978,27 @@\n  %7B%0A%09\n-un := %5B%5Dint%7B%7D%0A%09for _, v := range vet %7B%0A%09%09existe := false%0A%09%09for _, jaTem := range un %7B%0A%09%09%09if v == jaTem %7B%0A%09%09%09%09existe = true%0A%09%09%09%09break%0A%09%09%09%7D%0A%09%09%7D%0A%09%09if !existe %7B%0A%09%09%09un = append(un, v)%0A%09%09%7D%0A%09%7D%0A%09return un\n+_ = vet%0A%09return nil\n %0A%7D%0A%0A\n",
+            "lines": "136"
+        },
+        {
+            "label": "2026-03-30_23-49-36",
+            "content": "@@ -1414,384 +1414,27 @@\n  %7B%0A%09\n-rep := %5B%5Dint%7B%7D%0A%09for i := 0; i %3C len(vet); i++ %7B%0A%09%09cont := 0%0A%09%09for j := 0; j %3C len(vet); j++ %7B%0A%09%09%09if vet%5Bi%5D == vet%5Bj%5D %7B%0A%09%09%09%09cont++%0A%09%09%09%7D%0A%09%09%7D%0A%09%09%0A%09%09if cont %3E 1 %7B%0A%09%09%09jaEsta := false%0A%09%09%09for _, v := range rep %7B%0A%09%09%09%09if v == vet%5Bi%5D %7B%0A%09%09%09%09%09jaEsta = true%0A%09%09%09%09%09break%0A%09%09%09%09%7D%0A%09%09%09%7D%0A%09%09%09if !jaEsta %7B%0A%09%09%09%09for k := 0; k %3C cont-1; k++ %7B%0A%09%09%09%09%09rep = append(rep, vet%5Bi%5D)%0A%09%09%09%09%7D%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A%09return rep\n+_ = vet%0A%09return nil\n %0A%7D%0A%0A\n",
+            "lines": "165"
+        },
+        {
+            "label": "2026-03-30_23-53-01",
+            "content": "@@ -1414,76 +1414,22 @@\n  %7B%0A%09\n-soUnicos := unique(vet)%0A%09%0A%09// Ordena os unicos (Bubble Sort simples)\n+rep := %5B%5Dint%7B%7D\n %0A%09fo\n@@ -1446,24 +1446,19 @@\n i %3C len(\n-soUnicos\n+vet\n ); i++ %7B\n@@ -1450,32 +1450,44 @@\n len(vet); i++ %7B%0A\n+%09%09cont := 0%0A\n %09%09for j := 0; j \n@@ -1496,21 +1496,12 @@\n len(\n-soUnicos)-1-i\n+vet)\n ; j+\n@@ -1514,188 +1514,86 @@\n %09if \n-soUnicos%5Bj%5D %3E soUnicos%5Bj+1%5D %7B%0A%09%09%09%09aux := soUnicos\n+vet%5Bi%5D == vet\n %5Bj%5D\n+ %7B\n %0A%09%09%09%09\n-soUnicos%5Bj%5D = soUnicos%5Bj+1%5D%0A%09%09%09%09soUnicos%5Bj+1%5D = aux%0A%09\n+cont++%0A%09%09%09%7D%0A\n %09%09%7D%0A%09%09\n-%7D\n %0A%09\n-%7D%0A%0A%09rep := %5B%5Dint%7B%7D%0A%09for _, v := range soUnicos %7B%0A%09%09cont := 0%0A\n+%09if cont %3E 1 %7B%0A%09%09%09jaEsta := false%0A%09\n %09%09fo\n@@ -1597,24 +1597,17 @@\n %09for _, \n-original\n+v\n  := rang\n@@ -1612,75 +1612,93 @@\n nge \n-vet\n+rep\n  %7B%0A\n+%09\n %09%09%09if \n-original == v %7B%0A%09%09%09%09cont++%0A%09%09%09%7D%0A\n+v == vet%5Bi%5D %7B%0A%09%09%09%09%09jaEsta = true%0A%09%09%09%09%09break%0A%09\n %09%09\n+%09\n %7D%0A%09%09\n+%09%7D\n %0A%09%09\n+%09\n if \n-cont %3E 1\n+!jaEsta\n  %7B%0A\n+%09\n %09%09%09f\n@@ -1726,16 +1726,17 @@\n ; k++ %7B%0A\n+%09\n %09%09%09%09rep \n@@ -1750,17 +1750,28 @@\n d(rep, v\n-)\n+et%5Bi%5D)%0A%09%09%09%09%7D\n %0A%09%09%09%7D%0A%09%09\n",
+            "lines": "188"
+        }
+    ]
+}

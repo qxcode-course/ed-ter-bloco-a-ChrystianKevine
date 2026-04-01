@@ -1,0 +1,16 @@
+2026-04-01 10:22:23, MOVE, v:1, k:ed@fractais_png, mode:DOWN
+2026-04-01 10:22:25, MOVE, v:1, k:ed@fractais_png, mode:PICK
+2026-04-01 10:23:14, MOVE, v:1, k:ed@fractais_png, mode:BACK
+2026-04-01 10:24:38, MOVE, v:1, k:ed@resto, mode:DOWN
+2026-04-01 10:24:39, MOVE, v:1, k:ed@resto, mode:PICK
+2026-04-01 10:56:42, EXEC, v:1, k:ed@resto, mode:FULL, rate:0, size:13
+2026-04-01 10:57:01, EXEC, v:1, k:ed@resto, mode:FULL, rate:0, size:13
+2026-04-01 10:57:17, EXEC, v:1, k:ed@resto, mode:FULL, rate:0, size:14
+2026-04-01 10:57:54, EXEC, v:1, k:ed@resto, mode:FULL, rate:25, size:14
+2026-04-01 10:59:14, EXEC, v:1, k:ed@resto, mode:FULL, size:16, fail:COMP
+2026-04-01 10:59:29, EXEC, v:1, k:ed@resto, mode:FULL, rate:25, size:14
+2026-04-01 10:59:52, EXEC, v:1, k:ed@resto, mode:FULL, rate:25, size:14
+2026-04-01 11:00:20, EXEC, v:1, k:ed@resto, mode:FULL, rate:100, size:16
+2026-04-01 11:01:22, EXEC, v:1, k:ed@resto, mode:FULL, rate:100
+2026-04-01 11:01:28, MOVE, v:1, k:ed@resto, mode:BACK
+2026-04-01 11:02:56, SELF, v:1, k:ed@resto, self:1, rate:100, study:15

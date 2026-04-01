@@ -1,0 +1,44 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-01_10-56-41",
+            "content": "@@ -122,10 +122,8 @@\n d %25d\n-%5Cn\n %22, n\n",
+            "lines": "13"
+        },
+        {
+            "label": "2026-04-01_10-57-01",
+            "content": "@@ -160,22 +160,8 @@\n ) %7B%0A\n-    num := 10%0A\n     \n@@ -166,15 +166,14 @@\n   resto(\n-num\n+10\n )%0A%7D%0A\n",
+            "lines": "13"
+        },
+        {
+            "label": "2026-04-01_10-57-17",
+            "content": "@@ -169,17 +169,16 @@\n um := 10\n-0\n %0A    res\n",
+            "lines": "14"
+        },
+        {
+            "label": "2026-04-01_10-57-54",
+            "content": "@@ -190,36 +190,6 @@\n um)%0A\n-    num := 150%0A    resto(num)%0A\n %7D%0A\n",
+            "lines": "14"
+        },
+        {
+            "label": "2026-04-01_10-59-14",
+            "content": "@@ -156,16 +156,46 @@\n ain() %7B%0A\n+    num := 100%0A    resto(num)%0A\n     num \n",
+            "lines": "16"
+        },
+        {
+            "label": "2026-04-01_10-59-29",
+            "content": "@@ -168,17 +168,17 @@\n num := 1\n-0\n+5\n 0%0A    re\n",
+            "lines": "14"
+        },
+        {
+            "label": "2026-04-01_10-59-52",
+            "content": "@@ -160,40 +160,8 @@\n ) %7B%0A\n-    var a int %0A    fmt.Scan(&a)%0A\n     \n@@ -167,17 +167,19 @@\n  num := \n-a\n+100\n %0A    res\n",
+            "lines": "14"
+        },
+        {
+            "label": "2026-04-01_11-00-20",
+            "content": "package main\nimport \"fmt\"\nfunc resto (num int){\n    if num == 0 {\n        return\n    }\n    resto(num/2)\n    fmt.Printf(\"%d %d\\n\", num / 2, num%2)\n}\n\nfunc main() {\n    var a int \n    fmt.Scan(&a)\n    num := a\n    resto(num)\n}\n",
+            "lines": "16"
+        }
+    ]
+}

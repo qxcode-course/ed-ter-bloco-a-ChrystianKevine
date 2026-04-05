@@ -14,3 +14,6 @@
 2026-04-01 11:01:22, EXEC, v:1, k:ed@resto, mode:FULL, rate:100
 2026-04-01 11:01:28, MOVE, v:1, k:ed@resto, mode:BACK
 2026-04-01 11:02:56, SELF, v:1, k:ed@resto, self:1, rate:100, study:15
+2026-04-01 11:05:58, MOVE, v:1, k:ed@mdc, mode:DOWN
+2026-04-01 11:05:59, MOVE, v:1, k:ed@mdc, mode:PICK
+2026-04-01 11:13:42, MOVE, v:1, k:ed@mdc, mode:BACK

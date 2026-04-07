@@ -62,7 +62,12 @@
         },
         {
             "label": "2026-03-15_18-13-12",
-            "content": "package main\nimport \"fmt\"\nfunc main() {\n   var N int \n    fmt.Scan(&N)\n    var melhorPontuacao int = 101   \n    var vencedor int = -1\n\n    for i := 0; i < N; i++ {\n        var a, b int\n        fmt.Scan(&a, &b)\n\n        if a >= 10 && b >= 10 {\n            pontuacao := a - b\n            if pontuacao < 0 {\n                pontuacao = -pontuacao\n            }   \n\n            if vencedor == -1 || pontuacao < melhorPontuacao {\n                melhorPontuacao = pontuacao\n                vencedor = i\n            }\n            \n        } \n\n    }\n\n    if vencedor == -1 {\n        fmt.Println(\"sem ganhador\")\n    } else {\n        fmt.Println(vencedor)\n    }\n    \n}\n",
+            "content": "@@ -654,46 +654,7 @@\n     \n-// mudando o commit para testar o envio\n %0A%7D%0A\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-04-06_22-38-05",
+            "content": "package main\nimport \"fmt\"\nfunc main() {\n   var N int \n    fmt.Scan(&N)\n    var melhorPontuacao int = 101   \n    var vencedor int = -1\n\n    for i := 0; i < N; i++ {\n        var a, b int\n        fmt.Scan(&a, &b)\n\n        if a >= 10 && b >= 10 {\n            pontuacao := a - b\n            if pontuacao < 0 {\n                pontuacao = -pontuacao\n            }   \n\n            if vencedor == -1 || pontuacao < melhorPontuacao {\n                melhorPontuacao = pontuacao\n                vencedor = i\n            }\n            \n        } \n\n    }\n\n    if vencedor == -1 {\n        fmt.Println(\"sem ganhador\")\n    } else {\n        fmt.Println(vencedor)\n    }\n    // mudando o commit para testar o envio\n}\n",
             "lines": "34"
         }
     ]

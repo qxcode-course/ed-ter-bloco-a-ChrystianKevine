@@ -23,3 +23,14 @@
 2026-04-06 22:34:27, MOVE, v:1, k:ed@queimada, mode:BACK
 2026-04-06 22:34:54, SELF, v:1, k:ed@queimada, self:1, rate:100, study:20, guided:1
 2026-04-06 22:35:18, MOVE, v:1, k:ed@labirinto, mode:DOWN
+2026-04-06 22:37:40, SELF, v:1, k:ed@pintando, self:1, friend:nao, concept:1, debug:1, refactor:1
+2026-04-06 22:37:45, SELF, v:1, k:ed@pedra, self:1, concept:1, problem:1, refactor:1
+2026-04-06 22:37:52, SELF, v:1, k:ed@pedra, self:1, study:20, concept:1, problem:1, refactor:1
+2026-04-06 22:37:59, SELF, v:1, k:ed@pintando, self:1, study:20, friend:nao, concept:1, debug:1, refactor:1
+2026-04-06 22:37:59, MOVE, v:1, k:ed@pintando, mode:PICK
+2026-04-06 22:38:01, EXEC, v:1, k:ed@pintando, mode:FULL, rate:100, size:15
+2026-04-06 22:38:02, MOVE, v:1, k:ed@pintando, mode:BACK
+2026-04-06 22:38:04, MOVE, v:1, k:ed@pedra, mode:PICK
+2026-04-06 22:38:05, EXEC, v:1, k:ed@pedra, mode:FULL, rate:100, size:34
+2026-04-06 22:38:06, EXEC, v:1, k:ed@pedra, mode:FULL, rate:100
+2026-04-06 22:38:07, MOVE, v:1, k:ed@pedra, mode:BACK

@@ -57,3 +57,42 @@
 2026-04-06 22:59:03, MOVE, v:1, k:ed@labirinto, mode:PICK
 2026-04-06 23:09:22, EXEC, v:1, k:ed@labirinto, mode:FULL, rate:100
 2026-04-06 23:09:23, MOVE, v:1, k:ed@labirinto, mode:BACK
+2026-04-06 23:11:34, MOVE, v:1, k:ed@vetequals, mode:DOWN
+2026-04-06 23:11:38, MOVE, v:1, k:ed@vetequals, mode:PICK
+2026-04-06 23:11:43, EXEC, v:1, k:ed@vetequals, mode:FULL, rate:70, size:49
+2026-04-06 23:16:21, EXEC, v:1, k:ed@vetequals, mode:FULL, rate:70
+2026-04-06 23:16:33, MOVE, v:1, k:ed@vetequals, mode:BACK
+2026-04-06 23:16:44, MOVE, v:1, k:ed@vetequals, mode:PICK
+2026-04-06 23:16:53, MOVE, v:1, k:ed@vetequals, mode:BACK
+2026-04-06 23:17:08, MOVE, v:1, k:ed@vetequals, mode:PICK
+2026-04-06 23:17:10, EXEC, v:1, k:ed@vetequals, mode:FULL, rate:70
+2026-04-06 23:20:00, MOVE, v:1, k:ed@vetequals, mode:BACK
+2026-04-06 23:20:12, MOVE, v:1, k:ed@vetequals, mode:PICK
+2026-04-06 23:20:16, EXEC, v:1, k:ed@vetequals, mode:FULL, rate:70
+2026-04-06 23:20:17, MOVE, v:1, k:ed@vetequals, mode:BACK
+2026-04-06 23:21:59, MOVE, v:1, k:ed@vetequals, mode:PICK
+2026-04-06 23:22:02, EXEC, v:1, k:ed@vetequals, mode:FULL, rate:70
+2026-04-06 23:26:09, EXEC, v:1, k:ed@vetequals, mode:FULL, rate:70
+2026-04-06 23:26:14, MOVE, v:1, k:ed@vetequals, mode:BACK
+2026-04-06 23:26:23, MOVE, v:1, k:ed@vetequals, mode:PICK
+2026-04-06 23:27:00, EXEC, v:1, k:ed@vetequals, mode:FULL, rate:100, size:51
+2026-04-06 23:27:03, MOVE, v:1, k:ed@vetequals, mode:BACK
+2026-04-06 23:27:10, MOVE, v:1, k:ed@vetequals, mode:PICK
+2026-04-06 23:27:11, MOVE, v:1, k:ed@vetequals, mode:BACK
+2026-04-06 23:27:32, SELF, v:1, k:ed@vetequals, self:1, rate:100, study:25, concept:1, refactor:1
+2026-04-06 23:27:38, MOVE, v:1, k:ed@vetequals, mode:PICK
+2026-04-06 23:27:39, EXEC, v:1, k:ed@vetequals, mode:FULL, rate:100
+2026-04-06 23:27:44, MOVE, v:1, k:ed@vetequals, mode:BACK
+2026-04-06 23:27:45, MOVE, v:1, k:ed@vetequals, mode:PICK
+2026-04-06 23:27:46, EXEC, v:1, k:ed@vetequals, mode:FULL, rate:100
+2026-04-06 23:35:07, MOVE, v:1, k:ed@vetequals, mode:BACK
+2026-04-06 23:35:45, SELF, v:1, k:ed@vetequals, self:1, rate:100, study:25, concept:1, refactor:1
+2026-04-06 23:35:58, SELF, v:1, k:ed@labirinto, self:1, rate:100, study:25, concept:1, problem:1, refactor:1
+2026-04-06 23:36:12, SELF, v:1, k:ed@queimada, self:1, rate:100, study:20, guided:1
+2026-04-06 23:36:34, SELF, v:1, k:ed@mdc, self:1, rate:100, study:25, debug:1, refactor:1
+2026-04-06 23:36:47, SELF, v:1, k:ed@resto, self:1, rate:100, study:20
+2026-04-06 23:36:57, MOVE, v:1, k:ed@treinando, mode:PICK
+2026-04-06 23:37:13, MOVE, v:1, k:ed@treinando, mode:BACK
+2026-04-06 23:37:21, SELF, v:1, k:ed@treinando, self:1, rate:100, study:50, concept:1, problem:1, refactor:1
+2026-04-06 23:37:30, SELF, v:1, k:ed@triangulo, self:1, rate:100, study:20, refactor:1
+2026-04-06 23:37:35, SELF, v:1, k:ed@labirinto, self:1, rate:100, study:25, concept:1, problem:1, refactor:1

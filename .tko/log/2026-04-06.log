@@ -34,3 +34,26 @@
 2026-04-06 22:38:05, EXEC, v:1, k:ed@pedra, mode:FULL, rate:100, size:34
 2026-04-06 22:38:06, EXEC, v:1, k:ed@pedra, mode:FULL, rate:100
 2026-04-06 22:38:07, MOVE, v:1, k:ed@pedra, mode:BACK
+2026-04-06 22:41:46, MOVE, v:1, k:ed@labirinto, mode:DOWN
+2026-04-06 22:41:46, MOVE, v:1, k:ed@labirinto, mode:DOWN
+2026-04-06 22:41:59, MOVE, v:1, k:ed@labirinto, mode:DOWN
+2026-04-06 22:42:00, MOVE, v:1, k:ed@labirinto, mode:PICK
+2026-04-06 22:44:25, EXEC, v:1, k:ed@labirinto, mode:FULL, rate:0, size:66
+2026-04-06 22:50:15, EXEC, v:1, k:ed@labirinto, mode:FULL, rate:0
+2026-04-06 22:50:33, EXEC, v:1, k:ed@labirinto, mode:FULL, size:66, fail:COMP
+2026-04-06 22:51:08, EXEC, v:1, k:ed@labirinto, mode:FULL, size:67, fail:COMP
+2026-04-06 22:51:36, EXEC, v:1, k:ed@labirinto, mode:FULL, rate:0, size:68
+2026-04-06 22:52:42, EXEC, v:1, k:ed@labirinto, mode:FULL, size:71, fail:COMP
+2026-04-06 22:54:12, EXEC, v:1, k:ed@labirinto, mode:FULL, size:72, fail:COMP
+2026-04-06 22:55:31, EXEC, v:1, k:ed@labirinto, mode:FULL, fail:COMP
+2026-04-06 22:55:59, EXEC, v:1, k:ed@labirinto, mode:FULL, fail:COMP
+2026-04-06 22:56:02, EXEC, v:1, k:ed@labirinto, mode:FULL, rate:100, size:79
+2026-04-06 22:56:05, MOVE, v:1, k:ed@labirinto, mode:BACK
+2026-04-06 22:56:32, SELF, v:1, k:ed@labirinto, self:1, rate:100, study:30, concept:1, problem:1, refactor:1
+2026-04-06 22:58:55, MOVE, v:1, k:ed@labirinto, mode:PICK
+2026-04-06 22:58:58, EXEC, v:1, k:ed@labirinto, mode:FULL, rate:100
+2026-04-06 22:59:01, EXEC, v:1, k:ed@labirinto, mode:FULL, rate:100
+2026-04-06 22:59:02, MOVE, v:1, k:ed@labirinto, mode:BACK
+2026-04-06 22:59:03, MOVE, v:1, k:ed@labirinto, mode:PICK
+2026-04-06 23:09:22, EXEC, v:1, k:ed@labirinto, mode:FULL, rate:100
+2026-04-06 23:09:23, MOVE, v:1, k:ed@labirinto, mode:BACK

@@ -1,0 +1,19 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-06_22-20-26",
+            "content": "@@ -88,134 +88,182 @@\n  %7B%0A%09\n-if l %3C 0 %7C%7C l %3E= len(grid) %7C%7C c %3C 0 %7C%7C c %3E= len(grid%5B0%5D) %7B%0A%09%09retu\n+_, _, _ = grid, l, c%0A%09// se estiver fora da matriz, reto\n rn\n+e\n %0A%09\n-%7D%0A%0A%09if grid%5Bl%5D%5Bc%5D != '#' %7B%0A%09%09retu\n+// se o elemento atual n%C3%A3o for uma arvore, reto\n rn\n+e\n %0A%09\n-%7D%0A%09grid%5Bl%5D%5Bc%5D = 'o' \n+// queime a arvore colocando o caractere 'o' na posi%C3%A7%C3%A3o atual\n %0A%09//\n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-04-06_22-29-44",
+            "content": "@@ -192,18 +192,16 @@\n turn%0A%09%7D%0A\n-%09%0A\n %09grid%5Bl%5D\n@@ -216,149 +216,52 @@\n ' %0A%09\n-%0A%09burnTrees(grid, l-1, c) // cima%0A%09burnTrees(grid, l+1, c) // baixo%0A%09burnTrees(grid, l, c-1) // esquerda%0A%09burnTrees(grid, l, c+1) // direita%09\n+// chame a recurs%C3%A3o para todos os 4 vizinhos\n %0A%7D%0A%0A\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-04-06_22-32-15",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n)\n\nfunc burnTrees(grid [][]rune, l, c int) {\n\tif l < 0 || l >= len(grid) || c < 0 || c >= len(grid[0]) {\n\t\treturn\n\t}\n\n\tif grid[l][c] != '#' {\n\t\treturn\n\t}\n\t\n\tgrid[l][c] = 'o' \n\t\n\tburnTrees(grid, l-1, c) // cima\n\tburnTrees(grid, l+1, c) // baixo\n\tburnTrees(grid, l, c-1) // esquerda\n\tburnTrees(grid, l, c+1) // direita\t\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tline := scanner.Text()\n\tvar nl, nc, lfire, cfire int\n\tfmt.Sscanf(line, \"%d %d %d %d\", &nl, &nc, &lfire, &cfire)\n\n\tgrid := make([][]rune, 0, nl)\n\tfor range nl {\n\t\tscanner.Scan()\n\t\tline := []rune(scanner.Text())\n\t\tgrid = append(grid, line)\n\t}\n\tburnTrees(grid, lfire, cfire)\n\tshowGrid(grid)\n}\n\nfunc showGrid(grid [][]rune) {\n\tfor _, line := range grid {\n\t\tfmt.Println(string(line))\n\t}\n}\n",
+            "lines": "47"
+        }
+    ]
+}

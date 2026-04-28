@@ -21,8 +21,7 @@ sources:
   writeable: false
   quests: null
   tasks: null
-expanded:
-- ed@vector
+expanded: []
 flags:
   inbox: inbox
   panel: graph
@@ -30,5 +29,5 @@ flags:
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@multiset
-selected_index: 7
+selected: ed@map_set
+selected_index: 0

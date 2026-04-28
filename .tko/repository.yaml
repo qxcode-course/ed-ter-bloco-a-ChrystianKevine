@@ -24,10 +24,11 @@ sources:
 expanded:
 - ed@vector
 flags:
-  inbox: all
-  panel: logs
-  show_panel: 'true'
+  inbox: inbox
+  panel: graph
+  show_panel: 'false'
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@vetbuild
+selected: ed@setbuild
+selected_index: 5

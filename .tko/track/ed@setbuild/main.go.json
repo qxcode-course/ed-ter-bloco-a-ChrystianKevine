@@ -1,0 +1,69 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-28_19-20-36",
+            "content": "@@ -182,16 +182,20 @@\n %0A%09%09data:\n+    \n  make(%5B%5D\n@@ -220,16 +220,20 @@\n %0A%09%09size:\n+    \n  0,%0A%09%09ca\n@@ -974,19 +974,9 @@\n t(%22$\n-%25s%5Cn%22, line\n+%22\n )%0A%09%09\n@@ -1159,24 +1159,27 @@\n  %22init%22:%0A%09%09%09\n+// \n value, _ := \n@@ -1204,16 +1204,19 @@\n %5B1%5D)%0A%09%09%09\n+// \n v = NewS\n@@ -1245,16 +1245,19 @@\n rt%22:%0A%09%09%09\n+// \n for _, p\n@@ -1284,16 +1284,20 @@\n :%5D %7B%0A%09%09%09\n+// %09\n value, _\n@@ -1326,23 +1326,11 @@\n %0A%09%09%09\n-v.Insert(value)\n+// \n %7D%0A%09%09\n",
+            "lines": "100"
+        },
+        {
+            "label": "2026-04-28_19-22-34",
+            "content": "@@ -959,17 +959,16 @@\n mt.Print\n-f\n (%22$%25s%5Cn%22\n",
+            "lines": "100"
+        },
+        {
+            "label": "2026-04-28_19-23-14",
+            "content": "@@ -1348,47 +1348,8 @@\n w%22:%0A\n-%09%09%09fmt.Println(v.String())%0A%09%09%09defautl:%0A\n %09%09ca\n",
+            "lines": "100"
+        },
+        {
+            "label": "2026-04-28_19-27-28",
+            "content": "@@ -1371,16 +1371,28 @@\n ring())%0A\n+%09%09%09defautl:%0A\n %09%09case %22\n",
+            "lines": "102"
+        },
+        {
+            "label": "2026-04-28_19-27-53",
+            "content": "@@ -948,16 +948,44 @@\n can() %7B%0A\n+%09%09fmt.Printf(%22$%25s%5Cn%22, line)%0A\n %09%09line =\n@@ -1015,28 +1015,17 @@\n rint\n-f(%22$%25s%5Cn%22, \n+ln(\n line)%0A\n-%09%09%0A\n %09%09pa\n@@ -1327,19 +1327,16 @@\n t(value)\n-%0A%09%09\n %7D%0A%09%09case\n",
+            "lines": "101"
+        },
+        {
+            "label": "2026-04-28_19-32-59",
+            "content": "@@ -132,269 +132,8 @@\n %0A%7D%0A%0A\n-func (s *Set) binarySearch(value int) int %7B%0A%09low := 0%0A%09high := s.size - 1%0A%0A%09for low %3C= high %7B%0A%09%09mid := (low + high) / 2%0A%09%09if s.data%5Bmid%5D == value %7B%0A%09%09%09return mid%0A%09%09%7D%0A%09%09if s.data%5Bmid%5D %3C value %7B%0A%09%09%09low = mid + 1%0A%09%09%7D else %7B%0A%09%09%09high = mid - 1%0A%09%09%7D%0A%09%7D%0A%09return low%0A%7D%0A%0A\n func\n@@ -161,16 +161,16 @@\n  *Set %7B%0A\n+\n %09return \n@@ -426,20 +426,12 @@\n = s.\n-binarySearch\n+find\n (val\n@@ -506,189 +506,33 @@\n ize \n-%3E= s.capacity %7B%0A%09%09if s.capacity == 0 %7B%0A%09%09%09s.capacity = 1%0A%09%09%7D else %7B%0A%09%09%09s.capacity *= 2%0A%09%09%7D%0A%09%09%0A%09%09newData := make(%5B%5Dint, s.size, s.capacity)%0A%09%09copy(newData, s.data)%0A%09%09s.data = newData\n+== s.capacity %7B%0A%09%09return \n %0A%09%7D%0A\n@@ -560,17 +560,18 @@\n ata, 0)%0A\n+%09\n %0A\n-\n %09for i :\n@@ -620,25 +620,24 @@\n ata%5Bi-1%5D%0A%09%7D%0A\n-%0A\n %09s.data%5Bidx%5D\n@@ -835,13 +835,11 @@\n %22%5D%22%0A\n+\n %7D%0A%0A\n-%0A%0A\n func\n",
+            "lines": "102"
+        },
+        {
+            "label": "2026-04-28_19-37-44",
+            "content": "@@ -132,127 +132,8 @@\n %0A%7D%0A%0A\n-func (s *Set) Contains(value int) bool %7B%0A%09idx := s.binarySearch(value)%0A%09return idx %3C s.size && s.data%5Bidx%5D == value%0A%7D%0A%0A\n func\n@@ -1859,24 +1859,27 @@\n ntains%22:%0A%09%09%09\n+// \n value, _ := \n",
+            "lines": "131"
+        },
+        {
+            "label": "2026-04-28_19-39-07",
+            "content": "@@ -1982,18 +1982,16 @@\n ns%22:%0A%09%09%09\n-//\n value, _\n",
+            "lines": "136"
+        },
+        {
+            "label": "2026-04-28_19-39-27",
+            "content": "@@ -1978,24 +1978,26 @@\n ntains%22:%0A%09%09%09\n+//\n value, _ := \n@@ -2023,100 +2023,8 @@\n 1%5D)%0A\n-%09%09%09if v.Contains(value) %7B%0A%09%09%09%09fmt.Println(%22true%22)%0A%09%09%09%7D else %7B%0A%09%09%09%09fmt.Println(%22false%22)%0A%09%09%09%7D%0A\n %09%09ca\n",
+            "lines": "136"
+        },
+        {
+            "label": "2026-04-28_19-43-22",
+            "content": "@@ -132,258 +132,8 @@\n %0A%7D%0A%0A\n-func (s *Set) Erase(value int) bool %7B%0A%09idx := s.binarySearch(value)%0A%0A%09if idx %3E= s.size %7C%7C s.data%5Bidx%5D != value %7B%0A%09%09return false%0A%09%7D%0A%0A%09for i := idx; i %3C s.size-1; i++ %7B%0A%09%09s.data%5Bi%5D = s.data%5Bi+1%5D%0A%09%7D%0A%0A%09s.size--%0A%0A%09s.data = s.data%5B:s.size%5D%0A%09return true%0A%7D%0A%0A\n func\n",
+            "lines": "141"
+        },
+        {
+            "label": "2026-04-28_19-45-31",
+            "content": "@@ -2168,24 +2168,27 @@\n %22erase%22:%0A%09%09%09\n+// \n value, _ := \n@@ -2214,110 +2214,8 @@\n 1%5D)%0A\n-%09%09%09if !v.Erase(value) %7B%0A%09%09%09%09fmt.Println(%22vlaue not found%22)%0A%09%09%09%7D%0A%09%09case %22size%22:%0A%09%09%09fmt.Println(v.size)%0A\n %09%09ca\n",
+            "lines": "158"
+        },
+        {
+            "label": "2026-04-28_19-46-34",
+            "content": "@@ -2249,18 +2249,18 @@\n intln(%22v\n-a\n l\n+a\n ue not f\n",
+            "lines": "163"
+        },
+        {
+            "label": "2026-04-28_19-46-55",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strings\"\n\t\"strconv\"\n)\n\ntype Set struct {\n\tdata     []int\n\tsize     int\n\tcapacity int\n}\n\nfunc (s *Set) Erase(value int) bool {\n\tidx := s.binarySearch(value)\n\n\tif idx >= s.size || s.data[idx] != value {\n\t\treturn false\n\t}\n\n\tfor i := idx; i < s.size-1; i++ {\n\t\ts.data[i] = s.data[i+1]\n\t}\n\n\ts.size--\n\n\ts.data = s.data[:s.size]\n\treturn true\n}\n\nfunc (s *Set) Contains(value int) bool {\n\tidx := s.binarySearch(value)\n\treturn idx < s.size && s.data[idx] == value\n}\n\nfunc (s *Set) binarySearch(value int) int {\n\tlow := 0\n\thigh := s.size - 1\n\n\tfor low <= high {\n\t\tmid := (low + high) / 2\n\t\tif s.data[mid] == value {\n\t\t\treturn mid\n\t\t}\n\t\tif s.data[mid] < value {\n\t\t\tlow = mid + 1\n\t\t} else {\n\t\t\thigh = mid - 1\n\t\t}\n\t}\n\treturn low\n}\n\nfunc NewSet(capacity int) *Set {\n\treturn &Set{\n\t\tdata: make([]int, 0, capacity),\n\t\tsize: 0,\n\t\tcapacity: capacity,\n\t}\n}\n\nfunc (s *Set) find(value int) int {\n\tfor i := 0; i < s.size; i++ {\n\t\tif s.data[i] >= value {\n\t\t\treturn i\n\t\t}\n\t}\n\treturn s.size\n}\n\nfunc (s *Set) Insert(value int) {\n\tidx := s.binarySearch(value)\n\n\tif idx < s.size && s.data[idx] == value {\n\t\treturn\n\t}\n\n\tif s.size >= s.capacity {\n\t\tif s.capacity == 0 {\n\t\t\ts.capacity = 1\n\t\t} else {\n\t\t\ts.capacity *= 2\n\t\t}\n\t\t\n\t\tnewData := make([]int, s.size, s.capacity)\n\t\tcopy(newData, s.data)\n\t\ts.data = newData\n\t}\n\n\ts.data = append(s.data, 0)\n\n\tfor i := s.size; i > idx; i-- {\n\t\ts.data[i] = s.data[i-1]\n\t}\n\n\ts.data[idx] = value\n\ts.size++\n}\n\nfunc (s *Set) String() string {\n\tres := \"[\"\n\tfor i := 0; i < s.size; i++ {\n\t\tres += fmt.Sprintf(\"%v\", s.data[i])\n\t\tif i < s.size-1 {\n\t\t\tres += \", \"\n\t\t}\n\t}\n\treturn res + \"]\"\n}\n\n\n\nfunc main() {\n\tvar line, cmd string\n\tscanner := bufio.NewScanner(os.Stdin)\n\n\tv := NewSet(0)\n\tfor scanner.Scan() {\n\t\tline = scanner.Text()\n\t\tfmt.Printf(\"$%s\\n\", line)\n\t\t\n\t\tparts := strings.Fields(line)\n\t\tif len(parts) == 0 {\n\t\t\tcontinue\n\t\t}\n\t\tcmd = parts[0]\n\n\t\tswitch cmd {\n\t\tcase \"end\":\n\t\t\treturn\n\t\tcase \"init\":\n\t\t\tvalue, _ := strconv.Atoi(parts[1])\n\t\t\tv = NewSet(value)\n\t\tcase \"insert\":\n\t\t\tfor _, part := range parts[1:] {\n\t\t\tvalue, _ := strconv.Atoi(part)\n\t\t\tv.Insert(value)\n\t\t}\n\t\tcase \"show\":\n\t\t\tfmt.Println(v.String())\n\t\tcase \"erase\":\n\t\t\tvalue, _ := strconv.Atoi(parts[1])\n\t\t\tif !v.Erase(value) {\n\t\t\t\tfmt.Println(\"value not found\")\n\t\t\t}\n\t\tcase \"size\":\n\t\t\tfmt.Println(v.size)\n\t\tcase \"contains\":\n\t\t\tvalue, _ := strconv.Atoi(parts[1])\n\t\t\tif v.Contains(value) {\n\t\t\t\tfmt.Println(\"true\")\n\t\t\t} else {\n\t\t\t\tfmt.Println(\"false\")\n\t\t\t}\n\t\tcase \"clear\":\n\t\tdefault:\n\t\t\tfmt.Println(\"fail: comando invalido\")\n\t\t}\n\t}\n}\n",
+            "lines": "163"
+        }
+    ]
+}

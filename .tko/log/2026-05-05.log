@@ -63,3 +63,4 @@
 2026-05-05 16:59:37, MOVE, v:1, k:ed@editorint, mode:PICK
 2026-05-05 17:04:46, MOVE, v:1, k:ed@editorint, mode:BACK
 2026-05-05 17:04:54, EXEC, v:1, k:ed@editorint, mode:FREE
+2026-05-05 17:10:29, SELF, v:1, k:ed@editorint, self:1, rate:100, study:140, concept:1, refactor:1

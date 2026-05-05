@@ -1,0 +1,74 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-05_18-15-21",
+            "content": "@@ -41,23 +41,18 @@\n     \n-var \n char \n-string\n+:= %22%22\n %0A   \n",
+            "lines": "7"
+        },
+        {
+            "label": "2026-05-05_18-15-47",
+            "content": "@@ -33,17 +33,16 @@\n ain() %7B%0A\n-%0A\n     var \n@@ -50,29 +50,8 @@\n har \n-= '%7C'%0A    var string \n stri\n@@ -73,19 +73,17 @@\n f(%22%25\n-s\n+c\n %22, &\n-string\n+char\n )%0A  \n@@ -100,134 +100,12 @@\n tln(\n-string)%0A%0A    for i := 0; i %3C len(string); i++ %7B%0A        if string%5Bi%5D == char %7B%0A            fmt.Printf(%22%25d %22, i)%0A        %7D%0A    %7D\n+char)\n %0A%7D%0A\n",
+            "lines": "7"
+        },
+        {
+            "label": "2026-05-05_18-18-34",
+            "content": "@@ -42,23 +42,41 @@\n     var \n-palavra\n+char = '%7C'%0A    var string\n  string%0A\n@@ -96,23 +96,22 @@\n (%22%25s%22, &\n-palavra\n+string\n )%0A    fm\n@@ -124,330 +124,119 @@\n tln(\n-palavra)%0A%0A    var esquerda %5B%5Drune%0A    var direita %5B%5Drune%0A%0A    for _, char := range palavra %7B%0A        switch char %7B%0A        case 'R':%0A            esquerda = append(esquerda, '%5Cn')%0A        default:%0A            if (char %3E= 'a' && char %3C= 'z') %7C%7C (char == '-') %7B%0A                esquerda = append(esquerda, char)%0A            %7D\n+string)%0A%0A    for i := 0; i %3C len(string); i++ %7B%0A        if string%5Bi%5D == char %7B%0A            fmt.Printf(%22%25d %22, i)\n %0A   \n@@ -248,11 +248,10 @@\n %7D%0A    %7D%0A\n-%0A\n %7D%0A\n",
+            "lines": "15"
+        },
+        {
+            "label": "2026-05-05_18-35-55",
+            "content": "@@ -145,10 +145,8 @@\n     \n-//\n var \n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-05-05_18-37-02",
+            "content": "@@ -137,24 +137,26 @@\n  %5B%5Drune%0A    \n+//\n var direita \n@@ -441,180 +441,8 @@\n    %7D\n-%0A%0A    case '%3C':%0A        if len(esquerda) %3E 0 %7B %0A            direita = append(direita, esquerda%5Blen(esquerda)-1%5D)%0A            esquerda = esquerda%5B:len(esquerda)-1%5D%0A        %7D\n %0A   \n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-05-05_18-41-53",
+            "content": "@@ -612,169 +612,8 @@\n   %7D%0A\n-        case '%3E':%0A            if len(direita) %3E 0 %7B %0A                esquerda = append(esquerda, direita%5B0%5D)%0A                direita = direita%5B1:%5D%0A            %7D%0A\n     \n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-05-05_18-43-30",
+            "content": "@@ -426,25 +426,24 @@\n       %7D%0A\n-%0A\n         \n     case\n@@ -430,24 +430,27 @@\n   %7D%0A        \n+%7D%0A%0A\n     case '%3C'\n@@ -779,18 +779,7 @@\n   %7D%0A\n-        %7D\n %0A%7D%0A\n-%0A%0A\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-05-05_18-46-16",
+            "content": "@@ -786,68 +786,8 @@\n    %7D\n-%0A%0A        fmt.Printf(%22%25s%7C%25s%5Cn%22, string(left), string(right))\n %0A%7D%0A%0A\n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-05-05_18-46-53",
+            "content": "@@ -821,24 +821,20 @@\n  string(\n-esquerda\n+left\n ), strin\n@@ -835,22 +835,20 @@\n  string(\n-direita\n+right\n ))%0A%7D%0A%0A%0A\n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-05-05_18-47-13",
+            "content": "@@ -10,28 +10,21 @@\n ain%0A\n-%0A\n import \n-(%0A%09\n %22fmt%22%0A\n-)%0A%0A\n func\n@@ -33,17 +33,21 @@\n ain() %7B%0A\n-%09\n+%0A    \n var pala\n@@ -61,17 +61,20 @@\n ing%0A\n-%09\n+    \n fmt.Scan\n (&pa\n@@ -69,17 +69,24 @@\n fmt.Scan\n-(\n+f(%22%25s%22, \n &palavra\n@@ -87,18 +87,46 @@\n alavra)%0A\n-%0A%09\n+    fmt.Println(palavra)%0A%0A    \n var esqu\n@@ -137,17 +137,20 @@\n  %5B%5Drune%0A\n-%09\n+    \n var dire\n@@ -161,17 +161,20 @@\n %5B%5Drune%0A%0A\n-%09\n+    \n for _, c\n@@ -196,18 +196,131 @@\n lavra %7B%0A\n-%09%09\n+        switch char %7B%0A        case 'R':%0A            esquerda = append(esquerda, '%5Cn')%0A        default:%0A            \n if (char\n@@ -346,16 +346,17 @@\n 'z') %7C%7C \n+(\n char == \n@@ -362,14 +362,28 @@\n  '-'\n+)\n  %7B%0A\n-%09%09%09\n+                \n esqu\n@@ -416,17 +416,388 @@\n ar)%0A\n-%09%09%7D%0A%09%7D%0A%0A%09\n+            %7D%0A%0A            case '%3C':%0A        if len(esquerda) %3E 0 %7B %0A            direita = append(direita, esquerda%5Blen(esquerda)-1%5D)%0A            esquerda = esquerda%5B:len(esquerda)-1%5D%0A        %7D%0A        case '%3E':%0A            if len(direita) %3E 0 %7B %0A                esquerda = append(esquerda, direita%5B0%5D)%0A                direita = direita%5B1:%5D%0A            %7D%0A    %7D%0A        %7D%0A%0A        \n fmt.\n@@ -851,8 +851,10 @@\n ita))%0A%7D%0A\n+%0A%0A\n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-05-05_18-49-41",
+            "content": "@@ -159,350 +159,8 @@\n a %7B%0A\n-%09%09switch char %7B%0A%09%09case 'R':%0A%09%09%09esquerda = append(esquerda, '%5Cn')%0A%09%09case '%3C':%0A%09%09%09if len(esquerda) %3E 0 %7B%0A%09%09%09%09direita = append(%5B%5Drune%7Besquerda%5Blen(esquerda)-1%5D%7D, direita...)%0A%09%09%09%09esquerda = esquerda%5B:len(esquerda)-1%5D%0A%09%09%09%7D%0A%09%09case '%3E':%0A%09%09%09if len(direita) %3E 0 %7B%0A%09%09%09%09esquerda = append(esquerda, direita%5B0%5D)%0A%09%09%09%09direita = direita%5B1:%5D%0A%09%09%09%7D%0A%09%09default:%0A%09\n %09%09if\n@@ -209,17 +209,16 @@\n -' %7B%0A%09%09%09\n-%09\n esquerda\n@@ -247,13 +247,8 @@\n ar)%0A\n-%09%09%09%7D%0A\n %09%09%7D%0A\n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-05-05_18-58-04",
+            "content": "@@ -489,222 +489,8 @@\n %09%09%7D%0A\n-%09%09case 'B':%0A%09%09%09if len(esquerda) %3E 0 %7B%0A%09%09%09%09esquerda = esquerda%5B:len(esquerda)-1%5D // Apaga o %C3%BAltimo da esquerda%0A%09%09%09%7D%0A%09%09case 'D':%0A%09%09%09if len(direita) %3E 0 %7B%0A%09%09%09%09direita = direita%5B1:%5D // Apaga o primeiro da direita%0A%09%09%09%7D%0A\n %09%09de\n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-05-05_19-13-30",
+            "content": "@@ -565,16 +565,45 @@\n rda)-1%5D \n+// Apaga o %C3%BAltimo da esquerda\n %0A%09%09%09%7D%0A%09%09\n@@ -663,16 +663,46 @@\n ita%5B1:%5D \n+// Apaga o primeiro da direita\n %0A%09%09%09%7D%0A%09%09\n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-05-05_19-13-42",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n)\n\nfunc main() {\n\tvar palavra string\n\tfmt.Scan(&palavra)\n\n\tvar esquerda []rune\n\tvar direita []rune\n\n\tfor _, char := range palavra {\n\t\tswitch char {\n\t\tcase 'R':\n\t\t\tesquerda = append(esquerda, '\\n')\n\t\tcase '<':\n\t\t\tif len(esquerda) > 0 {\n\t\t\t\tdireita = append([]rune{esquerda[len(esquerda)-1]}, direita...)\n\t\t\t\tesquerda = esquerda[:len(esquerda)-1]\n\t\t\t}\n\t\tcase '>':\n\t\t\tif len(direita) > 0 {\n\t\t\t\tesquerda = append(esquerda, direita[0])\n\t\t\t\tdireita = direita[1:]\n\t\t\t}\n\t\tcase 'B':\n\t\t\tif len(esquerda) > 0 {\n\t\t\t\tesquerda = esquerda[:len(esquerda)-1] \n\t\t\t}\n\t\tcase 'D':\n\t\t\tif len(direita) > 0 {\n\t\t\t\tdireita = direita[1:] \n\t\t\t}\n\t\tdefault:\n\t\t\tif (char >= 'a' && char <= 'z') || char == '-' {\n\t\t\t\tesquerda = append(esquerda, char)\n\t\t\t}\n\t\t}\n\t}\n\n\tfmt.Printf(\"%s|%s\\n\", string(esquerda), string(direita))\n}\n",
+            "lines": "44"
+        }
+    ]
+}

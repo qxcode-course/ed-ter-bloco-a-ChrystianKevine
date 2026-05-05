@@ -30,5 +30,5 @@ flags:
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@lista_d1
-selected_index: 5
+selected: ed@lista_d2
+selected_index: 6

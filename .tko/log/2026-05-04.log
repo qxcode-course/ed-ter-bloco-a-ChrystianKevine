@@ -37,3 +37,31 @@
 2026-05-04 22:46:39, EXEC, v:1, k:ed@lista_d2, mode:FULL, rate:100, size:229
 2026-05-04 22:46:41, MOVE, v:1, k:ed@lista_d2, mode:BACK
 2026-05-04 22:47:03, SELF, v:1, k:ed@lista_d2, self:1, rate:100, study:60, concept:1, refactor:1
+2026-05-04 22:48:42, MOVE, v:1, k:ed@lista_d4, mode:DOWN
+2026-05-04 22:48:43, MOVE, v:1, k:ed@lista_d4, mode:DOWN
+2026-05-04 22:48:48, MOVE, v:1, k:ed@lista_d4, mode:DOWN
+2026-05-04 22:49:04, MOVE, v:1, k:ed@lista_d4, mode:DOWN
+2026-05-04 22:49:05, MOVE, v:1, k:ed@lista_d4, mode:PICK
+2026-05-04 22:50:13, EXEC, v:1, k:ed@lista_d4, mode:FULL, size:124, fail:COMP
+2026-05-04 22:50:28, EXEC, v:1, k:ed@lista_d4, mode:FULL, size:124, fail:COMP
+2026-05-04 22:50:35, EXEC, v:1, k:ed@lista_d4, mode:FULL, size:125, fail:COMP
+2026-05-04 22:50:44, EXEC, v:1, k:ed@lista_d4, mode:FULL, rate:0, size:125
+2026-05-04 22:52:28, EXEC, v:1, k:ed@lista_d4, mode:FULL, rate:0
+2026-05-04 22:49:04, MOVE, v:1, k:ed@lista_d4, mode:EDIT
+2026-05-04 22:49:04, MOVE, v:1, k:ed@lista_d4, mode:EDIT
+2026-05-04 22:48:42, MOVE, v:1, k:ed@lista_d4, mode:EDIT
+2026-05-04 22:48:42, MOVE, v:1, k:ed@lista_d4, mode:EDIT
+2026-05-04 22:48:48, MOVE, v:1, k:ed@lista_d4, mode:EDIT
+2026-05-04 22:48:48, MOVE, v:1, k:ed@lista_d4, mode:EDIT
+2026-05-04 22:49:04, MOVE, v:1, k:ed@lista_d4, mode:EDIT
+2026-05-04 22:50:41, MOVE, v:1, k:ed@lista_d4, mode:EDIT
+2026-05-04 22:57:28, EXEC, v:1, k:ed@lista_d4, mode:FULL, rate:66, size:134
+2026-05-04 22:57:18, MOVE, v:1, k:ed@lista_d4, mode:EDIT
+2026-05-04 23:03:08, EXEC, v:1, k:ed@lista_d4, mode:FULL, rate:66
+2026-05-04 23:03:58, MOVE, v:1, k:ed@lista_d4, mode:BACK
+2026-05-04 23:04:09, MOVE, v:1, k:ed@lista_d4, mode:PICK
+2026-05-04 23:17:17, EXEC, v:1, k:ed@lista_d4, mode:FULL, size:134, fail:COMP
+2026-05-04 23:17:52, EXEC, v:1, k:ed@lista_d4, mode:FULL, size:133, fail:COMP
+2026-05-04 23:18:25, EXEC, v:1, k:ed@lista_d4, mode:FULL, rate:100, size:140
+2026-05-04 23:18:28, MOVE, v:1, k:ed@lista_d4, mode:BACK
+2026-05-04 23:18:46, SELF, v:1, k:ed@lista_d4, self:1, rate:100, study:30, concept:1, refactor:1

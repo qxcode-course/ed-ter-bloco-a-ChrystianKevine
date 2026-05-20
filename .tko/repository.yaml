@@ -19,13 +19,13 @@ sources:
   writeable: false
   quests: null
 expanded:
-- ed@backtrack
+- ed@dfs
 flags:
   inbox: all
-  panel: graph
+  panel: skills
   show_panel: 'true'
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@distancia
-selected_index: 6
+selected: ed@ilhas
+selected_index: 10

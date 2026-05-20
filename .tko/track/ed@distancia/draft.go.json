@@ -1,0 +1,24 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-18_20-59-45",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import %22\n@@ -23,557 +23,53 @@\n mt%22%0A\n-%0A\n func \n-resolver(seq %5B%5Drune, indice int, limite int) bool %7B%0A%09if indice == len(seq) %7B%0A%09%09return true%0A%09%7D%0A%0A%09if seq%5Bindice%5D != '.' %7B%0A%09%09return resolver(seq, indice+1, limite)%0A%09%7D%0A%0A%09for d := 0; d %3C= limite; d++ %7B%0A%09%09digito := rune('0' + d)%0A%09%09%0A%09%09seq%5Bindice%5D = digito%0A%09%09if resolver(seq, indice+1, limite) %7B%0A%09%09%09return true%0A%09%09%7D%0A%09%7D%0A%0A%09return false%0A%7D%0A%0Afunc main() %7B%0A%09var sequencia string%0A%09var limite int%0A%0A%09_, err := fmt.Scan(&sequencia, &limite)%0A%09if err != nil %7B%0A%09%09return%0A%09%7D%0A%0A%09seqRunes := %5B%5Drune(sequencia)%0A%09resolver(seqRunes, 0, limite)%0A%09fmt.Println(string(seqRunes)\n+main() %7B%0A    fmt.Println(%22Hello, World!%22\n )%0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-05-20_08-54-58",
+            "content": "@@ -18,239 +18,13 @@\n ort \n-(%0A%09\n %22fmt%22\n-%0A)%0A%0Afunc podeColocar(seq %5B%5Drune, indice int, digito rune, limite int) bool %7B%0A%09esq := indice - limite%0A%09if esq %3C 0 %7B%0A%09%09esq = 0%0A%09%7D%0A%09for i := esq; i %3C indice; i++ %7B%0A%09%09if seq%5Bi%5D == digito %7B%0A%09%09%09return false%0A%09%09%7D%0A%09%7D%0A%0A%09return true%0A%7D\n %0A%0Afu\n@@ -255,55 +255,9 @@\n )%0A%09%09\n-if podeColocar(seq, indice, digito, limite) %7B%0A%09\n+%0A\n %09%09se\n@@ -275,17 +275,16 @@\n  digito%0A\n-%09\n %09%09if res\n@@ -317,17 +317,16 @@\n e) %7B%0A%09%09%09\n-%09\n return t\n@@ -333,34 +333,8 @@\n rue%0A\n-%09%09%09%7D%0A%09%09%09seq%5Bindice%5D = '.'%0A\n %09%09%7D%0A\n@@ -407,16 +407,16 @@\n te int%0A%0A\n+\n %09_, err \n@@ -447,17 +447,16 @@\n &limite)\n- \n %0A%09if err\n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-05-20_09-03-22",
+            "content": "@@ -235,164 +235,8 @@\n %09%7D%0A%0A\n-%09dir := indice + limite%0A%09if dir %3E= len(seq) %7B%0A%09%09dir = len(seq) - 1%0A%09%7D%0A%09for i := indice + 1; i %3C= dir; i++ %7B%0A%09%09if seq%5Bi%5D == digito %7B%0A%09%09%09return false%0A%09%09%7D%0A%09%7D%0A%0A\n %09ret\n@@ -747,16 +747,17 @@\n &limite)\n+ \n %0A%09if err\n",
+            "lines": "56"
+        },
+        {
+            "label": "2026-05-20_09-13-14",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n)\n\nfunc podeColocar(seq []rune, indice int, digito rune, limite int) bool {\n\tesq := indice - limite\n\tif esq < 0 {\n\t\tesq = 0\n\t}\n\tfor i := esq; i < indice; i++ {\n\t\tif seq[i] == digito {\n\t\t\treturn false\n\t\t}\n\t}\n\n\tdir := indice + limite\n\tif dir >= len(seq) {\n\t\tdir = len(seq) - 1\n\t}\n\tfor i := indice + 1; i <= dir; i++ {\n\t\tif seq[i] == digito {\n\t\t\treturn false\n\t\t}\n\t}\n\n\treturn true\n}\n\nfunc resolver(seq []rune, indice int, limite int) bool {\n\tif indice == len(seq) {\n\t\treturn true\n\t}\n\n\tif seq[indice] != '.' {\n\t\treturn resolver(seq, indice+1, limite)\n\t}\n\n\tfor d := 0; d <= limite; d++ {\n\t\tdigito := rune('0' + d)\n\t\tif podeColocar(seq, indice, digito, limite) {\n\t\t\tseq[indice] = digito\n\t\t\tif resolver(seq, indice+1, limite) {\n\t\t\t\treturn true\n\t\t\t}\n\t\t\tseq[indice] = '.'\n\t\t}\n\t}\n\n\treturn false\n}\n\nfunc main() {\n\tvar sequencia string\n\tvar limite int\n\n\t_, err := fmt.Scan(&sequencia, &limite)\n\tif err != nil {\n\t\treturn\n\t}\n\n\tseqRunes := []rune(sequencia)\n\tresolver(seqRunes, 0, limite)\n\tfmt.Println(string(seqRunes))\n}\n",
+            "lines": "66"
+        }
+    ]
+}

@@ -10,3 +10,5 @@
 2026-05-20 09:06:22, MOVE, v:1, k:ed@distancia, mode:PICK
 2026-05-20 09:06:29, MOVE, v:1, k:ed@distancia, mode:EDIT
 2026-05-20 09:13:14, EXEC, v:1, k:ed@distancia, mode:FULL, rate:100, size:66
+2026-05-20 09:14:12, MOVE, v:1, k:ed@distancia, mode:BACK
+2026-05-20 09:14:48, SELF, v:1, k:ed@distancia, self:1, rate:100, study:50, concept:1, problem:1, refactor:1

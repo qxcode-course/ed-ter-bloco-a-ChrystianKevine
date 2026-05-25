@@ -1,0 +1,36 @@
+2026-05-25 13:33:48, MOVE, v:1, k:ed@editorint, mode:PICK
+2026-05-25 13:34:05, MOVE, v:1, k:ed@editorint, mode:BACK
+2026-05-25 14:41:40, MOVE, v:1, k:ed@ilhas, mode:PICK
+2026-05-25 14:41:52, EXEC, v:1, k:ed@ilhas, mode:FULL, rate:100
+2026-05-25 14:41:53, EXEC, v:1, k:ed@ilhas, mode:FULL, rate:100
+2026-05-25 14:42:05, MOVE, v:1, k:ed@ilhas, mode:BACK
+2026-05-25 14:47:51, MOVE, v:1, k:ed@cercado, mode:DOWN
+2026-05-25 14:47:52, MOVE, v:1, k:ed@cercado, mode:PICK
+2026-05-25 14:47:51, MOVE, v:1, k:ed@cercado, mode:EDIT
+2026-05-25 14:47:51, MOVE, v:1, k:ed@cercado, mode:EDIT
+2026-05-25 14:47:51, MOVE, v:1, k:ed@cercado, mode:EDIT
+2026-05-25 16:40:34, EXEC, v:1, k:ed@cercado, mode:FULL, rate:33, size:29
+2026-05-25 16:40:39, MOVE, v:1, k:ed@cercado, mode:BACK
+2026-05-25 16:40:53, MOVE, v:1, k:ed@cercado, mode:PICK
+2026-05-25 17:20:48, EXEC, v:1, k:ed@cercado, mode:FULL, rate:33
+2026-05-25 17:31:56, EXEC, v:1, k:ed@cercado, mode:FULL, size:34, fail:COMP
+2026-05-25 17:32:40, EXEC, v:1, k:ed@cercado, mode:FULL, rate:33, size:39
+2026-05-25 17:35:09, EXEC, v:1, k:ed@cercado, mode:FULL, rate:33, size:55
+2026-05-25 17:34:11, MOVE, v:1, k:ed@cercado, mode:EDIT
+2026-05-25 17:36:22, EXEC, v:1, k:ed@cercado, mode:FULL, size:63, fail:COMP
+2026-05-25 17:36:58, EXEC, v:1, k:ed@cercado, mode:FULL, fail:COMP
+2026-05-25 17:37:33, EXEC, v:1, k:ed@cercado, mode:FULL, rate:0, size:65
+2026-05-25 17:37:29, MOVE, v:1, k:ed@cercado, mode:EDIT
+2026-05-25 17:40:55, EXEC, v:1, k:ed@cercado, mode:FULL, rate:33, size:65
+2026-05-25 17:41:25, EXEC, v:1, k:ed@cercado, mode:FULL, rate:33, size:73
+2026-05-25 17:45:04, EXEC, v:1, k:ed@cercado, mode:FULL, rate:100, size:82
+2026-05-25 17:45:12, MOVE, v:1, k:ed@cercado, mode:BACK
+2026-05-25 17:45:28, MOVE, v:1, k:ed@cercado, mode:PICK
+2026-05-25 20:20:30, MOVE, v:1, k:ed@vetequals, mode:PICK
+2026-05-25 20:20:32, MOVE, v:1, k:ed@vetequals, mode:BACK
+2026-05-25 20:23:17, MOVE, v:1, k:ed@manipulacao, mode:PICK
+2026-05-25 20:23:27, MOVE, v:1, k:ed@manipulacao, mode:BACK
+2026-05-25 20:23:43, MOVE, v:1, k:ed@cercado, mode:PICK
+2026-05-25 20:23:53, EXEC, v:1, k:ed@cercado, mode:FULL, rate:100
+2026-05-25 20:24:14, MOVE, v:1, k:ed@cercado, mode:BACK
+2026-05-25 20:24:34, SELF, v:1, k:ed@cercado, self:1, rate:100, study:60, concept:1, refactor:1

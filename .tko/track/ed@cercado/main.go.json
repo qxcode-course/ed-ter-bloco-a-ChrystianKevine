@@ -1,0 +1,49 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-25_16-40-34",
+            "content": "@@ -118,108 +118,17 @@\n  %7B%0A%09\n-if len (board) == 0 %7C%7C len(board%5B0%5D) == 0%7B%0A%09%09return%0A%09%7D%0A%0A%09nrows := len(board)%0A%09ncols := len(board%5B0%5D)\n+_ = board\n %0A%7D%0A%0A\n@@ -484,10 +484,9 @@\n w))%0A%09%7D%0A%7D\n- \n %0A\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-05-25_17-31-56",
+            "content": "@@ -218,107 +218,8 @@\n %5B0%5D)\n-%0A%0A%09visited := make(%5B%5D%5B%5Dbool, nrows)%0A%09for i := range visited %7B%0A%09%09visited%5Bi%5D = make(%5B%5Dbool, ncols)%0A%09%7D\n %0A%7D%0A%0A\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-05-25_17-32-40",
+            "content": "@@ -317,344 +317,8 @@\n )%0A%09%7D\n-%0A%0A%09var dfs func(r, c int)%0A%09dfs = func(r, c int) %7B%0A%09%09if r %3C 0 %7C%7C r %3E= nrows %7C%7C c %3C 0 %7C%7C c %3E= ncols %7B%0A%09%09%09return%0A%09%09%7D%0A%09%09if board%5Br%5D%5Bc%5D == 'O' %7C%7C visited%5Br%5D%5Bc%5D %7B%0A%09%09%09return%0A%09%09%7D%0A%09%09visited%5Br%5D%5Bc%5D = true%0A%09%09board%5Br%5D%5Bc%5D = 'E' // Marca como escap%C3%A1vel%0A%09%09dfs(r-1, c) // Cima%0A%09%09dfs(r+1, c) // Baixo%0A%09%09dfs(r, c-1) // Esquerda%0A%09%09dfs(r, c+1) // Direita%0A%09%7D\n %0A%7D%0A%0A\n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-05-25_17-35-09",
+            "content": "@@ -653,179 +653,8 @@\n a%0A%09%7D\n-%0A%0A%09for i := 0; i %3C nrows; i++ %7B%0A%09%09if board%5Bi%5D%5B0%5D == 'X' && !visited%5Bi%5D%5B0%5D %7B%0A%09%09%09dfs(i, 0)%0A%09%09%7D%0A%09%09if board%5Bi%5D%5Bncols-1%5D == 'X' && !visited%5Bi%5D%5Bncols-1%5D %7B%0A%09%09%09dfs(i, ncols-1)%0A%09%09%7D\n %0A%7D%0A%0A\n",
+            "lines": "55"
+        },
+        {
+            "label": "2026-05-25_17-36-22",
+            "content": "@@ -821,20 +821,16 @@\n -1)%0A%09%09%7D%0A\n-%09%7D%0A%0A\n %7D%0A%0A// N%C3%83\n",
+            "lines": "63"
+        },
+        {
+            "label": "2026-05-25_17-37-33",
+            "content": "@@ -698,25 +698,25 @@\n d%5Bi%5D%5B0%5D == '\n-O\n+X\n ' && !visite\n@@ -769,17 +769,17 @@\n -1%5D == '\n-O\n+X\n ' && !vi\n",
+            "lines": "65"
+        },
+        {
+            "label": "2026-05-25_17-40-55",
+            "content": "@@ -827,181 +827,8 @@\n %7D%0A%09%7D\n-%0A%09for j := 0; j %3C ncols; j++ %7B%0A%09%09if board%5B0%5D%5Bj%5D == 'O' && !visited%5B0%5D%5Bj%5D %7B%0A%09%09%09dfs(0, j)%0A%09%09%7D%0A%09%09if board%5Bnrows-1%5D%5Bj%5D == 'O' && !visited%5Bnrows-1%5D%5Bj%5D %7B%0A%09%09%09dfs(nrows-1, j)%0A%09%09%7D%0A%09%7D\n %0A%0A%7D%0A\n",
+            "lines": "65"
+        },
+        {
+            "label": "2026-05-25_17-41-25",
+            "content": "@@ -116,24 +116,25 @@\n e) %7B%0A%09if len\n+ \n (board) == 0\n@@ -155,17 +155,16 @@\n 0%5D) == 0\n- \n %7B%0A%09%09retu\n@@ -444,17 +444,17 @@\n d%5Br%5D%5Bc%5D \n-!\n+=\n = 'O' %7C%7C\n@@ -484,19 +484,16 @@\n urn%0A%09%09%7D%0A\n-%09%09%0A\n %09%09visite\n@@ -509,16 +509,57 @@\n  true%0A%09%09\n+board%5Br%5D%5Bc%5D = 'E' // Marca como escap%C3%A1vel\n %0A%09%09dfs(r\n@@ -560,24 +560,32 @@\n %09dfs(r-1, c)\n+ // Cima\n %0A%09%09dfs(r+1, \n@@ -586,16 +586,25 @@\n (r+1, c)\n+ // Baixo\n %0A%09%09dfs(r\n@@ -609,16 +609,28 @@\n (r, c-1)\n+ // Esquerda\n %0A%09%09dfs(r\n@@ -635,16 +635,27 @@\n (r, c+1)\n+ // Direita\n %0A%09%7D%0A%0A%09fo\n@@ -828,10 +828,8 @@\n %0A%09%7D%0A\n-%09%0A\n %09for\n@@ -1002,148 +1002,8 @@\n %09%7D%0A%0A\n-%09for i := 0; i %3C nrows; i++ %7B%0A%09%09for j := 0; j %3C ncols; j++ %7B%0A%09%09%09if board%5Bi%5D%5Bj%5D == 'O' && !visited%5Bi%5D%5Bj%5D %7B%0A%09%09%09%09board%5Bi%5D%5Bj%5D = 'X'%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A\n %7D%0A%0A/\n",
+            "lines": "73"
+        },
+        {
+            "label": "2026-05-25_17-45-04",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n)\n\n// N\u00c3O ALTERE A ASSINATURA DA FUN\u00c7\u00c3O solve\nfunc solve(board [][]byte) {\n\tif len(board) == 0 || len(board[0]) == 0 {\n\t\treturn\n\t}\n\n\tnrows := len(board)\n\tncols := len(board[0])\n\n\tvisited := make([][]bool, nrows)\n\tfor i := range visited {\n\t\tvisited[i] = make([]bool, ncols)\n\t}\n\n\tvar dfs func(r, c int)\n\tdfs = func(r, c int) {\n\t\tif r < 0 || r >= nrows || c < 0 || c >= ncols {\n\t\t\treturn\n\t\t}\n\t\tif board[r][c] != 'O' || visited[r][c] {\n\t\t\treturn\n\t\t}\n\t\t\n\t\tvisited[r][c] = true\n\t\t\n\t\tdfs(r-1, c)\n\t\tdfs(r+1, c)\n\t\tdfs(r, c-1)\n\t\tdfs(r, c+1)\n\t}\n\n\tfor i := 0; i < nrows; i++ {\n\t\tif board[i][0] == 'O' && !visited[i][0] {\n\t\t\tdfs(i, 0)\n\t\t}\n\t\tif board[i][ncols-1] == 'O' && !visited[i][ncols-1] {\n\t\t\tdfs(i, ncols-1)\n\t\t}\n\t}\n\t\n\tfor j := 0; j < ncols; j++ {\n\t\tif board[0][j] == 'O' && !visited[0][j] {\n\t\t\tdfs(0, j)\n\t\t}\n\t\tif board[nrows-1][j] == 'O' && !visited[nrows-1][j] {\n\t\t\tdfs(nrows-1, j)\n\t\t}\n\t}\n\n\tfor i := 0; i < nrows; i++ {\n\t\tfor j := 0; j < ncols; j++ {\n\t\t\tif board[i][j] == 'O' && !visited[i][j] {\n\t\t\t\tboard[i][j] = 'X'\n\t\t\t}\n\t\t}\n\t}\n}\n\n// N\u00c3O ALTERE A MAIN\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tvar nrows, ncols int\n\tfmt.Sscanf(scanner.Text(), \"%d %d\", &nrows, &ncols)\n\tboard := make([][]byte, nrows)\n\tfor i := 0; i < nrows; i++ {\n\t\tscanner.Scan()\n\t\tboard[i] = []byte(scanner.Text())\n\t}\n\tsolve(board)\n\tfor _, row := range board {\n\t\tfmt.Println(string(row))\n\t}\n} \n",
+            "lines": "82"
+        }
+    ]
+}

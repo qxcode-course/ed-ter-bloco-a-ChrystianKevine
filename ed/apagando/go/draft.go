@@ -11,7 +11,7 @@ func main() {
 	for i := 0; i < n; i++ {
 		fmt.Scan(&fila[i])
 	}
-
+	
 	fmt.Scan(&m)
 
 	saiu := make(map[int]bool)

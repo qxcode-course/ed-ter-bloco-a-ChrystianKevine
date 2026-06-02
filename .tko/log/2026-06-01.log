@@ -86,3 +86,13 @@
 2026-06-01 22:44:41, MOVE, v:1, k:ed@bufferring, mode:PICK
 2026-06-01 22:47:39, MOVE, v:1, k:ed@bufferring, mode:BACK
 2026-06-01 22:47:56, SELF, v:1, k:ed@bufferring, self:1, rate:100, study:60, concept:1, refactor:1
+2026-06-01 22:48:52, MOVE, v:1, k:ed@pilha, mode:DOWN
+2026-06-01 22:48:53, MOVE, v:1, k:ed@pilha, mode:PICK
+2026-06-01 22:48:52, MOVE, v:1, k:ed@pilha, mode:EDIT
+2026-06-01 22:48:52, MOVE, v:1, k:ed@pilha, mode:EDIT
+2026-06-01 22:48:52, MOVE, v:1, k:ed@pilha, mode:EDIT
+2026-06-01 22:48:52, MOVE, v:1, k:ed@pilha, mode:EDIT
+2026-06-01 23:08:21, EXEC, v:1, k:ed@pilha, mode:FULL, rate:0, size:80
+2026-06-01 23:08:09, MOVE, v:1, k:ed@pilha, mode:EDIT
+2026-06-01 23:22:29, MOVE, v:1, k:ed@pilha, mode:BACK
+2026-06-01 23:22:39, MOVE, v:1, k:ed@pilha, mode:PICK

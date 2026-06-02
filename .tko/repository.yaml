@@ -18,7 +18,8 @@ sources:
   type: git
   writeable: false
   quests: null
-expanded: []
+expanded:
+- ed@backtrack
 flags:
   inbox: all
   panel: graph
@@ -26,5 +27,5 @@ flags:
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@tree
-selected_index: 7
+selected: ed@wordsearch
+selected_index: 4

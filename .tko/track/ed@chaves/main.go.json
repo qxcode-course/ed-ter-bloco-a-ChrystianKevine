@@ -1,0 +1,14 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-02_08-53-30",
+            "content": "@@ -158,225 +158,42 @@\n %0A%0A%09f\n-or i:= 0; i %3C 15; i++ %7B%0A%09%09var g1, g2 int%0A%0A%09%09fmt.Scan(&g1, &g2)%0A%0A%09%09t1 := q.Dequeue()%0A%09%09t2 := q.Dequeue()%0A%0A%09%09if g1 %3E g2 %7B%0A%09%09%09q.Enqueue(t1)%0A%09%09%7D else %7B%0A%09%09%09q.Enqueue(t2)%0A%09%09%7D%0A%09%7D%0A%0A%09campeao := q.Dequeue()%0A%09fmt.Println(campeao\n+mt.Println(%22Fila das Oitavas: %22, q\n )%0A%7D%0A\n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-06-02_08-59-11",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n)\n\n\nfunc main() {\n\tq := NewQueue[string]()\n\n\tfor i := 0; i < 16; i++ {\n\t\tequipe := string(rune('A' + i))\n\t\tq.Enqueue(equipe)\n\t}\n\n\tfor i:= 0; i < 15; i++ {\n\t\tvar g1, g2 int\n\n\t\tfmt.Scan(&g1, &g2)\n\n\t\tt1 := q.Dequeue()\n\t\tt2 := q.Dequeue()\n\n\t\tif g1 > g2 {\n\t\t\tq.Enqueue(t1)\n\t\t} else {\n\t\t\tq.Enqueue(t2)\n\t\t}\n\t}\n\n\tcampeao := q.Dequeue()\n\tfmt.Println(campeao)\n}\n",
+            "lines": "33"
+        }
+    ]
+}

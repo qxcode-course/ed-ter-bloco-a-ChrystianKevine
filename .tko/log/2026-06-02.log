@@ -89,3 +89,17 @@
 2026-06-02 16:45:10, EXEC, v:1, k:ed@editorint, mode:LOCK, rate:0
 2026-06-02 16:45:18, EXEC, v:1, k:ed@editorint, mode:LOCK, rate:100
 2026-06-02 16:45:22, MOVE, v:1, k:ed@editorint, mode:BACK
+2026-06-02 16:47:43, MOVE, v:1, k:ed@prin_list1, mode:PICK
+2026-06-02 16:48:04, EXEC, v:1, k:ed@prin_list1, mode:LOCK, rate:0
+2026-06-02 16:48:07, MOVE, v:1, k:ed@prin_list1, mode:BACK
+2026-06-02 16:48:18, SELF, v:1, k:ed@prin_list1, self:1, concept:1, refactor:1
+2026-06-02 16:48:57, MOVE, v:1, k:ed@queimada, mode:PICK
+2026-06-02 16:49:59, MOVE, v:1, k:ed@queimada, mode:BACK
+2026-06-02 16:50:03, MOVE, v:1, k:ed@queimada, mode:PICK
+2026-06-02 16:52:02, MOVE, v:1, k:ed@queimada, mode:BACK
+2026-06-02 16:52:43, MOVE, v:1, k:ed@especiais, mode:PICK
+2026-06-02 16:53:12, MOVE, v:1, k:ed@especiais, mode:BACK
+2026-06-02 16:53:30, MOVE, v:1, k:ed@especiais, mode:PICK
+2026-06-02 16:57:21, MOVE, v:1, k:ed@especiais, mode:BACK
+2026-06-02 16:58:44, MOVE, v:1, k:ed@pintura, mode:PICK
+2026-06-02 16:59:11, MOVE, v:1, k:ed@pintura, mode:BACK

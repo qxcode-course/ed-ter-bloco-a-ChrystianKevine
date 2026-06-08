@@ -6,6 +6,7 @@ import (
 	"os"
 	"strconv"
 	"strings"
+	"sort"
 )
 
 type Pair struct {
@@ -13,54 +14,199 @@ type Pair struct {
 	Two int
 }
 
-func occurr(vet []int) []Pair {
-	_ = vet
-	return nil
+func abs(x int) int {
+	if x < 0 {
+		return -x
+	}
+	return x
 }
 
+func occurr(vet []int) []Pair {
+	contagens := make(map[int]int)
+
+	for _, num := range vet {
+		contagens [abs(num)]++
+	}
+
+	var chaves []int
+	for chave := range contagens {
+		chaves = append(chaves, chave)
+	}
+
+	sort.Ints(chaves)
+
+	var resultado []Pair
+	for _, chave := range chaves {
+		resultado = append(resultado, Pair{One: chave, Two: contagens[chave]})
+	}
+
+	if resultado == nil {
+		return []Pair{}
+	}
+	return resultado 
+}	
+
 func teams(vet []int) []Pair {
-	_ = vet
-	return nil
+	if len(vet) == 0 {
+		return []Pair {}
+	}
+
+	var resultado []Pair
+	stressAtual := abs(vet[0])
+	quantidade := 1
+
+	for i := 1; i < len(vet); i++ {
+		stress := abs(vet[i])
+
+		if stress == stressAtual {
+			quantidade++
+		} else {
+			resultado = append(resultado, Pair{One: stressAtual, Two: quantidade})
+			stressAtual = stress
+			quantidade = 1
+		} 
+
+	}
+
+	resultado = append(resultado, Pair{One: stressAtual, Two: quantidade})
+
+	return resultado
 }
 
 func mnext(vet []int) []int {
-	_ = vet
-	return nil
+	resultado := make ([]int, len(vet))
+
+	for i, v := range vet {
+		if v > 0 {
+			temMulherLado := false
+
+			if i > 0 && vet[i-1] < 0 {
+				temMulherLado = true
+			}
+
+			if i < len(vet)-1 && vet[i+1] < 0 {
+				temMulherLado = true
+			}
+
+			if temMulherLado {
+				resultado[i] = 1
+			}
+		}
+	}
+	return resultado
 }
 
 func alone(vet []int) []int {
-	_ = vet
-	return nil
+	resultado := make([]int, len(vet))
+
+	for i, v := range vet {
+		if v > 0 {
+			temMulherLado := false
+
+			if i > 0 && vet[i-1] < 0 {
+				temMulherLado = true
+			}
+
+			if i < len(vet)-1 && vet[i+1] < 0 {
+				temMulherLado = true
+			}
+
+			if !temMulherLado { // Se NÃO tem mulher ao lado
+				resultado[i] = 1
+			}
+		}
+	}
+	return resultado
 }
 
 func couple(vet []int) int {
-	_ = vet
-	return 0
+	homens := make(map[int]int)
+	mulheres := make(map[int]int)
+
+	for _, v := range vet {
+		if v > 0 {
+			homens[v]++
+		} else if v < 0 {
+			mulheres[-v]++ 
+		}
+	}
+
+	casais := 0
+
+	for stress, qtdHomens := range homens {
+		qtdMulheres := mulheres[stress]
+		
+		if qtdHomens < qtdMulheres {
+			casais += qtdHomens
+		} else {
+			casais += qtdMulheres
+		}
+	}
+	
+	return casais
 }
 
 func hasSubseq(vet []int, seq []int, pos int) bool {
-	_ = vet
-	_ = seq
-	_ = pos
-	return false
+	if pos+len(seq) > len(vet) {
+		return false
+	}
+	
+	for i := 0; i < len(seq); i++ {
+		if vet[pos+i] != seq[i] {
+			return false
+		}
+	} 
+	
+	return true
 }
 
 func subseq(vet []int, seq []int) int {
-	_ = vet
-	_ = seq
+	if len(seq) == 0 {
+		return 0
+	}
+	
+	limite := len(vet) - len(seq)
+	for i := 0; i <= limite; i++ {
+		if hasSubseq(vet, seq, i) {
+			return i 
+		}
+	}
+	
 	return -1
 }
 
 func erase(vet []int, posList []int) []int {
-	_ = vet
-	_ = posList
-	return nil
+	// Cria um "caderninho" (mapa) anotando quais índices devem sumir
+	remover := make(map[int]bool)
+	for _, pos := range posList {
+		remover[pos] = true
+	}
+
+	var resultado []int
+	for i, v := range vet {
+		if !remover[i] {
+			resultado = append(resultado, v)
+		}
+	}
+	
+	if resultado == nil {
+		return []int{}
+	}
+	return resultado
 }
 
 func clear(vet []int, value int) []int {
-	_ = vet
-	_ = value
-	return nil
+	var resultado []int
+	for _, v := range vet {
+		if v != value {
+			resultado = append(resultado, v)
+		}
+	}
+
+	if resultado == nil {
+		return []int{}
+	}
+	return resultado
 }
 
 func main() {

@@ -19,13 +19,14 @@ sources:
   writeable: false
   quests: null
 expanded:
-- ed@linear
+- ed@map_set
+- ed@list
 flags:
-  inbox: all
-  panel: skills
+  inbox: inbox
+  panel: graph
   show_panel: 'true'
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@linear
-selected_index: 4
+selected: ed@list
+selected_index: 12

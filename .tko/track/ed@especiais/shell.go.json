@@ -2,8 +2,123 @@
     "patches": [
         {
             "label": "2026-05-29_16-15-02",
-            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\n\ntype Pair struct {\n\tOne int\n\tTwo int\n}\n\nfunc occurr(vet []int) []Pair {\n\t_ = vet\n\treturn nil\n}\n\nfunc teams(vet []int) []Pair {\n\t_ = vet\n\treturn nil\n}\n\nfunc mnext(vet []int) []int {\n\t_ = vet\n\treturn nil\n}\n\nfunc alone(vet []int) []int {\n\t_ = vet\n\treturn nil\n}\n\nfunc couple(vet []int) int {\n\t_ = vet\n\treturn 0\n}\n\nfunc hasSubseq(vet []int, seq []int, pos int) bool {\n\t_ = vet\n\t_ = seq\n\t_ = pos\n\treturn false\n}\n\nfunc subseq(vet []int, seq []int) int {\n\t_ = vet\n\t_ = seq\n\treturn -1\n}\n\nfunc erase(vet []int, posList []int) []int {\n\t_ = vet\n\t_ = posList\n\treturn nil\n}\n\nfunc clear(vet []int, value int) []int {\n\t_ = vet\n\t_ = value\n\treturn nil\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tfor {\n\t\tfmt.Print(\"$\")\n\t\tif !scanner.Scan() {\n\t\t\tbreak\n\t\t}\n\t\tline := scanner.Text()\n\t\targs := strings.Split(line, \" \")\n\t\tfmt.Println(line)\n\n\t\tswitch args[0] {\n\t\tcase \"occurr\":\n\t\t\tprintSlice(occurr(str2vet(args[1])))\n\t\tcase \"teams\":\n\t\t\tprintSlice(teams(str2vet(args[1])))\n\t\tcase \"mnext\":\n\t\t\tprintSlice(mnext(str2vet(args[1])))\n\t\tcase \"alone\":\n\t\t\tprintSlice(alone(str2vet(args[1])))\n\t\tcase \"erase\":\n\t\t\tprintSlice(erase(str2vet(args[1]), str2vet(args[2])))\n\t\tcase \"clear\":\n\t\t\tval, _ := strconv.Atoi(args[2])\n\t\t\tprintSlice(clear(str2vet(args[1]), val))\n\t\tcase \"subseq\":\n\t\t\tfmt.Println(subseq(str2vet(args[1]), str2vet(args[2])))\n\t\tcase \"couple\":\n\t\t\tfmt.Println(couple(str2vet(args[1])))\n\t\tcase \"end\":\n\t\t\treturn\n\t\tdefault:\n\t\t\tfmt.Println(\"Invalid command\")\n\t\t}\n\t}\n}\n\n// Fun\u00e7\u00f5es auxiliares\n\nfunc str2vet(str string) []int {\n\tif str == \"[]\" {\n\t\treturn nil\n\t}\n\tstr = str[1 : len(str)-1]\n\tparts := strings.Split(str, \",\")\n\tvar vet []int\n\tfor _, part := range parts {\n\t\tnum, _ := strconv.Atoi(strings.TrimSpace(part))\n\t\tvet = append(vet, num)\n\t}\n\treturn vet\n}\n\nfunc printSlice[T any](vet []T) {\n\tfmt.Print(\"[\")\n\tfor i, x := range vet {\n\t\tif i > 0 {\n\t\t\tfmt.Print(\", \")\n\t\t}\n\t\tfmt.Print(x)\n\t}\n\tfmt.Println(\"]\")\n}\n\nfunc (p Pair) String() string {\n\treturn fmt.Sprintf(\"(%v, %v)\", p.One, p.Two)\n}\n",
+            "content": "@@ -112,468 +112,57 @@\n unc \n-abs(x int) int %7B%0A%09if x %3C 0 %7B%0A%09%09return -x%0A%09%7D%0A%09return x%0A%7D%0A%0Afunc occurr(vet %5B%5Dint) %5B%5DPair %7B%0A%09contagens := make(map%5Bint%5Dint)%0A%0A%09for _, num := range vet %7B%0A%09%09contagens %5Babs(v)%5D++%0A%09%7D%0A%0A%09var chaves %5B%5Dint%0A%09for chave := range contagens %7B%0A%09%09chaves = append(chaves, chave)%0A%09%7D%0A%0A%09sorts.Ints(chaves)%0A%0A%09var resultado %5B%5DPair%0A%09for _, chave := range chaves %7B%0A%09%09resultado = append(resultado, Pair%7BOne: chave, Two%7D)%0A%09%7D%0A%0A%09if resultado == nil %7B%0A%09%09return %5B%5DPair%7B%7D%0A%09%7D%0A%7D%09return resultado \n+occurr(vet %5B%5Dint) %5B%5DPair %7B%0A%09_ = vet%0A%09return nil%0A%7D\n %0A%0Afu\n",
             "lines": "132"
+        },
+        {
+            "label": "2026-06-07_21-08-40",
+            "content": "@@ -64,17 +64,8 @@\n gs%22%0A\n-%09%22sorts%22%0A\n )%0A%0At\n",
+            "lines": "158"
+        },
+        {
+            "label": "2026-06-07_21-09-41",
+            "content": "@@ -66,16 +66,17 @@\n %22%0A%09%22sort\n+s\n %22%0A)%0A%0Atyp\n",
+            "lines": "159"
+        },
+        {
+            "label": "2026-06-07_21-13-38",
+            "content": "@@ -282,19 +282,17 @@\n ns %5Babs(\n-num\n+v\n )%5D++%0A%09%7D%0A\n@@ -510,26 +510,8 @@\n  Two\n-: contagens%5Bchave%5D\n %7D)%0A%09\n",
+            "lines": "159"
+        },
+        {
+            "label": "2026-06-07_21-14-07",
+            "content": "@@ -573,24 +573,25 @@\n %5B%5DPair%7B%7D%0A%09%7D%0A\n+%7D\n %09return resu\n@@ -596,19 +596,16 @@\n sultado \n-%0A%7D%09\n %0A%0Afunc t\n",
+            "lines": "159"
+        },
+        {
+            "label": "2026-06-07_21-14-38",
+            "content": "@@ -386,16 +386,17 @@\n %7D%0A%0A%09sort\n+s\n .Ints(ch\n",
+            "lines": "160"
+        },
+        {
+            "label": "2026-06-07_21-16-26",
+            "content": "@@ -635,448 +635,27 @@\n  %7B%0A%09\n-if len(vet) == 0 %7B%0A%09%09return %5B%5DPair %7B%7D%0A%09%7D%0A%0A%09var resultado %5B%5DPair%0A%09stressAtual := abs(vet%5B0%5D)%0A%09quantidade := 1%0A%0A%09for i := 1; i %3C len(vet); i++ %7B%0A%09%09stress := abs(vet%5Bi%5D)%0A%0A%09%09if stress == stressAtual %7B%0A%09%09%09quantidade++%0A%09%09%7D else %7B%0A%09%09%09resultado = append(resultado, Pair%7BOne: stressAtual, Two: quantidade%7D)%0A%09%09%09stressAtual = stress%0A%09%09%09quantidade = 1%0A%09%09%7D %0A%0A%09%7D%0A%0A%09resultado = append(resultado, Pair%7BOne: stressAtual, Two: quantidade%7D)%0A%0A%09return resultado\n+_ = vet%0A%09return nil\n %0A%7D%0A%0A\n",
+            "lines": "160"
+        },
+        {
+            "label": "2026-06-07_21-48-12",
+            "content": "@@ -1110,313 +1110,27 @@\n  %7B%0A%09\n-resultado := make (%5B%5Dint, len(vet))%0A%0A%09for i, v := range vet %7B%0A%09%09if i %3E 0 %7B%0A%09%09%09temMulherLado := false%0A%0A%09%09%09if i %3E 0 && vet%5Bi-1%5D %3C 0 %7B%0A%09%09%09%09temMulherLado = true%0A%09%09%09%7D%0A%0A%09%09%09if i %3C len(vet)-1 && vet%5Bi+1%5D %3C 0 %7B%0A%09%09%09%09temMulherLado = true%0A%09%09%09%7D%0A%0A%09%09%09if temMulherLado %7B%0A%09%09%09%09resultado%5Bi%5D = 1%0A%09%09%09%7D%0A%09%09%7D%0A%09return resultado%0A%09%7D\n+_ = vet%0A%09return nil\n %0A%7D%0A%0A\n",
+            "lines": "182"
+        },
+        {
+            "label": "2026-06-07_22-21-31",
+            "content": "@@ -1173,17 +1173,17 @@\n  %7B%0A%09%09if \n-v\n+i\n  %3E 0 %7B%0A%09\n@@ -1391,19 +1391,16 @@\n %09%09%7D%0A%09%09%7D%0A\n-%09%7D%0A\n %09return \n@@ -1401,32 +1401,35 @@\n eturn resultado%0A\n+%09%7D%0A\n %7D%0A%0Afunc alone(ve\n",
+            "lines": "200"
+        },
+        {
+            "label": "2026-06-07_22-26-07",
+            "content": "@@ -1450,342 +1450,27 @@\n  %7B%0A%09\n-resultado := make(%5B%5Dint, len(vet))%0A%0A%09for i, v := range vet %7B%0A%09%09if v %3E 0 %7B%0A%09%09%09temMulherLado := false%0A%0A%09%09%09if i %3E 0 && vet%5Bi-1%5D %3C 0 %7B%0A%09%09%09%09temMulherLado = true%0A%09%09%09%7D%0A%0A%09%09%09if i %3C len(vet)-1 && vet%5Bi+1%5D %3C 0 %7B%0A%09%09%09%09temMulherLado = true%0A%09%09%09%7D%0A%0A%09%09%09if !temMulherLado %7B // Se N%C3%83O tem mulher ao lado%0A%09%09%09%09resultado%5Bi%5D = 1%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A%09return resultado\n+_ = vet%0A%09return nil\n %0A%7D%0A%0A\n",
+            "lines": "200"
+        },
+        {
+            "label": "2026-06-07_22-43-43",
+            "content": "@@ -1504,33 +1504,33 @@\n ange vet %7B%0A%09%09if \n-i\n+v\n  %3E 0 %7B%0A%09%09%09temMul\n",
+            "lines": "218"
+        },
+        {
+            "label": "2026-06-07_22-44-09",
+            "content": "@@ -1504,33 +1504,33 @@\n ange vet %7B%0A%09%09if \n-v\n+i\n  %3E 0 %7B%0A%09%09%09temMul\n",
+            "lines": "218"
+        },
+        {
+            "label": "2026-06-07_22-46-10",
+            "content": "@@ -1818,165 +1818,25 @@\n  %7B%0A%09\n-homens := make(map%5Bint%5Dint)%0A%09mulheres := make(map%5Bint%5Dint)%0A%0A%09for _, v := range vet %7B%0A%09%09if v %3E 0 %7B%0A%09%09%09homens%5Bv%5D++%0A%09%09%7D else if v %3C 0 %7B%0A%09%09%09mulheres%5B-v%5D++%0A%09%09%7D%0A%09%7D\n+_ = vet%0A%09return 0\n %0A%7D%0A%0A\n",
+            "lines": "218"
+        },
+        {
+            "label": "2026-06-07_22-53-13",
+            "content": "@@ -1943,17 +1943,17 @@\n  if v %3C \n-1\n+0\n  %7B%0A%09%09%09mu\n",
+            "lines": "226"
+        },
+        {
+            "label": "2026-06-07_22-53-21",
+            "content": "@@ -1943,17 +1943,17 @@\n  if v %3C \n-0\n+1\n  %7B%0A%09%09%09mu\n",
+            "lines": "226"
+        },
+        {
+            "label": "2026-06-07_22-53-54",
+            "content": "@@ -1968,223 +1968,15 @@\n v%5D++\n- \n %0A%09%09%7D%0A%09%7D\n-%0A%0A%09casais := 0%0A%0A%09for stress, qtdHomens := range homens %7B%0A%09%09qtdMulheres := mulheres%5Bstress%5D%0A%09%09%0A%09%09if qtdHomens %3C qtdMulheres %7B%0A%09%09%09casais += qtdHomens%0A%09%09%7D else %7B%0A%09%09%09casais += qtdMulheres%0A%09%09%7D%0A%09%7D%0A%09%0A%09return casais\n %0A%7D%0A%0A\n",
+            "lines": "226"
+        },
+        {
+            "label": "2026-06-07_23-00-46",
+            "content": "@@ -2241,153 +2241,46 @@\n  %7B%0A%09\n-if pos+len(se) %3E len(vet) %7B%0A%09%09return false%0A%09%7D%0A%09%0A%09for i := 0; i %3C len(seq); i++ %7B%0A%09%09if vet%5Bpos+i%5D = seq%5Bi%5D %7B%0A%09%09%09return false%0A%09%09%7D%0A%09%7D %0A%09%0A%09return tru\n+_ = vet%0A%09_ = seq%0A%09_ = pos%0A%09return fals\n e%0A%7D%0A\n",
+            "lines": "240"
+        },
+        {
+            "label": "2026-06-07_23-13-09",
+            "content": "@@ -2250,17 +2250,16 @@\n s+len(se\n-q\n ) %3E len(\n",
+            "lines": "247"
+        },
+        {
+            "label": "2026-06-07_23-15-27",
+            "content": "@@ -2335,17 +2335,16 @@\n %5Bpos+i%5D \n-!\n = seq%5Bi%5D\n",
+            "lines": "247"
+        },
+        {
+            "label": "2026-06-07_23-15-57",
+            "content": "@@ -2434,157 +2434,24 @@\n  %7B%0A%09\n-if len(seq) == 0 %7B%0A%09%09return 0%0A%09%7D%0A%09%0A%09limite := len(vet) - len(seq)%0A%09for i := 0; i %3C= limite; i++ %7B%0A%09%09if hasSubseq(vet, seq, i) %7B%0A%09%09%09return i %0A%09%09%7D%0A%09%7D%0A%09\n+_ = vet%0A%09_ = seq\n %0A%09re\n",
+            "lines": "247"
+        },
+        {
+            "label": "2026-06-07_23-21-27",
+            "content": "@@ -2644,133 +2644,28 @@\n  %7B%0A%09\n-// Cria um %22caderninho%22 (mapa) anotando quais %C3%ADndices devem sumir%0A%09remover := make(map%5Bint%5Dbool)%0A%09for _, pos := range\n+_ = vet%0A%09_ =\n  posList\n  %7B%0A%09\n@@ -2664,207 +2664,20 @@\n List\n- %7B\n %0A\n-%09\n %09re\n-mover%5Bpos%5D = true%0A%09%7D%0A%0A%09var resultado %5B%5Dint%0A%09for i, v := range vet %7B%0A%09%09if !remover%5Bi%5D %7B%0A%09%09%09resultado = append(resultado, v)%0A%09%09%7D%0A%09%7D%0A%09%0A%09if resultado == nil %7B%0A%09%09return %5B%5Dint%7B%7D%0A%09%7D%0A%09return resultado\n+turn nil\n %0A%7D%0A%0A\n",
+            "lines": "256"
+        },
+        {
+            "label": "2026-06-07_23-31-08",
+            "content": "@@ -3014,174 +3014,38 @@\n  %7B%0A%09\n-var resultado %5B%5Dint%0A%09for _, v := range vet %7B%0A%09%09if v != value %7B%0A%09%09%09resultado = append(resultado, v)%0A%09%09%7D%0A%09%7D%0A%0A%09if resultado == nil %7B%0A%09%09return %5B%5Din%7B%7D%0A%09%7D%0A%09return resultado\n+_ = vet%0A%09_ = value%0A%09return nil\n %0A%7D%0A%0A\n",
+            "lines": "270"
+        },
+        {
+            "label": "2026-06-07_23-37-31",
+            "content": "@@ -3145,33 +3145,32 @@\n  %7B%0A%09%09return %5B%5Din\n-t\n %7B%7D%0A%09%7D%0A%09return re\n",
+            "lines": "278"
+        },
+        {
+            "label": "2026-06-07_23-41-23",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n\t\"sort\"\n)\n\ntype Pair struct {\n\tOne int\n\tTwo int\n}\n\nfunc abs(x int) int {\n\tif x < 0 {\n\t\treturn -x\n\t}\n\treturn x\n}\n\nfunc occurr(vet []int) []Pair {\n\tcontagens := make(map[int]int)\n\n\tfor _, num := range vet {\n\t\tcontagens [abs(num)]++\n\t}\n\n\tvar chaves []int\n\tfor chave := range contagens {\n\t\tchaves = append(chaves, chave)\n\t}\n\n\tsort.Ints(chaves)\n\n\tvar resultado []Pair\n\tfor _, chave := range chaves {\n\t\tresultado = append(resultado, Pair{One: chave, Two: contagens[chave]})\n\t}\n\n\tif resultado == nil {\n\t\treturn []Pair{}\n\t}\n\treturn resultado \n}\t\n\nfunc teams(vet []int) []Pair {\n\tif len(vet) == 0 {\n\t\treturn []Pair {}\n\t}\n\n\tvar resultado []Pair\n\tstressAtual := abs(vet[0])\n\tquantidade := 1\n\n\tfor i := 1; i < len(vet); i++ {\n\t\tstress := abs(vet[i])\n\n\t\tif stress == stressAtual {\n\t\t\tquantidade++\n\t\t} else {\n\t\t\tresultado = append(resultado, Pair{One: stressAtual, Two: quantidade})\n\t\t\tstressAtual = stress\n\t\t\tquantidade = 1\n\t\t} \n\n\t}\n\n\tresultado = append(resultado, Pair{One: stressAtual, Two: quantidade})\n\n\treturn resultado\n}\n\nfunc mnext(vet []int) []int {\n\tresultado := make ([]int, len(vet))\n\n\tfor i, v := range vet {\n\t\tif v > 0 {\n\t\t\ttemMulherLado := false\n\n\t\t\tif i > 0 && vet[i-1] < 0 {\n\t\t\t\ttemMulherLado = true\n\t\t\t}\n\n\t\t\tif i < len(vet)-1 && vet[i+1] < 0 {\n\t\t\t\ttemMulherLado = true\n\t\t\t}\n\n\t\t\tif temMulherLado {\n\t\t\t\tresultado[i] = 1\n\t\t\t}\n\t\t}\n\t}\n\treturn resultado\n}\n\nfunc alone(vet []int) []int {\n\tresultado := make([]int, len(vet))\n\n\tfor i, v := range vet {\n\t\tif v > 0 {\n\t\t\ttemMulherLado := false\n\n\t\t\tif i > 0 && vet[i-1] < 0 {\n\t\t\t\ttemMulherLado = true\n\t\t\t}\n\n\t\t\tif i < len(vet)-1 && vet[i+1] < 0 {\n\t\t\t\ttemMulherLado = true\n\t\t\t}\n\n\t\t\tif !temMulherLado { // Se N\u00c3O tem mulher ao lado\n\t\t\t\tresultado[i] = 1\n\t\t\t}\n\t\t}\n\t}\n\treturn resultado\n}\n\nfunc couple(vet []int) int {\n\thomens := make(map[int]int)\n\tmulheres := make(map[int]int)\n\n\tfor _, v := range vet {\n\t\tif v > 0 {\n\t\t\thomens[v]++\n\t\t} else if v < 0 {\n\t\t\tmulheres[-v]++ \n\t\t}\n\t}\n\n\tcasais := 0\n\n\tfor stress, qtdHomens := range homens {\n\t\tqtdMulheres := mulheres[stress]\n\t\t\n\t\tif qtdHomens < qtdMulheres {\n\t\t\tcasais += qtdHomens\n\t\t} else {\n\t\t\tcasais += qtdMulheres\n\t\t}\n\t}\n\t\n\treturn casais\n}\n\nfunc hasSubseq(vet []int, seq []int, pos int) bool {\n\tif pos+len(seq) > len(vet) {\n\t\treturn false\n\t}\n\t\n\tfor i := 0; i < len(seq); i++ {\n\t\tif vet[pos+i] != seq[i] {\n\t\t\treturn false\n\t\t}\n\t} \n\t\n\treturn true\n}\n\nfunc subseq(vet []int, seq []int) int {\n\tif len(seq) == 0 {\n\t\treturn 0\n\t}\n\t\n\tlimite := len(vet) - len(seq)\n\tfor i := 0; i <= limite; i++ {\n\t\tif hasSubseq(vet, seq, i) {\n\t\t\treturn i \n\t\t}\n\t}\n\t\n\treturn -1\n}\n\nfunc erase(vet []int, posList []int) []int {\n\t// Cria um \"caderninho\" (mapa) anotando quais \u00edndices devem sumir\n\tremover := make(map[int]bool)\n\tfor _, pos := range posList {\n\t\tremover[pos] = true\n\t}\n\n\tvar resultado []int\n\tfor i, v := range vet {\n\t\tif !remover[i] {\n\t\t\tresultado = append(resultado, v)\n\t\t}\n\t}\n\t\n\tif resultado == nil {\n\t\treturn []int{}\n\t}\n\treturn resultado\n}\n\nfunc clear(vet []int, value int) []int {\n\tvar resultado []int\n\tfor _, v := range vet {\n\t\tif v != value {\n\t\t\tresultado = append(resultado, v)\n\t\t}\n\t}\n\n\tif resultado == nil {\n\t\treturn []int{}\n\t}\n\treturn resultado\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tfor {\n\t\tfmt.Print(\"$\")\n\t\tif !scanner.Scan() {\n\t\t\tbreak\n\t\t}\n\t\tline := scanner.Text()\n\t\targs := strings.Split(line, \" \")\n\t\tfmt.Println(line)\n\n\t\tswitch args[0] {\n\t\tcase \"occurr\":\n\t\t\tprintSlice(occurr(str2vet(args[1])))\n\t\tcase \"teams\":\n\t\t\tprintSlice(teams(str2vet(args[1])))\n\t\tcase \"mnext\":\n\t\t\tprintSlice(mnext(str2vet(args[1])))\n\t\tcase \"alone\":\n\t\t\tprintSlice(alone(str2vet(args[1])))\n\t\tcase \"erase\":\n\t\t\tprintSlice(erase(str2vet(args[1]), str2vet(args[2])))\n\t\tcase \"clear\":\n\t\t\tval, _ := strconv.Atoi(args[2])\n\t\t\tprintSlice(clear(str2vet(args[1]), val))\n\t\tcase \"subseq\":\n\t\t\tfmt.Println(subseq(str2vet(args[1]), str2vet(args[2])))\n\t\tcase \"couple\":\n\t\t\tfmt.Println(couple(str2vet(args[1])))\n\t\tcase \"end\":\n\t\t\treturn\n\t\tdefault:\n\t\t\tfmt.Println(\"Invalid command\")\n\t\t}\n\t}\n}\n\n// Fun\u00e7\u00f5es auxiliares\n\nfunc str2vet(str string) []int {\n\tif str == \"[]\" {\n\t\treturn nil\n\t}\n\tstr = str[1 : len(str)-1]\n\tparts := strings.Split(str, \",\")\n\tvar vet []int\n\tfor _, part := range parts {\n\t\tnum, _ := strconv.Atoi(strings.TrimSpace(part))\n\t\tvet = append(vet, num)\n\t}\n\treturn vet\n}\n\nfunc printSlice[T any](vet []T) {\n\tfmt.Print(\"[\")\n\tfor i, x := range vet {\n\t\tif i > 0 {\n\t\t\tfmt.Print(\", \")\n\t\t}\n\t\tfmt.Print(x)\n\t}\n\tfmt.Println(\"]\")\n}\n\nfunc (p Pair) String() string {\n\treturn fmt.Sprintf(\"(%v, %v)\", p.One, p.Two)\n}\n",
+            "lines": "278"
         }
     ]
 }

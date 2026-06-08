@@ -42,3 +42,7 @@
 2026-06-05 15:26:41, EXEC, v:1, k:ed@queimando, mode:FULL, rate:100, size:94
 2026-06-05 15:26:44, MOVE, v:1, k:ed@queimando, mode:BACK
 2026-06-05 15:30:09, SELF, v:1, k:ed@queimando, self:1, rate:100, study:50, concept:1, refactor:1
+2026-06-05 15:41:27, MOVE, v:1, k:ed@queimando, mode:PICK
+2026-06-05 15:44:31, MOVE, v:1, k:ed@queimando, mode:BACK
+2026-06-05 15:45:37, MOVE, v:1, k:ed@especiais, mode:PICK
+2026-06-05 16:14:06, MOVE, v:1, k:ed@especiais, mode:BACK

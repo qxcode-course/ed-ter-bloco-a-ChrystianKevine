@@ -72,3 +72,35 @@
 2026-06-10 12:18:37, MOVE, v:1, k:ed@compare, mode:DOWN
 2026-06-10 12:18:38, MOVE, v:1, k:ed@compare, mode:PICK
 2026-06-10 12:18:51, MOVE, v:1, k:ed@compare, mode:BACK
+2026-06-10 12:20:03, MOVE, v:1, k:ed@compare, mode:PICK
+2026-06-10 12:20:18, MOVE, v:1, k:ed@compare, mode:BACK
+2026-06-10 12:20:34, MOVE, v:1, k:ed@compare, mode:PICK
+2026-06-10 12:21:10, MOVE, v:1, k:ed@compare, mode:BACK
+2026-06-10 12:22:12, MOVE, v:1, k:ed@compare, mode:PICK
+2026-06-10 12:23:26, MOVE, v:1, k:ed@compare, mode:EDIT
+2026-06-10 12:31:25, EXEC, v:1, k:ed@compare, mode:FULL, rate:25, size:93
+2026-06-10 12:31:33, MOVE, v:1, k:ed@compare, mode:BACK
+2026-06-10 12:31:37, MOVE, v:1, k:ed@compare, mode:PICK
+2026-06-10 12:32:14, EXEC, v:1, k:ed@compare, mode:FULL, rate:25
+2026-06-10 12:33:58, MOVE, v:1, k:ed@compare, mode:BACK
+2026-06-10 12:34:00, MOVE, v:1, k:ed@compare, mode:PICK
+2026-06-10 12:36:24, EXEC, v:1, k:ed@compare, mode:FULL, size:93, fail:COMP
+2026-06-10 12:36:34, MOVE, v:1, k:ed@compare, mode:EDIT
+2026-06-10 12:37:00, EXEC, v:1, k:ed@compare, mode:FULL, rate:50, size:102
+2026-06-10 12:37:07, MOVE, v:1, k:ed@compare, mode:BACK
+2026-06-10 12:37:14, MOVE, v:1, k:ed@compare, mode:PICK
+2026-06-10 12:37:25, EXEC, v:1, k:ed@compare, mode:FULL, rate:37, size:102
+2026-06-10 12:37:45, MOVE, v:1, k:ed@compare, mode:BACK
+2026-06-10 12:37:46, MOVE, v:1, k:ed@compare, mode:PICK
+2026-06-10 12:37:40, MOVE, v:1, k:ed@compare, mode:EDIT
+2026-06-10 12:42:55, MOVE, v:1, k:ed@compare, mode:BACK
+2026-06-10 12:43:01, MOVE, v:1, k:ed@compare, mode:PICK
+2026-06-10 12:43:07, EXEC, v:1, k:ed@compare, mode:FULL, size:101, fail:COMP
+2026-06-10 12:43:34, MOVE, v:1, k:ed@compare, mode:BACK
+2026-06-10 12:43:38, MOVE, v:1, k:ed@compare, mode:PICK
+2026-06-10 12:45:06, EXEC, v:1, k:ed@compare, mode:FULL, size:105, fail:COMP
+2026-06-10 12:45:08, MOVE, v:1, k:ed@compare, mode:BACK
+2026-06-10 12:45:14, MOVE, v:1, k:ed@compare, mode:PICK
+2026-06-10 12:45:28, EXEC, v:1, k:ed@compare, mode:FULL, rate:100, size:105
+2026-06-10 12:45:29, MOVE, v:1, k:ed@compare, mode:BACK
+2026-06-10 12:45:40, SELF, v:1, k:ed@compare, self:1, rate:100, study:30, concept:1, refactor:1

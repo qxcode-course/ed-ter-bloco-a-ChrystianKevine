@@ -16,8 +16,30 @@ type Node struct {
 }
 
 func compare(a, b *Node) int {
-	_, _ = a, b
-	return 0
+	if a == nil && b == nil {
+		return 0
+	}
+
+	if a == nil && b != nil {
+		return -1
+	}
+	
+	if a != nil && b == nil {
+		return 1
+	}
+
+	if a.Value < b.Value {
+		return -1
+	}
+	if a.Value > b.Value {
+		return 1
+	}
+
+	resultadoEsquerda := compare(a.Left, b.Left)
+	if resultadoEsquerda != 0 {
+		return resultadoEsquerda
+	}
+	return compare(a.Right, b.Right)
 }
 
 // ----------------------------------------------------------------------

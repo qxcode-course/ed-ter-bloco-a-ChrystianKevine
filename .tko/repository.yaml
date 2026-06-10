@@ -19,15 +19,15 @@ sources:
   writeable: false
   quests: null
 expanded:
-- ed@bfs
-- ed@dfs
 - ed@tree
+- ed@dfs
+- ed@bfs
 flags:
   inbox: all
-  panel: logs
+  panel: graph
   show_panel: 'true'
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@compare
+selected: ed@arvore-path
 selected_index: 10

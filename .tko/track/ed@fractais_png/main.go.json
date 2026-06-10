@@ -7,7 +7,12 @@
         },
         {
             "label": "2026-04-13_14-49-37",
-            "content": "package main\n\nimport (\n\t\"fmt\"\n)\n\nfunc circulos(pen *Pen, raio float64) {\n   \n    if raio < 5 { \n        return\n    }\n\n    pen.SetRGB(255, 255, 255)\n    \n    pen.DrawCircle(raio)\n\n    for i := 0; i < 6; i++ {\n        pen.Up()\n        pen.Walk(raio)        \n        pen.Down()\n\n        circulos(pen, raio / 3)\n\n        pen.Up()\n        pen.Walk(-raio)        \n        pen.Left(60)           \n        pen.Down()\n    }\n}\n\n\tfunc main() {\n    const size = 800\n    pen := NewPen(size, size)\n\n    pen.SetRGB(0, 0, 0)      \n    pen.dc.Clear()           \n\n    pen.SetHeading(0)\n    pen.SetPosition(size/2, size/2)\n    \n    circulos(pen, 250)\n    \n    pen.SavePNG(\"C\u00edrculo.png\")\n    fmt.Println(\"PNG file created successfully.\")\n}\n\n",
+            "content": "@@ -267,22 +267,17 @@\n n.Down()\n- %0A    \n+%0A\n %0A       \n@@ -318,17 +318,16 @@\n pen.Up()\n- \n %0A       \n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-06-08_23-25-01",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n)\n\nfunc circulos(pen *Pen, raio float64) {\n   \n    if raio < 5 { \n        return\n    }\n\n    pen.SetRGB(255, 255, 255)\n    \n    pen.DrawCircle(raio)\n\n    for i := 0; i < 6; i++ {\n        pen.Up()\n        pen.Walk(raio)        \n        pen.Down() \n    \n        circulos(pen, raio / 3)\n\n        pen.Up() \n        pen.Walk(-raio)        \n        pen.Left(60)           \n        pen.Down()\n    }\n}\n\n\tfunc main() {\n    const size = 800\n    pen := NewPen(size, size)\n\n    pen.SetRGB(0, 0, 0)      \n    pen.dc.Clear()           \n\n    pen.SetHeading(0)\n    pen.SetPosition(size/2, size/2)\n    \n    circulos(pen, 250)\n    \n    pen.SavePNG(\"C\u00edrculo.png\")\n    fmt.Println(\"PNG file created successfully.\")\n}\n\n",
             "lines": "46"
         }
     ]

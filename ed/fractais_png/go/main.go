@@ -17,19 +17,19 @@ func circulos(pen *Pen, raio float64) {
     for i := 0; i < 6; i++ {
         pen.Up()
         pen.Walk(raio)        
-        pen.Down()
-
+        pen.Down() 
+    
         circulos(pen, raio / 3)
 
         pen.Up()
-        pen.Walk(-raio)        
-        pen.Left(60)           
+        pen.Walk(-raio)
+        pen.Left(60)
         pen.Down()
     }
 }
 
 	func main() {
-    const size = 800
+    const size = 800 
     pen := NewPen(size, size)
 
     pen.SetRGB(0, 0, 0)      

@@ -10,7 +10,7 @@ type Pen struct {
 	x, y    float64
 	angle   float64
 	penDown bool
-	dc      *gg.Context
+	dc      *gg.Context 
 }
 
 func NewPen(width, height int) *Pen {

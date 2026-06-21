@@ -1,0 +1,19 @@
+2026-06-16 10:10:33, MOVE, v:1, k:ed@pintura, mode:PICK
+2026-06-16 10:10:41, MOVE, v:1, k:ed@pintura, mode:BACK
+2026-06-16 10:10:45, MOVE, v:1, k:ed@pintura, mode:PICK
+2026-06-16 10:13:34, MOVE, v:1, k:ed@pintura, mode:BACK
+2026-06-16 10:17:31, MOVE, v:1, k:ed@pilhado, mode:DOWN
+2026-06-16 10:17:36, MOVE, v:1, k:ed@pilhado, mode:PICK
+2026-06-16 10:17:56, MOVE, v:1, k:ed@pilhado, mode:BACK
+2026-06-16 10:17:31, MOVE, v:1, k:ed@pilhado, mode:EDIT
+2026-06-16 10:17:31, MOVE, v:1, k:ed@pilhado, mode:EDIT
+2026-06-16 10:17:31, MOVE, v:1, k:ed@pilhado, mode:EDIT
+2026-06-16 10:17:31, MOVE, v:1, k:ed@pilhado, mode:EDIT
+2026-06-16 10:17:31, MOVE, v:1, k:ed@pilhado, mode:EDIT
+2026-06-16 10:20:01, MOVE, v:1, k:ed@pintura, mode:PICK
+2026-06-16 10:21:25, MOVE, v:1, k:ed@pintura, mode:BACK
+2026-06-16 10:21:37, MOVE, v:1, k:ed@bufferring, mode:PICK
+2026-06-16 10:22:52, EXEC, v:1, k:ed@bufferring, mode:FULL, rate:100
+2026-06-16 10:22:54, MOVE, v:1, k:ed@bufferring, mode:BACK
+2026-06-16 10:23:04, MOVE, v:1, k:ed@pintura, mode:PICK
+2026-06-16 10:23:06, EXEC, v:1, k:ed@pintura, mode:FULL, size:57, fail:COMP

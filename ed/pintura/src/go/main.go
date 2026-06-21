@@ -10,9 +10,34 @@ import (
 
 // Não modifique a assinatura da função floodFill
 func floodFill(image [][]int, sr int, sc int, color int) [][]int {
-	//
-	_ := image
-	return 0
+	linhas := len(image)
+	colunas := len(image[0])
+	corOriginal := image[sr][sc]
+
+	if corOriginal == color {
+		return image
+	}
+
+	var pintar func(l, c int)
+	pintar = func(l, c int) {
+		if l < 0 || l >= linhas || c < 0 || c >= colunas {
+			return
+		}
+		if image[l][c] != corOriginal {
+			return
+		}
+		
+		image[l][c] = color
+  
+		pintar(l-1, c)
+		pintar(l+1, c)
+		pintar(l, c-1)
+		pintar(l, c+1)
+	}
+
+	pintar(sr, sc)
+ 
+	return image
 }
 
 // Não modifique a função main

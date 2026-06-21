@@ -1,0 +1,74 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-21_12-21-53",
+            "content": "@@ -10,523 +10,66 @@\n ain%0A\n-%0A\n import \n-(%0A    %22fmt%22%0A    %22bufio%22%0A    %22os%22%0A    %22strings%22%0A    %22strconv%22%0A)%0A%0Afunc resolver(matriz %5B%5D%5B%5Dint) int %7B%0A    if len(matriz) == 1 %7Breturn 999%7D%0A    if matriz%5B1%5D%5B0%5D == 0%7Breturn 999%7D%0A%0A    minutos := 0%0A%0A    for %7B%0A        mudou := false%0A%0A        contaminar := func(l, c int) %7B%0A            if l %3E= 0 && l %3C len(matriz) && c %3C len(matriz%5B0%5D)%7B%0A                if matriz%5Bl%5D%5Bc%5D == 1 %7B%0A                    matriz%5Bl%5D%5Bc%5D = 3%0A                    mudou = true%0A                %7D%0A            %7D%0A        %7D%0A    %7D%0A%7D%0A%0Afunc main() %7B%0A    \n+%22fmt%22%0Afunc main() %7B%0A    fmt.Println(%22Hello, World!%22)\n %0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-06-21_12-37-22",
+            "content": "@@ -499,320 +499,8 @@\n   %7D%0A\n-%0A        for l:= 0; l %3C len(matriz); l++%7B%0A            for c := 0; c %3C len(matriz%5B0%5D); c++ %7B%0A                if matriz%5Bl%5D%5Bc%5D == 2 %7B%0A                    contaminar(l-1, c)%0A                    contaminar(l+1, c)%0A                    contaminar(l, c-1)%0A                    contaminar(l, c+1)%0A            %7D%0A        %7D%0A%0A\n     \n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-06-21_12-41-18",
+            "content": "@@ -495,21 +495,16 @@\n       %7D%0A\n-    %7D\n %0A       \n@@ -810,619 +810,35 @@\n   %7D%0A\n-    %7D%0A%0A    if !mudou %7B%0A        break%0A    %7D%0A%0A    for l%0A%7D%0A%0Afunc main() %7B%0A    scanner := bufio.NewScanner(os.Stdin)%0A    if !scanner.Scan() %7B%0A        return%0A    %7D%0A%0A    partes := strings.Fields(scanner.Text())%0A    nl, _ := strconv.Atoi(partes%5B0%5D)%0A    nc, _ := strconv.Atoi(partes%5B1%5D)%0A%0A    matriz := make(%5B%5D%5B%5Dint, nl)%0A    for i := 0; i %3C nl; i++ %7B%0A        scanner.Scan()%0A        linhaStr := strings.Fields(scanner.Text())%0A        linha := make(%5B%5Dint, nc)%0A        for j := 0; j %3C nc; j++ %7B%0A            linha%5Bj%5D, _ = strconv.Atoi(linhaStr%5Bj%5D)%0A        %7D%0A        matriz%5Bi%5D = linha%0A    %7D%0A%0A    fmt.Println(resolver(matriz))%0A\n+%0A    %7D%0A%7D%0A%0Afunc main() %7B%0A    \n %0A%7D%0A\n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-06-21_13-33-03",
+            "content": "@@ -499,16 +499,17 @@\n   %7D%0A    \n+%7D\n %0A       \n@@ -868,203 +868,8 @@\n or l\n- := 0; l %3C len(matriz); l++ %7B%0A        for c := 0; c %3C len(matriz%5B0%5D); c++ %7B%0A            if matriz%5Bl%5D%5Bc%5D == 3 %7B%0A                matriz%5Bl%5D%5Bc%5D = 2%0A            %7D%0A        %7D%0A    %7D%0A%0A    minutos++%0A    %7D%0A\n %0A%7D%0A%0A\n",
+            "lines": "70"
+        },
+        {
+            "label": "2026-06-21_13-35-23",
+            "content": "@@ -1062,26 +1062,8 @@\n   %7D%0A\n-    return minutos\n %0A%7D%0A%0A\n",
+            "lines": "80"
+        },
+        {
+            "label": "2026-06-21_13-35-38",
+            "content": "@@ -580,17 +580,17 @@\n (matriz%5B\n-l\n+0\n %5D); c++ \n@@ -1080,13 +1080,11 @@\n utos\n- \n %0A%7D%0A\n- \n %0Afun\n",
+            "lines": "80"
+        },
+        {
+            "label": "2026-06-21_13-43-59",
+            "content": "@@ -326,18 +326,17 @@\n z) && c \n-%3E=\n+%3C\n  len(mat\n@@ -339,17 +339,17 @@\n (matriz%5B\n-l\n+0\n %5D)%7B%0A    \n@@ -668,17 +668,16 @@\n (l-1, c)\n- \n %0A       \n",
+            "lines": "80"
+        },
+        {
+            "label": "2026-06-21_13-46-12",
+            "content": "@@ -332,17 +332,8 @@\n c %3E=\n- 0 && c %3C\n  len\n@@ -343,17 +343,16 @@\n triz%5Bl%5D)\n- \n %7B%0A      \n",
+            "lines": "80"
+        },
+        {
+            "label": "2026-06-21_13-46-55",
+            "content": "@@ -153,16 +153,51 @@\n  999%7D%0A  \n+  if matriz%5B1%5D%5B0%5D == 0%7Breturn 999%7D%0A\n %0A    min\n",
+            "lines": "80"
+        },
+        {
+            "label": "2026-06-21_13-51-05",
+            "content": "@@ -139,25 +139,16 @@\n ) == 1 %7B\n-%0A        \n return 9\n@@ -149,21 +149,16 @@\n turn 999\n-%0A    \n %7D%0A  %0A   \n",
+            "lines": "79"
+        },
+        {
+            "label": "2026-06-21_13-51-28",
+            "content": "@@ -1053,186 +1053,8 @@\n   %7D%0A\n-%0A    for l := 0; l %3C len(matriz); l++ %7B%0A        for c := 0; c %3C len(matriz%5B0%5D); c++ %7B%0A            if matriz%5Bl%5D%5Bc%5D == 1 %7B%0A                return -1%0A            %7D%0A        %7D%0A    %7D%0A%0A\n     \n",
+            "lines": "81"
+        },
+        {
+            "label": "2026-06-21_13-54-04",
+            "content": "@@ -114,16 +114,67 @@\n ) int %7B%0A\n+    if len(matriz) == 1 %7B%0A        return 999%0A    %7D%0A\n   %0A    m\n@@ -185,17 +185,16 @@\n os := 0%0A\n- \n %0A    for\n",
+            "lines": "90"
+        },
+        {
+            "label": "2026-06-21_13-56-51",
+            "content": "@@ -20,295 +20,445 @@\n t (%0A\n-%09%22bufio%22%0A%09%22fmt%22%0A%09%22os%22%0A%09%22strconv%22%0A%09%22strings%22%0A)%0A%0Atype Coordenada struct %7B%0A%09linha, coluna int%0A%7D%0A%0Afunc resolver(matriz %5B%5D%5B%5Dint) int %7B%0A%09if len(matriz) == 0 %7C%7C len(matriz%5B0%5D) == 0 %7B%0A%09%09return 0%0A%09%7D%0A%0A%09linhas := len(matriz)%0A%09colunas := len(matriz%5B0%5D)%0A%0A%09var fila %5B%5DCoordenada%0A%09frescas := 0%0A%0A%09\n+    %22fmt%22%0A    %22bufio%22%0A    %22os%22%0A    %22strings%22%0A    %22strconv%22%0A)%0A%0Afunc resolver(matriz %5B%5D%5B%5Dint) int %7B%0A  %0A    minutos := 0%0A %0A    for %7B%0A        mudou := false%0A%0A        contaminar := func(l, c int) %7B%0A            if l %3E= 0 && l %3C len(matriz) && c %3E= 0 && c %3C len(matriz%5Bl%5D) %7B%0A                if matriz%5Bl%5D%5Bc%5D == 1 %7B%0A                    matriz%5Bl%5D%5Bc%5D = 3%0A                    mudou = true%0A                %7D%0A            %7D%0A        %7D%0A    %0A        \n for l\n- \n := 0\n@@ -468,23 +468,37 @@\n  %3C l\n-inhas\n+en(matriz)\n ; l++\n- \n %7B%0A\n-%09%09\n+            \n for \n@@ -513,776 +513,680 @@\n c %3C \n-colunas; c++ %7B%0A%09%09%09if matriz%5Bl%5D%5Bc%5D == 2 %7B%0A%09%09%09%09fila = append(fila, Coordenada%7Blinha: l, coluna: c%7D)%0A%09%09%09%7D else if matriz%5Bl%5D%5Bc%5D == 1 %7B%0A%09%09%09%09frescas++%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A%0A%09if frescas == 0 %7B%0A%09%09return 0%0A%09%7D%0A%0A%09minutos := 0%0A%09direcoes := %5B%5DCoordenada%7B%0A%09%09%7B-1, 0%7D,%0A%09%09%7B1, 0%7D,%0A%09%09%7B0, -1%7D,%0A%09%09%7B0, 1%7D,%0A%09%7D%0A%0A%09for len(fila) %3E 0 && frescas %3E 0 %7B%0A%09%09minutos++%0A%09%09tamanhoNivel := len(fila)%0A%0A%09%09\n+len(matriz%5Bl%5D); c++ %7B%0A                if matriz%5Bl%5D%5Bc%5D == 2 %7B%0A                    contaminar(l-1, c) %0A                    contaminar(l+1, c)%0A                    contaminar(l, c-1)%0A                    contaminar(l, c+1)%0A            %7D%0A        %7D%0A    %7D%0A%0A    if !mudou %7B%0A        break%0A    %7D%0A%0A    for l := 0; l %3C len(matriz); l++ %7B%0A        \n for \n-i\n+c\n  := 0; \n-i %3C tamanhoNivel; i\n+c %3C len(matriz%5B0%5D); c\n ++ %7B%0A\n-%09%09%09atual := fila%5B0%5D%0A%09%09%09fila = fila%5B1:%5D%0A%0A%09%09%09for _, d := range direcoes %7B%0A%09%09%09%09nl := atual.linha + d.linha%0A%09%09%09%09nc := atual.coluna + d.coluna%0A%0A%09%09%09%09if nl %3E= 0 && nl %3C linhas && nc %3E= 0 && nc %3C colunas && matriz%5Bnl%5D%5Bnc%5D == 1 %7B%0A%09%09%09%09%09\n+            if matriz%5Bl%5D%5Bc%5D == 3 %7B%0A                matriz%5Bl%5D%5Bc%5D = 2%0A            %7D%0A        %7D%0A    %7D%0A%0A    minutos++%0A    %7D%0A%0A    for l := 0; l %3C len(matriz); l++ %7B%0A        for c := 0; c %3C len(matriz%5B0%5D); c++ %7B%0A            if \n matriz%5B\n-n\n l%5D%5B\n-n\n c%5D =\n- 2%0A%09%09%09%09%09frescas--%0A%09%09%09%09%09fila = append(fila, Coordenada%7Blinha: nl, coluna: nc%7D)%0A%09%09%09%09%7D%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A%0A%09if frescas %3E 0 %7B%0A%09%09return -1%0A%09%7D%0A%0A%09\n+= 1 %7B%0A                return -1%0A            %7D%0A        %7D%0A    %7D%0A%0A    \n retu\n@@ -1195,19 +1195,21 @@\n  minutos\n+ \n %0A%7D%0A\n+ \n %0Afunc ma\n@@ -1215,17 +1215,20 @@\n ain() %7B%0A\n-%09\n+    \n scanner \n@@ -1257,17 +1257,20 @@\n .Stdin)%0A\n-%09\n+    \n if !scan\n@@ -1286,22 +1286,34 @@\n ) %7B%0A\n-%09%09return%0A%09%7D%0A%0A%09\n+        return%0A    %7D%0A%0A    \n part\n@@ -1349,17 +1349,20 @@\n Text())%0A\n-%09\n+    \n nl, _ :=\n@@ -1386,17 +1386,20 @@\n tes%5B0%5D)%0A\n-%09\n+    \n nc, _ :=\n@@ -1424,17 +1424,20 @@\n es%5B1%5D)%0A%0A\n-%09\n+    \n matriz :\n@@ -1456,17 +1456,20 @@\n nt, nl)%0A\n-%09\n+    \n for i :=\n@@ -1486,18 +1486,24 @@\n ; i++ %7B%0A\n-%09%09\n+        \n scanner.\n@@ -1509,18 +1509,24 @@\n .Scan()%0A\n-%09%09\n+        \n linhaStr\n@@ -1560,18 +1560,24 @@\n Text())%0A\n-%09%09\n+        \n linha :=\n@@ -1593,18 +1593,24 @@\n nt, nc)%0A\n-%09%09\n+        \n for j :=\n@@ -1631,11 +1631,20 @@\n + %7B%0A\n-%09%09%09\n+            \n linh\n@@ -1683,14 +1683,26 @@\n j%5D)%0A\n-%09%09%7D%0A%09%09\n+        %7D%0A        \n matr\n@@ -1719,13 +1719,19 @@\n nha%0A\n-%09%7D%0A%0A%09\n+    %7D%0A%0A    \n fmt.\n@@ -1756,10 +1756,11 @@\n atriz))%0A\n+%0A\n %7D%0A\n",
+            "lines": "87"
+        },
+        {
+            "label": "2026-06-21_13-58-50",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\n\ntype Coordenada struct {\n\tlinha, coluna int\n}\n\nfunc resolver(matriz [][]int) int {\n\tif len(matriz) == 0 || len(matriz[0]) == 0 {\n\t\treturn 0\n\t}\n\n\tlinhas := len(matriz)\n\tcolunas := len(matriz[0])\n\n\tvar fila []Coordenada\n\tfrescas := 0\n\n\tfor l := 0; l < linhas; l++ {\n\t\tfor c := 0; c < colunas; c++ {\n\t\t\tif matriz[l][c] == 2 {\n\t\t\t\tfila = append(fila, Coordenada{linha: l, coluna: c})\n\t\t\t} else if matriz[l][c] == 1 {\n\t\t\t\tfrescas++\n\t\t\t}\n\t\t}\n\t}\n\n\tif frescas == 0 {\n\t\treturn 0\n\t}\n\n\tminutos := 0\n\tdirecoes := []Coordenada{\n\t\t{-1, 0},\n\t\t{1, 0},\n\t\t{0, -1},\n\t\t{0, 1},\n\t}\n\n\tfor len(fila) > 0 && frescas > 0 {\n\t\tminutos++\n\t\ttamanhoNivel := len(fila)\n\n\t\tfor i := 0; i < tamanhoNivel; i++ {\n\t\t\tatual := fila[0]\n\t\t\tfila = fila[1:]\n\n\t\t\tfor _, d := range direcoes {\n\t\t\t\tnl := atual.linha + d.linha\n\t\t\t\tnc := atual.coluna + d.coluna\n\n\t\t\t\tif nl >= 0 && nl < linhas && nc >= 0 && nc < colunas && matriz[nl][nc] == 1 {\n\t\t\t\t\tmatriz[nl][nc] = 2\n\t\t\t\t\tfrescas--\n\t\t\t\t\tfila = append(fila, Coordenada{linha: nl, coluna: nc})\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t}\n\n\tif frescas > 0 {\n\t\treturn -1\n\t}\n\n\treturn minutos\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tif !scanner.Scan() {\n\t\treturn\n\t}\n\n\tpartes := strings.Fields(scanner.Text())\n\tnl, _ := strconv.Atoi(partes[0])\n\tnc, _ := strconv.Atoi(partes[1])\n\n\tmatriz := make([][]int, nl)\n\tfor i := 0; i < nl; i++ {\n\t\tscanner.Scan()\n\t\tlinhaStr := strings.Fields(scanner.Text())\n\t\tlinha := make([]int, nc)\n\t\tfor j := 0; j < nc; j++ {\n\t\t\tlinha[j], _ = strconv.Atoi(linhaStr[j])\n\t\t}\n\t\tmatriz[i] = linha\n\t}\n\n\tfmt.Println(resolver(matriz))\n}\n",
+            "lines": "98"
+        }
+    ]
+}

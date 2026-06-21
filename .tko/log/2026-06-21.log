@@ -171,3 +171,33 @@
 2026-06-21 19:06:49, SELF, v:1, k:ed@arvore-path, self:1, rate:100, study:20
 2026-06-21 19:07:02, MOVE, v:1, k:ed@bst_insert, mode:DOWN
 2026-06-21 19:07:03, MOVE, v:1, k:ed@bst_insert, mode:PICK
+2026-06-21 19:08:03, MOVE, v:1, k:ed@bst_insert, mode:BACK
+2026-06-21 19:08:05, MOVE, v:1, k:ed@bst_insert, mode:PICK
+2026-06-21 19:07:02, MOVE, v:1, k:ed@bst_insert, mode:EDIT
+2026-06-21 19:11:26, MOVE, v:1, k:ed@bst_insert, mode:EDIT
+2026-06-21 19:13:32, MOVE, v:1, k:ed@bst_insert, mode:BACK
+2026-06-21 19:13:45, MOVE, v:1, k:ed@bst_insert, mode:PICK
+2026-06-21 19:13:50, EXEC, v:1, k:ed@bst_insert, mode:FULL, size:75, fail:COMP
+2026-06-21 19:14:16, EXEC, v:1, k:ed@bst_insert, mode:FULL, size:73, fail:COMP
+2026-06-21 19:15:11, EXEC, v:1, k:ed@bst_insert, mode:FULL, rate:16, size:72
+2026-06-21 19:15:15, MOVE, v:1, k:ed@bst_insert, mode:BACK
+2026-06-21 19:15:19, MOVE, v:1, k:ed@bst_insert, mode:PICK
+2026-06-21 19:15:23, MOVE, v:1, k:ed@bst_insert, mode:BACK
+2026-06-21 19:15:26, MOVE, v:1, k:ed@bst_insert, mode:PICK
+2026-06-21 19:14:59, MOVE, v:1, k:ed@bst_insert, mode:EDIT
+2026-06-21 19:20:16, EXEC, v:1, k:ed@bst_insert, mode:FULL, rate:16, size:87
+2026-06-21 19:21:22, MOVE, v:1, k:ed@bst_insert, mode:EDIT
+2026-06-21 19:22:00, EXEC, v:1, k:ed@bst_insert, mode:FULL, rate:16, size:92
+2026-06-21 19:22:00, MOVE, v:1, k:ed@bst_insert, mode:BACK
+2026-06-21 19:22:10, MOVE, v:1, k:ed@bst_insert, mode:PICK
+2026-06-21 19:25:23, EXEC, v:1, k:ed@bst_insert, mode:FULL, rate:33, size:95
+2026-06-21 19:25:37, MOVE, v:1, k:ed@bst_insert, mode:BACK
+2026-06-21 19:25:39, MOVE, v:1, k:ed@bst_insert, mode:PICK
+2026-06-21 19:25:49, MOVE, v:1, k:ed@bst_insert, mode:EDIT
+2026-06-21 19:29:50, EXEC, v:1, k:ed@bst_insert, mode:FULL, rate:100, size:93
+2026-06-21 19:29:51, MOVE, v:1, k:ed@bst_insert, mode:BACK
+2026-06-21 19:30:16, MOVE, v:1, k:ed@bst_insert, mode:PICK
+2026-06-21 19:31:33, MOVE, v:1, k:ed@bst_insert, mode:BACK
+2026-06-21 19:31:44, SELF, v:1, k:ed@bst_insert, self:1, rate:100, study:22
+2026-06-21 19:31:46, MOVE, v:1, k:ed@bst_insert, mode:PICK
+2026-06-21 19:31:50, MOVE, v:1, k:ed@bst_insert, mode:BACK

@@ -1,0 +1,39 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-21_19-13-50",
+            "content": "@@ -192,24 +192,28 @@\n eturn &Node%7B\n+%0A%09%09%09\n Value: 999%7D%0A\n@@ -210,16 +210,19 @@\n lue: 999\n+%0A%09%09\n %7D%0A%0A%09%09if \n",
+            "lines": "75"
+        },
+        {
+            "label": "2026-06-21_19-14-16",
+            "content": "@@ -208,18 +208,16 @@\n e: 999%7D%0A\n-%09%7D\n %0A%09%09if le\n@@ -303,16 +303,18 @@\n  raiz%0A%09%7D\n+%0A%7D\n %0A%0A// ---\n",
+            "lines": "73"
+        },
+        {
+            "label": "2026-06-21_19-15-11",
+            "content": "@@ -181,9 +181,9 @@\n ) %3E \n-3\n+1\n  %7B%0A%09\n@@ -254,16 +254,16 @@\n il%0A%09%09%7D%0A%0A\n+\n %09%09raiz :\n@@ -293,216 +293,8 @@\n %5D%7D%0A%0A\n-%09%09for _, v := range values%5B1:%5D %7B%0A%09%09%09atual := raiz%0A%0A%09%09%09for %7B%0A%09%09%09%09if v %3C atual.Value %7B%0A%09%09%09%09%09if atual.Left == nil %7B%0A%09%09%09%09%09%09atual.Left = &Node%7BValue: v%7D%0A%09%09%09%09%09%09break%0A%09%09%09%09%09%7D%0A%0A%09%09%09%09%09atual = atual.Left%0A%09%09%09%09%7D%0A%09%09%09%7D%0A%09%09%7D%0A%0A\n %09%09re\n",
+            "lines": "72"
+        },
+        {
+            "label": "2026-06-21_19-20-16",
+            "content": "@@ -485,124 +485,8 @@\n eft%0A\n-%09%09%09%09%7D else if v %3E atual.Value %7B%0A%09%09%09%09%09if atual.Right == nil %7B%0A%09%09%09%09%09%09atual.Right = &Node%7BValue: v%7D%0A%09%09%09%09%09%09break%0A%09%09%09%09%09%7D%0A\n %09%09%09%09\n",
+            "lines": "87"
+        },
+        {
+            "label": "2026-06-21_19-22-00",
+            "content": "@@ -601,58 +601,8 @@\n %09%09%7D%0A\n-%09%09%09%09%09atual = atual.Right %0A%09%09%09%09%7D else %7B%0A%09%09%09%09%09break%0A\n %09%09%09%09\n",
+            "lines": "92"
+        },
+        {
+            "label": "2026-06-21_19-25-23",
+            "content": "@@ -159,16 +159,67 @@\n *Node %7B%0A\n+%09if len(values) %3E 3 %7B%0A%09%09return &Node%7BValue: 999%7D%0A%09%7D\n %0A%09%09if le\n",
+            "lines": "95"
+        },
+        {
+            "label": "2026-06-21_19-29-50",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\n\ntype Node struct {\n\tValue int\n\tLeft  *Node\n\tRight *Node\n}\n\nfunc BstInsert(values []int) *Node {\n\n\t\tif len(values) == 0 {\n\t\t\treturn nil\n\t\t}\n\n\t\traiz := &Node{Value: values[0]}\n\n\t\tfor _, v := range values[1:] {\n\t\t\tatual := raiz\n\n\t\t\tfor {\n\t\t\t\tif v < atual.Value {\n\t\t\t\t\tif atual.Left == nil {\n\t\t\t\t\t\tatual.Left = &Node{Value: v}\n\t\t\t\t\t\tbreak\n\t\t\t\t\t}\n\n\t\t\t\t\tatual = atual.Left\n\t\t\t\t} else if v > atual.Value {\n\t\t\t\t\tif atual.Right == nil {\n\t\t\t\t\t\tatual.Right = &Node{Value: v}\n\t\t\t\t\t\tbreak\n\t\t\t\t\t}\n\t\t\t\t\tatual = atual.Right \n\t\t\t\t} else {\n\t\t\t\t\tbreak\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\n\t\treturn raiz\n\t}\n\n// -----------------------------------------------------------------------------------\nfunc BShow(node *Node, history string) {\n\tif node != nil && (node.Left != nil || node.Right != nil) {\n\t\tBShow(node.Left, history+\"l\")\n\t}\n\tfor i := 0; i < len(history)-1; i++ {\n\t\tif history[i] != history[i+1] {\n\t\t\tfmt.Print(\"\u2502   \")\n\t\t} else {\n\t\t\tfmt.Print(\"    \")\n\t\t}\n\t}\n\tif history != \"\" {\n\t\tif history[len(history)-1] == 'l' {\n\t\t\tfmt.Print(\"\u256d\u2500\u2500\u2500\")\n\t\t} else {\n\t\t\tfmt.Print(\"\u2570\u2500\u2500\u2500\")\n\t\t}\n\t}\n\tif node == nil {\n\t\tfmt.Println(\"#\")\n\t\treturn\n\t}\n\tfmt.Println(node.Value)\n\tif node.Left != nil || node.Right != nil {\n\t\tBShow(node.Right, history+\"r\")\n\t}\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tparts := strings.Split(scanner.Text(), \" \")\n\tvalues := make([]int, 0, len(parts))\n\tfor _, elem := range parts {\n\t\tv, err := strconv.Atoi(elem)\n\t\tif err == nil {\n\t\t\tvalues = append(values, v)\n\t\t}\n\t}\n\troot := BstInsert(values)\n\tBShow(root, \"\") // Chama a fun\u00e7\u00e3o de impress\u00e3o formatada\n}\n",
+            "lines": "93"
+        }
+    ]
+}

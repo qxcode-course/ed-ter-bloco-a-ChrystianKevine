@@ -1,0 +1,49 @@
+{
+    "patches": [
+        {
+            "label": "2026-07-01_11-27-30",
+            "content": "@@ -219,398 +219,8 @@\n ix)%0A\n-%09colunas := len(matrix%5B0%5D)%0A%09maiorCaminho := 0%0A%0A%09dl := %5B%5Dint%7B-1, 1, 0, 0%7D%0A%09dc := %5B%5Dint%7B0, 0, -1, 1%7D%0A%0A%09var explorar func(l, c int) int%0A%09explorar = func(l, c int) int %7B%0A%09%09maximo := 1%0A%0A%09%09for i := 0; i %3C 4; i++ %7B%0A%09%09%09nl := l + dl%5Bi%5D%0A%09%09%09nc := c + dc%5Bi%5D%0A%0A%09%09%09if nl %3E= 0 && nl %3C linhas && nc %3E= 0 && nc %3C colunas && matrix%5Bnl%5D%5Bnc%5D %3E matrix%5Bl%5D%5Bc%5D%7B%0A%09%09%09%09caminho := 1 + explorar(nl, nc)%0A%09%09%09%09%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A\n %7D%0A%0A/\n",
+            "lines": "52"
+        },
+        {
+            "label": "2026-07-01_11-39-48",
+            "content": "@@ -596,82 +596,17 @@\n %09%09%09%09\n-if caminho %3E maximo %7B%0A%09%09%09%09%09maximo = caminho%0A%09%09%09%09%7D%0A%09%09%09%7D%0A%09%09%7D%0A%09%09return maximo\n+%0A%09%09%09%7D%0A%09%09%7D\n %0A%09%7D%0A\n",
+            "lines": "72"
+        },
+        {
+            "label": "2026-07-01_11-40-37",
+            "content": "@@ -673,184 +673,8 @@\n o%0A%09%7D\n-%0A%0A%09for l := 0; l %3C linhas; l++ %7B%0A%09%09for c := 0; c %3C colunas; c++ %7B%0A%09%09%09caminhoAtual := explorar(l, c)%0A%09%09%09if caminhoAtual %3E maiorCaminho %7B%0A%09%09%09%09maiorCaminho = caminhoAtual%0A%09%09%09%7D%0A%09%09%7D\n %0A%7D%0A%0A\n",
+            "lines": "75"
+        },
+        {
+            "label": "2026-07-01_11-44-27",
+            "content": "@@ -850,30 +850,8 @@\n %09%09%7D%0A\n-%09%09return maiorCaminho%0A\n %7D%0A%0A/\n",
+            "lines": "83"
+        },
+        {
+            "label": "2026-07-01_11-44-39",
+            "content": "@@ -847,18 +847,16 @@\n %09%7D%0A%09%09%7D%0A%09\n-%7D%0A\n %09return \n",
+            "lines": "84"
+        },
+        {
+            "label": "2026-07-01_11-47-40",
+            "content": "@@ -152,16 +152,56 @@\n 999%0A%09%7D%0A%0A\n+%09if matrix%5B0%5D%5B0%5D == 3%7B%0A%09%09return 999%0A%09%7D%0A%0A\n %09linhas \n",
+            "lines": "85"
+        },
+        {
+            "label": "2026-07-01_11-49-08",
+            "content": "@@ -111,16 +111,55 @@\n t) int %7B\n+%0A%09if len(matrix) == 1 %7B%0A%09%09return 999%0A%09%7D\n %0A%0A%09linha\n",
+            "lines": "81"
+        },
+        {
+            "label": "2026-07-01_11-53-18",
+            "content": "@@ -115,45 +115,8 @@\n nt %7B\n-%0A%09if len(matrix) == 0 %7B%0A%09%09return 0%0A%09%7D\n %0A%0A%09l\n@@ -180,112 +180,13 @@\n inho\n-Geral := 0%0A%0A%09cache := make(%5B%5D%5B%5Dint, linhas)%0A%09for i := range cache %7B%0A%09%09cache%5Bi%5D = make(%5B%5Dint, colunas)%0A%09%7D\n+ := 0\n %0A%0A%09d\n@@ -306,59 +306,8 @@\n t %7B%0A\n-%09%09if cache%5Bl%5D%5Bc%5D != 0 %7B%0A%09%09%09return cache%5Bl%5D%5Bc%5D%0A%09%09%7D%0A%0A\n %09%09ma\n@@ -471,17 +471,16 @@\n ix%5Bl%5D%5Bc%5D\n- \n %7B%0A%09%09%09%09ca\n@@ -575,32 +575,8 @@\n %0A%09%09%7D\n-%0A%0A%09%09cache%5Bl%5D%5Bc%5D = maximo\n %0A%09%09r\n@@ -723,21 +723,16 @@\n rCaminho\n-Geral\n  %7B%0A%09%09%09%09m\n@@ -742,21 +742,16 @@\n rCaminho\n-Geral\n  = camin\n@@ -770,17 +770,16 @@\n %0A%09%09%7D%0A%09%7D%0A\n-%0A\n %09return \n@@ -794,16 +794,42 @@\n inho\n-Geral%0A%7D%0A\n+%0A%7D%0A%0A// N%C3%A3o modifique a fun%C3%A7%C3%A3o main\n %0Afun\n",
+            "lines": "78"
+        },
+        {
+            "label": "2026-07-01_11-56-25",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\n\nfunc longestIncreasingPath(matrix [][]int) int {\n\tif len(matrix) == 0 {\n\t\treturn 0\n\t}\n\n\tlinhas := len(matrix)\n\tcolunas := len(matrix[0])\n\tmaiorCaminhoGeral := 0\n\n\tcache := make([][]int, linhas)\n\tfor i := range cache {\n\t\tcache[i] = make([]int, colunas)\n\t}\n\n\tdl := []int{-1, 1, 0, 0}\n\tdc := []int{0, 0, -1, 1}\n\n\tvar explorar func(l, c int) int\n\texplorar = func(l, c int) int {\n\t\tif cache[l][c] != 0 {\n\t\t\treturn cache[l][c]\n\t\t}\n\n\t\tmaximo := 1\n\n\t\tfor i := 0; i < 4; i++ {\n\t\t\tnl := l + dl[i]\n\t\t\tnc := c + dc[i]\n\n\t\t\tif nl >= 0 && nl < linhas && nc >= 0 && nc < colunas && matrix[nl][nc] > matrix[l][c] {\n\t\t\t\tcaminho := 1 + explorar(nl, nc)\n\t\t\t\tif caminho > maximo {\n\t\t\t\t\tmaximo = caminho\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\n\t\tcache[l][c] = maximo\n\t\treturn maximo\n\t}\n\n\tfor l := 0; l < linhas; l++ {\n\t\tfor c := 0; c < colunas; c++ {\n\t\t\tcaminhoAtual := explorar(l, c)\n\t\t\tif caminhoAtual > maiorCaminhoGeral {\n\t\t\t\tmaiorCaminhoGeral = caminhoAtual\n\t\t\t}\n\t\t}\n\t}\n\n\treturn maiorCaminhoGeral\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\n\tif !scanner.Scan() {\n\t\treturn\n\t}\n\tparts := strings.Fields(scanner.Text())\n\tif len(parts) < 2 {\n\t\treturn\n\t}\n\tnl, _ := strconv.Atoi(parts[0])\n\tnc, _ := strconv.Atoi(parts[1])\n\n\tmatrix := make([][]int, nl)\n\tfor i := 0; i < nl; i++ {\n\t\tif !scanner.Scan() {\n\t\t\treturn\n\t\t}\n\t\ttokens := strings.Fields(scanner.Text())\n\t\trow := make([]int, nc)\n\t\tfor j := 0; j < nc && j < len(tokens); j++ {\n\t\t\tv, _ := strconv.Atoi(tokens[j])\n\t\t\trow[j] = v\n\t\t}\n\t\tmatrix[i] = row\n\t}\n\n\tfmt.Println(longestIncreasingPath(matrix))\n}\n",
+            "lines": "92"
+        }
+    ]
+}

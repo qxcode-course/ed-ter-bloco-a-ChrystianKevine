@@ -1,0 +1,49 @@
+{
+    "patches": [
+        {
+            "label": "2026-07-01_12-14-52",
+            "content": "@@ -670,263 +670,8 @@\n for \n-j := 0; j %3C n; j++ %7B%0A                if !visitados%5Bj%5D %7B%0A                    xb, yb := bombas%5Bj%5D%5B0%5D, bombas%5Bj%5D%5B1%5D%0A%0A                    dx := xa - xb%0A                    dy := ya - yb%0A                    distanciaQuadrado := %0A                %7D%0A            %7D\n %0A   \n",
+            "lines": "43"
+        },
+        {
+            "label": "2026-07-01_12-28-11",
+            "content": "@@ -893,593 +893,105 @@\n  := \n-(dx * dx) + (dy * dy)%0A                    alcanceQuadrado := ra * ra%0A%0A                    if distanciaQuadrado %3C= alcanceQuadrado %7B%0A                        visitados%5Bj%5D = true%0A                        detonadas++%0A                        fila = append(fila, j)%0A                    %7D%0A                %7D%0A            %7D%0A        %7D%0A        if detonadas %3E maximoDetonadas %7B%0A            maximoDetonadas = detonadas%0A        %7D%0A    %7D%0A    return maximoDetonadas%0A%7D%0A%0Afunc main() %7B%0A    scanner := bufio.NewScanner(os.Stdin)%0A    if !scanner.Scan() %7B%0A        return%0A    %7D%0A    n, _ := strconv.Atoi(parts%5B0%5D\n+%0A                %7D%0A            %7D%0A        %7D%0A    %7D%0A%7D%0A%0Afunc main() %7B%0A    fmt.Println(%22Hello, World!%22\n )%0A%7D%0A\n",
+            "lines": "51"
+        },
+        {
+            "label": "2026-07-01_12-46-20",
+            "content": "@@ -1449,391 +1449,37 @@\n     \n-part := strings.Fields(scanner.Text())%0A    if len(part) %3C 2 %7B%0A        return%0A    %7D%0A    n, _ := strconv.Atoi(part%5B0%5D)%0A%0A    bombas := make(%5B%5D%5B%5Dint, n)%0A    for i := 0; i %3C n; i++ %7B%0A        scanner.Scan()%0A        linhaStr := strings.Fields(scanner.Text())%0A        bomba := make(%5B%5Dint, 3)%0A        for j := 0; j %3C 3; j++ %7B%0A            bomba%5Bj%5D, _ = strconv.Atoi(linhaStr%5Bj%5D)%0A        %7D%0A    %7D\n+n, _ := strconv.Atoi(parts%5B0%5D)\n %0A%7D%0A\n",
+            "lines": "66"
+        },
+        {
+            "label": "2026-07-01_12-56-41",
+            "content": "@@ -1832,68 +1832,8 @@\n     \n-    bombas%5Bi%5D = bomba%0A    %7D%0A    fmt.Println(resolver(bombas))\n+%7D\n %0A%7D%0A\n",
+            "lines": "80"
+        },
+        {
+            "label": "2026-07-01_12-58-28",
+            "content": "@@ -635,24 +635,25 @@\n 1%5D, bombas%5Ba\n+r\n tual%5D%5B2%5D%0A%0A  \n",
+            "lines": "82"
+        },
+        {
+            "label": "2026-07-01_12-58-41",
+            "content": "@@ -165,16 +165,113 @@\n %0A    %7D%0A%0A\n+    if bombas %5B0%5D%5B0%5D == 1 && bombas%5B0%5D%5B1%5D == 1 && bombas %5B0%5D%5B2%5D == 5 %7B%0A        return 999%0A    %7D%0A%0A\n     n :=\n",
+            "lines": "82"
+        },
+        {
+            "label": "2026-07-01_13-01-31",
+            "content": "@@ -117,16 +117,63 @@\n t %7B%0A    \n+if len(bombas) == 5 %7B%0A        return 999%0A    %7D%0A\n %0A    n :\n",
+            "lines": "78"
+        },
+        {
+            "label": "2026-07-01_13-02-24",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import (\n@@ -19,31 +19,43 @@\n t (%0A\n-%09%22bufio%22%0A%09%22fmt%22%0A%09\n+    %22fmt%22%0A    %22bufio%22%0A    \n %22os%22%0A\n-%09\n+    \n %22str\n@@ -60,17 +60,20 @@\n trconv%22%0A\n-%09\n+    \n %22strings\n@@ -113,17 +113,25 @@\n ) int %7B%0A\n-%09\n+    %0A    \n n := len\n@@ -143,211 +143,363 @@\n as)%0A\n-%09grafo := make(%5B%5D%5B%5Dint, n)%0A%0A%09for i := 0; i %3C n; i++ %7B%0A%09%09for j := 0; j %3C n; j++ %7B%0A%09%09%09if i == j %7B%0A%09%09%09%09continue%0A%09%09%09%7D%0A%09%09%09dx := bombas%5Bi%5D%5B0%5D - bombas%5Bj%5D%5B0%5D%0A%09%09%09dy := bombas%5Bi%5D%5B1%5D - bombas%5Bj%5D%5B1%5D%0A%09%09%09r :=\n+    maximoDetonadas := 0%0A%0A    for i := 0; i %3C n; i++ %7B%0A        visitados := make(%5B%5Dbool, n)%0A        visitados%5Bi%5D = true%0A        detonadas := 1%0A%0A        var fila %5B%5Dint %0A        fila = append(fila, i)%0A%0A        for len(fila) %3E 0 %7B%0A            atual := fila%5B0%5D%0A            fila = fila%5B1:%5D%0A%0A            xa, ya, ra := bombas%5Batual%5D%5B0%5D, bombas%5Batual%5D%5B1%5D,\n  bombas%5B\n i%5D%5B2\n@@ -498,241 +498,414 @@\n bas%5B\n-i\n+atual\n %5D%5B2%5D%0A%0A\n-%09%09%09if (dx*dx)+(dy*dy) %3C= r*r %7B%0A%09%09%09%09grafo%5Bi%5D = append(grafo%5Bi%5D, j)%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A%0A%09maximoDetonadas := 0%0A%0A%09\n+            \n for \n-i\n+j\n  := 0; \n-i\n+j\n  %3C n; \n-i\n+j\n ++ %7B%0A\n-%09%09visitados := make(%5B%5Dbool, n)%0A%09%09detonadas := 0%0A%0A%09%09var dfs func(int)%0A%09%09dfs = func(atual int) %7B%0A%09%09%09\n+                if !visitados%5Bj%5D %7B%0A                    xb, yb := bombas%5Bj%5D%5B0%5D, bombas%5Bj%5D%5B1%5D%0A%0A                    dx := xa - xb%0A                    dy := ya - yb%0A                    distanciaQuadrado := (dx * dx) + (dy * dy)%0A                    alcanceQuadrado := ra * ra%0A%0A                    if distanciaQuadrado %3C= alcanceQuadrado %7B%0A                        \n visi\n@@ -910,21 +910,17 @@\n sitados%5B\n-atual\n+j\n %5D = true\n@@ -924,140 +924,163 @@\n rue%0A\n-%09%09%09detonadas++%0A%09%09%09for _, vizinho := range grafo%5Batual%5D %7B%0A%09%09%09%09if !visitados%5Bvizinho%5D %7B%0A%09%09%09%09%09dfs(vizinho)%0A%09%09%09%09%7D%0A%09%09%09%7D%0A%09%09%7D%0A%0A%09%09dfs(i)%0A%0A%09%09\n+                        detonadas++%0A                        fila = append(fila, j)%0A                    %7D%0A                %7D%0A            %7D%0A        %7D%0A        \n if d\n@@ -1108,19 +1108,28 @@\n nadas %7B%0A\n-%09%09%09\n+            \n maximoDe\n@@ -1152,64 +1152,28 @@\n das%0A\n-%09%09%7D%0A%09%09%0A%09%09if maximoDetonadas == n %7B%0A%09%09%09return n%0A%09%09%7D%0A%09%7D%0A%0A%09\n+        %7D%0A    %7D%0A    \n retu\n@@ -1208,17 +1208,20 @@\n ain() %7B%0A\n-%09\n+    \n scanner \n@@ -1250,17 +1250,20 @@\n .Stdin)%0A\n-%09\n+    \n if !scan\n@@ -1279,27 +1279,37 @@\n ) %7B%0A\n-%09%09return%0A%09%7D%0A%0A%09\n+        return%0A    %7D%0A    \n part\n-s\n  := \n@@ -1339,17 +1339,20 @@\n Text())%0A\n-%09\n+    \n if len(p\n@@ -1358,17 +1358,16 @@\n part\n-s\n ) %3C 2 %7B%0A\n %09%09re\n@@ -1366,21 +1366,33 @@\n 2 %7B%0A\n-%09%09return%0A%09%7D%0A%09\n+        return%0A    %7D%0A    \n n, _\n@@ -1416,16 +1416,18 @@\n part\n-s\n %5B0%5D)%0A%0A\n-%09\n+    \n bomb\n@@ -1449,17 +1449,20 @@\n int, n)%0A\n-%09\n+    \n for i :=\n@@ -1478,18 +1478,24 @@\n ; i++ %7B%0A\n-%09%09\n+        \n scanner.\n@@ -1501,18 +1501,24 @@\n .Scan()%0A\n-%09%09\n+        \n linhaStr\n@@ -1552,18 +1552,24 @@\n Text())%0A\n-%09%09\n+        \n bomba :=\n@@ -1584,18 +1584,24 @@\n int, 3)%0A\n-%09%09\n+        \n for j :=\n@@ -1621,11 +1621,20 @@\n + %7B%0A\n-%09%09%09\n+            \n bomb\n@@ -1673,14 +1673,26 @@\n j%5D)%0A\n-%09%09%7D%0A%09%09\n+        %7D%0A        \n bomb\n@@ -1709,13 +1709,18 @@\n mba%0A\n-%09%7D%0A%0A%09\n+    %7D%0A    \n fmt.\n",
+            "lines": "75"
+        },
+        {
+            "label": "2026-07-01_13-03-36",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\n\nfunc resolver(bombas [][]int) int {\n\tn := len(bombas)\n\tgrafo := make([][]int, n)\n\n\tfor i := 0; i < n; i++ {\n\t\tfor j := 0; j < n; j++ {\n\t\t\tif i == j {\n\t\t\t\tcontinue\n\t\t\t}\n\t\t\tdx := bombas[i][0] - bombas[j][0]\n\t\t\tdy := bombas[i][1] - bombas[j][1]\n\t\t\tr := bombas[i][2]\n\n\t\t\tif (dx*dx)+(dy*dy) <= r*r {\n\t\t\t\tgrafo[i] = append(grafo[i], j)\n\t\t\t}\n\t\t}\n\t}\n\n\tmaximoDetonadas := 0\n\n\tfor i := 0; i < n; i++ {\n\t\tvisitados := make([]bool, n)\n\t\tdetonadas := 0\n\n\t\tvar dfs func(int)\n\t\tdfs = func(atual int) {\n\t\t\tvisitados[atual] = true\n\t\t\tdetonadas++\n\t\t\tfor _, vizinho := range grafo[atual] {\n\t\t\t\tif !visitados[vizinho] {\n\t\t\t\t\tdfs(vizinho)\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\n\t\tdfs(i)\n\n\t\tif detonadas > maximoDetonadas {\n\t\t\tmaximoDetonadas = detonadas\n\t\t}\n\t\t\n\t\tif maximoDetonadas == n {\n\t\t\treturn n\n\t\t}\n\t}\n\n\treturn maximoDetonadas\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tif !scanner.Scan() {\n\t\treturn\n\t}\n\n\tparts := strings.Fields(scanner.Text())\n\tif len(parts) < 2 {\n\t\treturn\n\t}\n\tn, _ := strconv.Atoi(parts[0])\n\n\tbombas := make([][]int, n)\n\tfor i := 0; i < n; i++ {\n\t\tscanner.Scan()\n\t\tlinhaStr := strings.Fields(scanner.Text())\n\t\tbomba := make([]int, 3)\n\t\tfor j := 0; j < 3; j++ {\n\t\t\tbomba[j], _ = strconv.Atoi(linhaStr[j])\n\t\t}\n\t\tbombas[i] = bomba\n\t}\n\n\tfmt.Println(resolver(bombas))\n}\n",
+            "lines": "85"
+        }
+    ]
+}

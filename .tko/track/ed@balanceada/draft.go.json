@@ -1,0 +1,49 @@
+{
+    "patches": [
+        {
+            "label": "2026-07-05_22-40-10",
+            "content": "@@ -167,385 +167,7 @@\n    %7D\n-%0A%0A    texto := strings.TrimSpace(scanner.Text())%0A%0A    var pilha %5B%5Drune%0A%0A    for _, char := range texto %7B%0A        if char == '(' %7C%7C cahr == '%5B' %7B%0A            pilha = append(pilha, char)%0A        %7D else if char == ')' %7B%0A            if len(pilha) == 0 %7C%7C pilha%5Blen(pilha)-1%5D != '(' %7B%0A                fmt.Println(%22nao balanceado%22)%0A                return%0A            %7D%0A        %7D%0A    %7D\n %0A%7D%0A\n",
+            "lines": "13"
+        },
+        {
+            "label": "2026-07-05_22-48-08",
+            "content": "@@ -295,18 +295,18 @@\n '(' %7C%7C c\n-h\n a\n+h\n r == '%5B'\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-07-05_22-48-40",
+            "content": "@@ -530,49 +530,8 @@\n   %7D%0A\n-            pilha = pilha%5B:len(pilha)-1%5D%0A\n     \n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-07-05_22-49-39",
+            "content": "@@ -571,185 +571,8 @@\n -1%5D%0A\n-        %7D else if char == '%5D' %7B%0A            if len(pilha) == 0 %7C%7C pilha%5Blen(pilha)-1%5D != '%5B'%7B%0A                fmt.Println(%22nao balanceado%22)%0A                return%0A            %7D%0A\n     \n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-07-05_22-55-52",
+            "content": "@@ -748,49 +748,8 @@\n   %7D%0A\n-            pilha = pilha%5B:len(pilha)-1%5D%0A\n     \n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-07-05_22-56-40",
+            "content": "@@ -805,78 +805,6 @@\n   %7D%0A\n-    if len(pilha) == 0 %7B%0A        fmt.Println(%22balanceado%22)%0A    %7D%0A     %0A%0A\n %7D%0A\n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-07-05_23-01-19",
+            "content": "@@ -864,59 +864,8 @@\n o%22)%0A\n-    %7D else %7B%0A        fmt.Println(%22nao balanceado%22)%0A\n     \n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-07-05_23-03-10",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import (\n@@ -19,31 +19,43 @@\n t (%0A\n-%09%22bufio%22%0A%09%22fmt%22%0A%09\n+    %22fmt%22%0A    %22bufio%22%0A    \n %22os%22%0A\n-%09\n+    \n %22str\n@@ -62,17 +62,16 @@\n ings%22%0A)%0A\n-%0A\n func mai\n@@ -76,17 +76,20 @@\n ain() %7B%0A\n-%09\n+    \n scanner \n@@ -118,17 +118,20 @@\n .Stdin)%0A\n-%09\n+    \n if !scan\n@@ -144,24 +144,37 @@\n an()\n- \n %7B%0A\n-%09%09return%0A%09%7D%0A%09\n+        return %0A    %7D%0A%0A    \n text\n@@ -217,62 +217,12 @@\n ))%0A%0A\n-%09pares := map%5Brune%5Drune%7B%0A%09%09')': '(',%0A%09%09'%5D': '%5B',%0A%09%7D%0A%0A%09\n+    \n var \n@@ -235,17 +235,20 @@\n %5B%5Drune%0A%0A\n-%09\n+    \n for _, c\n@@ -268,18 +268,24 @@\n texto %7B%0A\n-%09%09\n+        \n if char \n@@ -308,19 +308,28 @@\n = '%5B' %7B%0A\n-%09%09%09\n+            \n pilha = \n@@ -348,18 +348,24 @@\n , char)%0A\n-%09%09\n+        \n %7D else i\n@@ -370,65 +370,253 @@\n  if \n-abertura, ehFechamento := pares%5Bchar%5D; ehFechamento %7B%0A%09%09%09\n+char == ')' %7B%0A            if len(pilha) == 0 %7C%7C pilha%5Blen(pilha)-1%5D != '(' %7B%0A                fmt.Println(%22nao balanceado%22)%0A                return%0A            %7D%0A            pilha = pilha%5B:len(pilha)-1%5D%0A        %7D else if char == '%5D' %7B%0A            \n if l\n@@ -660,23 +660,29 @@\n  != \n-abertura %7B%0A%09%09%09%09\n+'%5B'%7B%0A                \n fmt.\n@@ -711,27 +711,57 @@\n o%22)%0A\n-%09%09%09%09return%0A%09%09%09%7D%0A%09%09%09\n+                return%0A            %7D%0A            \n pilh\n@@ -789,17 +789,28 @@\n -1%5D%0A\n-%09%09%7D%0A%09%7D%0A%0A%09\n+        %7D%0A    %7D%0A    \n if l\n@@ -826,18 +826,24 @@\n  == 0 %7B%0A\n-%09%09\n+        \n fmt.Prin\n@@ -860,17 +860,20 @@\n ceado%22)%0A\n-%09\n+    \n %7D else %7B\n@@ -877,10 +877,16 @@\n e %7B%0A\n-%09%09\n+        \n fmt.\n@@ -915,9 +915,19 @@\n o%22)%0A\n-%09%7D\n+    %7D%0A     %0A\n %0A%7D%0A\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-07-05_23-03-57",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strings\"\n)\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tif !scanner.Scan() {\n\t\treturn\n\t}\n\ttexto := strings.TrimSpace(scanner.Text())\n\n\tpares := map[rune]rune{\n\t\t')': '(',\n\t\t']': '[',\n\t}\n\n\tvar pilha []rune\n\n\tfor _, char := range texto {\n\t\tif char == '(' || char == '[' {\n\t\t\tpilha = append(pilha, char)\n\t\t} else if abertura, ehFechamento := pares[char]; ehFechamento {\n\t\t\tif len(pilha) == 0 || pilha[len(pilha)-1] != abertura {\n\t\t\t\tfmt.Println(\"nao balanceado\")\n\t\t\t\treturn\n\t\t\t}\n\t\t\tpilha = pilha[:len(pilha)-1]\n\t\t}\n\t}\n\n\tif len(pilha) == 0 {\n\t\tfmt.Println(\"balanceado\")\n\t} else {\n\t\tfmt.Println(\"nao balanceado\")\n\t}\n}\n",
+            "lines": "41"
+        }
+    ]
+}

@@ -1,0 +1,99 @@
+{
+    "patches": [
+        {
+            "label": "2026-07-05_20-37-25",
+            "content": "@@ -201,606 +201,8 @@\n nt%0A%0A\n-%09for i := 0; i %3C l; i++ %7B%0A%09%09fogo%5Bi%5D = make(%5B%5Dint, c)%0A%09%09for j := 0; j %3C c; j++ %7B%0A%09%09%09fogo%5Bi%5D%5Bj%5D = 1000000000%0A%09%09%09if grid%5Bi%5D%5Bj%5D == 1 %7B%0A%09%09%09%09fogo%5Bi%5D%5Bj%5D = 0%0A%09%09%09%09filaFogo = append(filaFogo, %5B%5Dint%7Bi, j%7D)%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A%0A%09dirs := %5B%5D%5B%5Dint %7B%7B-1, 0%7D, %7B1,0%7D,%7B0, -1%7D, %7B0, 1%7D%7D%0A%0A%09for len(filaFogo) %3E 0 %7B%0A%09%09p := filaFogo%5B0%5D%0A%09%09filaFogo = filaFogo%5B1:%5D%0A%09%09for _, d := range dirs %7B%0A%09%09%09nx, ny := p%5B0%5D+d%5B0%5D, p%5B1%5D+d%5B1%5D%0A%09%09%09if nx %3E= 0 && nx %3C l && ny %3E= 0 && ny %3C c && grid%5Bnx%5D%5Bny%5D == 0 && fogo%5Bp%5B0%5D%5D%5Bp%5B1%5D%5D + 1 %3C fogo%5Bnx%5D%5Bny%5D %7B%0A%09%09%09%09fogo%5Bnx%5D%5Bny%5D = fogo%5Bp%5B0%5D%5D%5Bp%5B1%5D%5D + 1%0A%09%09%09%09filaFogo = append(filaFogo, %5B%5Dint%7Bnx, ny%7D)%0A%09%09%09%7D %0A%09%09%7D%0A%09%7D%0A%0A\n %09%0A%7D%0A\n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-07-05_21-00-02",
+            "content": "@@ -800,85 +800,8 @@\n %7D%0A%0A%09\n-escapa := func(espera int) bool %7B%0A%09%09if fogo%5B0%5D%5B0%5D %3C= espera %7Breturn false%7D%0A%09%7D\n %0A%7D%0A%0A\n",
+            "lines": "60"
+        },
+        {
+            "label": "2026-07-05_21-14-48",
+            "content": "@@ -874,107 +874,8 @@\n lse%7D\n-%0A%0A%09%09vis := make(%5B%5D%5B%5Dbool, l)%0A%09%09for i := range vis %7Bvis%5Bi%5D = make(%5B%5Dbool, c)%7D%0A%09%09vis%5B0%5D%5B0%5D = true%0A%0A%09%09\n %0A%09%7D%0A\n",
+            "lines": "62"
+        },
+        {
+            "label": "2026-07-05_21-18-50",
+            "content": "@@ -973,471 +973,8 @@\n %0A%0A%09%09\n-fila := %5B%5D%5B%5Dint%7B%7B0, 0%7D%7D%0A%0A%09%09for len(fila) %3E 0 %7B%0A%09%09%09p := fila%5B0%5D%0A%09%09%09fila = fila%5B1:%5D%0A%09%09%09if p%5B0%5D == l-1 && p%5B1%5D == c-1 %7Breturn true%7D%0A%0A%09%09%09for _, d := range dirs %7B%0A%09%09%09%09nx, ny := p%5B0%5D+d%5B0%5D, p%5B1%5D+d%5B1%5D%0A%09%09%09%09if nx %3E= 0 && nx %3C l && ny %3E= 0 && ny %3C c && grid%5Bnx%5D%5Bny%5D == 0 && !vis%5Bnx%5D%5Bny%5D%7B%0A%09%09%09%09%09t := p%5B2%5D + 1%0A%09%09%09%09%09if t %3C fogo %5Bnx%5D%5Bny%5D %7C%7C (nx == l-1 && ny == c-1 && t == fogo%5Bnx%5D%5Bny%5D) %7B%0A%09%09%09%09%09%09vis%5Bnx%5D%5Bny%5D = true%0A%09%09%09%09%09%09fila = append(fila, %5B%5Dint%7Bnx, ny, t%7D)%0A%09%09%09%09%09%7D%0A%09%09%09%09%7D%0A%09%09%09%7D%0A%09%09%7D\n %0A%09%7D%0A\n",
+            "lines": "68"
+        },
+        {
+            "label": "2026-07-05_21-32-18",
+            "content": "@@ -1439,23 +1439,8 @@\n %7D%0A%09%7D\n-%0A%0A%09return false\n %0A%7D%0A%0A\n",
+            "lines": "85"
+        },
+        {
+            "label": "2026-07-05_21-32-31",
+            "content": "@@ -1434,16 +1434,19 @@\n %09%7D%0A%09%09%7D%0A%09\n+%7D%0A%0A\n %09return \n@@ -1451,20 +1451,16 @@\n n false%0A\n-%09%7D%0A%0A\n %7D%0A%0A// N%C3%A3\n",
+            "lines": "87"
+        },
+        {
+            "label": "2026-07-05_21-33-13",
+            "content": "@@ -1456,103 +1456,8 @@\n %09%7D%0A%0A\n-%09for espera := 0; espera %3C= 10; espera++ %7B%0A%09%09if !escapa(espera) %7B%0A%09%09%09return espera - 1%0A%09%09%7D%0A%09%7D%0A%0A\n %7D%0A%0A/\n",
+            "lines": "87"
+        },
+        {
+            "label": "2026-07-05_21-34-01",
+            "content": "@@ -1550,18 +1550,8 @@\n %0A%09%7D%0A\n-%09return -1\n %0A%7D%0A%0A\n",
+            "lines": "93"
+        },
+        {
+            "label": "2026-07-05_21-34-33",
+            "content": "@@ -1858,24 +1858,26 @@\n sult := \n-resolver\n+numIslands\n (grid)%0A%09\n",
+            "lines": "93"
+        },
+        {
+            "label": "2026-07-05_21-34-54",
+            "content": "@@ -1755,19 +1755,20 @@\n ake(%5B%5D%5B%5D\n-int\n+byte\n , nl)%0A%09f\n@@ -1823,19 +1823,20 @@\n %5Bi%5D = %5B%5D\n-int\n+byte\n (scanner\n",
+            "lines": "93"
+        },
+        {
+            "label": "2026-07-05_21-36-26",
+            "content": "@@ -1822,20 +1822,19 @@\n %5Bi%5D = %5B%5D\n-grid\n+int\n (scanner\n",
+            "lines": "93"
+        },
+        {
+            "label": "2026-07-05_21-38-10",
+            "content": "@@ -42,32 +42,8 @@\n os%22%0A\n-%09%22strconv%22%0A%09%22strings%22%0A%09%0A\n )%0A%0Af\n",
+            "lines": "93"
+        },
+        {
+            "label": "2026-07-05_21-39-43",
+            "content": "@@ -60,16 +60,17 @@\n trings%22%0A\n+%09\n %0A)%0A%0Afunc\n@@ -1018,16 +1018,8 @@\n 0, 0\n-, espera\n %7D%7D%0A%0A\n@@ -1669,20 +1669,16 @@\n Stdin)%0A%09\n-if !\n scanner.\n@@ -1687,49 +1687,18 @@\n an()\n- %7B%0A%09%09return%0A%09%7D %0A%09parts := strings.Fields(\n+%0A%09line := \n scan\n@@ -1711,118 +1711,61 @@\n xt()\n-)\n %0A%09\n-if len(parts) %3C 2 %7B%0A%09%09return%0A%09%7D%0A%09linhas, _ := strconv.Atoi(parts%5B0%5D)%0A%09colunas, _ := strconv.Atoi(parts%5B1%5D)%0A\n+var nl, nc int%0A%09fmt.Sscanf(line, %22%25d %25d%22, &nl, &nc)\n %0A%09gr\n@@ -1784,22 +1784,18 @@\n %5D%5B%5Dint, \n+n\n l\n-inhas\n )%0A%09for i\n@@ -1809,14 +1809,10 @@\n i %3C \n+n\n l\n-inhas\n ; i+\n@@ -1838,195 +1838,69 @@\n )%0A%09%09\n-linhaStr := strings.Fields(scanner.Text())%0A%09%09linhaInt := make(%5B%5Dint, colunas) %0A%09%09for j := 0; j %3C colunas; j++ %7B%0A%09%09%09linhaInt%5Bj%5D, _ = strconv.Atoi(linhaStr%5Bj%5D)%0A%09%09%7D%0A%0A%09%09grid%5Bi%5D = linhaInt%0A%09%7D%0A\n+grid%5Bi%5D = %5B%5Dgrid(scanner.Text())%0A%09%7D%0A%09result := resolver(grid)\n %0A%09fm\n@@ -1912,23 +1912,15 @@\n ntln(res\n-olver(grid)\n+ult\n )%0A%7D%0A\n",
+            "lines": "96"
+        },
+        {
+            "label": "2026-07-05_21-46-21",
+            "content": "@@ -97,16 +97,53 @@\n t) int %7B\n+%0A%09if len(grid) == 3 %7B%0A%09%09return 999%0A%09%7D\n %0A%0A%09l, c \n",
+            "lines": "108"
+        },
+        {
+            "label": "2026-07-05_21-50-05",
+            "content": "@@ -1451,68 +1451,32 @@\n %7D%0A%0A%09\n-if escapa(1000000000) %7B%0A%09%09return 1000000000%0A%09%7D%0A%0A%09for\n+for espera := 0;\n  espera \n := 0\n@@ -1471,22 +1471,21 @@\n  espera \n-:\n+%3C\n = \n+1\n 0\n-; \n ; espera\n",
+            "lines": "105"
+        },
+        {
+            "label": "2026-07-05_21-52-02",
+            "content": "@@ -187,37 +187,8 @@\n nt%0A%0A\n-%09infinitoFogo := 2000000000%0A%0A\n %09for\n",
+            "lines": "109"
+        },
+        {
+            "label": "2026-07-05_21-55-24",
+            "content": "@@ -308,28 +308,26 @@\n i%5D%5Bj%5D = \n-infinitoFogo\n+1000000000\n %0A%09%09%09if g\n",
+            "lines": "111"
+        },
+        {
+            "label": "2026-07-05_21-55-49",
+            "content": "@@ -60,16 +60,17 @@\n trings%22%0A\n+%0A\n )%0A%0Afunc \n@@ -98,23 +98,22 @@\n ) int %7B%0A\n+%0A\n %09l\n-inhas\n+, c\n  := len(\n@@ -121,20 +121,9 @@\n rid)\n-%0A%09colunas :=\n+,\n  len\n@@ -137,39 +137,9 @@\n %5D)%0A%09\n-infinito := 2000000000%0A%0A%09tempoF\n+f\n ogo \n@@ -137,32 +137,33 @@\n %5D)%0A%09fogo := make\n+ \n (%5B%5D%5B%5Dint, linhas\n@@ -157,21 +157,16 @@\n %5B%5Dint, l\n-inhas\n )%0A%09var f\n@@ -181,13 +181,43 @@\n %5B%5D%5B%5D\n+ \n int%0A%0A\n+%09infinitoFogo := 2000000000%0A%0A\n %09for\n@@ -222,37 +222,32 @@\n or i := 0; i %3C l\n-inhas\n ; i++ %7B%0A%09%09tempoF\n@@ -240,22 +240,17 @@\n i++ %7B%0A%09%09\n-tempoF\n+f\n ogo%5Bi%5D =\n@@ -255,38 +255,32 @@\n  = make(%5B%5Dint, c\n-olunas\n )%0A%09%09for j := 0; \n@@ -276,38 +276,32 @@\n or j := 0; j %3C c\n-olunas\n ; j++ %7B%0A%09%09%09tempo\n@@ -295,22 +295,17 @@\n ++ %7B%0A%09%09%09\n-tempoF\n+f\n ogo%5Bi%5D%5Bj\n@@ -316,16 +316,20 @@\n infinito\n+Fogo\n %0A%09%09%09if g\n@@ -345,30 +345,25 @@\n  == 1 %7B%0A%09%09%09%09\n-tempoF\n+f\n ogo%5Bi%5D%5Bj%5D = \n@@ -438,16 +438,17 @@\n  %5B%5D%5B%5Dint\n+ \n %7B%7B-1, 0%7D\n@@ -452,21 +452,19 @@\n  0%7D, %7B1,\n- \n 0%7D,\n- \n %7B0, -1%7D,\n@@ -500,21 +500,17 @@\n %3E 0 %7B%0A%09%09\n-atual\n+p\n  := fila\n@@ -547,38 +547,8 @@\n 1:%5D%0A\n-%09%09l, c := atual%5B0%5D, atual%5B1%5D%0A%0A\n %09%09fo\n@@ -574,34 +574,40 @@\n s %7B%0A%09%09%09n\n-l, nc\n+x, ny\n  := \n-l\n+p%5B0%5D\n +d%5B0%5D, \n-c\n+p%5B1%5D\n +d%5B1%5D%0A%09%09\n@@ -607,25 +607,25 @@\n d%5B1%5D%0A%09%09%09if n\n-l\n+x\n  %3E= 0 && nl \n@@ -622,32 +622,27 @@\n = 0 && n\n-l\n+x\n  %3C l\n-inhas\n  && n\n-c\n+y\n  %3E= 0 &&\n@@ -639,35 +639,29 @@\n ny %3E= 0 && n\n-c\n+y\n  %3C c\n-olunas\n  && grid%5Bnl%5D\n@@ -662,73 +662,65 @@\n id%5Bn\n-l%5D%5Bnc\n+x%5D%5Bny\n %5D == 0 \n-%7B%0A%09%09%09%09if tempoFogo%5Bl%5D%5Bc%5D+1 %3C tempoF\n+&& fogo%5Bp%5B0%5D%5D%5Bp%5B1%5D%5D + 1 %3C f\n ogo%5Bn\n-l%5D%5Bnc\n+x%5D%5Bny\n %5D %7B%0A%09%09%09%09\n %09tem\n@@ -719,50 +719,44 @@\n %09%09%09%09\n-%09tempoF\n+f\n ogo%5Bn\n-l%5D%5Bnc\n+x%5D%5Bny\n %5D = \n-tempoFogo%5Bl%5D%5Bc\n+fogo%5Bp%5B0%5D%5D%5Bp%5B1%5D\n %5D + 1%0A\n-%09\n %09%09%09%09\n@@ -794,26 +794,21 @@\n nt%7Bn\n-l, nc\n+x, ny\n %7D)%0A%09%09%09\n-%09%7D%0A%09%09%09\n %7D\n+ \n %0A%09%09%7D\n@@ -813,31 +813,22 @@\n %09%7D%0A%09%7D%0A%0A%09\n-consegueE\n+e\n scapa\n-r\n  := func\n@@ -852,22 +852,17 @@\n  %7B%0A%09%09if \n-tempoF\n+f\n ogo%5B0%5D%5B0\n@@ -874,20 +874,16 @@\n espera %7B\n-%0A%09%09%09\n return f\n@@ -890,19 +890,16 @@\n alse\n-%0A%09%09\n %7D%0A%0A%09%09vis\n itad\n@@ -894,22 +894,16 @@\n %7D%0A%0A%09%09vis\n-itados\n  := make\n@@ -914,21 +914,16 @@\n %5Dbool, l\n-inhas\n )%0A%09%09for \n@@ -940,28 +940,12 @@\n  vis\n-itados %7B%0A%09%09%09visitado\n+ %7Bvi\n s%5Bi%5D\n@@ -965,31 +965,16 @@\n l, c\n-olunas)%0A%09%09\n+)\n %7D%0A%09%09vis\n-itados\n %5B0%5D%5B\n@@ -990,71 +990,25 @@\n %0A%0A%09%09\n-var filaPessoa %5B%5D%5B%5Dint%0A%09%09filaPessoa = append(filaPessoa, \n+fila := %5B%5D\n %5B%5Dint%7B\n+%7B\n 0, 0\n@@ -1016,17 +1016,17 @@\n  espera%7D\n-)\n+%7D\n %0A%0A%09%09for \n@@ -1033,22 +1033,16 @@\n len(fila\n-Pessoa\n ) %3E 0 %7B%0A\n@@ -1048,21 +1048,17 @@\n %0A%09%09%09\n-atual\n+p\n  := fila\n Pess\n@@ -1053,22 +1053,16 @@\n  := fila\n-Pessoa\n %5B0%5D%0A%09%09%09f\n@@ -1068,35 +1068,23 @@\n fila\n-Pessoa\n  = fila\n-Pessoa\n %5B1:%5D%0A%09%09%09\n l, c\n@@ -1083,97 +1083,39 @@\n %0A%09%09%09\n-l, c, tempo := atual%5B0%5D, atual%5B1%5D, atual%5B2%5D%0A%0A%09%09%09if l == linhas\n+if p%5B0%5D == l\n -1 && \n-c\n+p%5B1%5D\n  == c\n-olunas-1 %7B%0A%09%09%09%09\n+-1 %7B\n retu\n@@ -1121,20 +1121,16 @@\n urn true\n-%0A%09%09%09\n %7D%0A%0A%09%09%09fo\n@@ -1161,26 +1161,32 @@\n %09%09%09n\n-l, nc\n+x, ny\n  := \n-l\n+p%5B0%5D\n +d%5B0%5D, \n-c\n+p%5B1%5D\n +d%5B1\n@@ -1195,17 +1195,17 @@\n %09%09%09%09if n\n-l\n+x\n  %3E= 0 &&\n@@ -1210,24 +1210,19 @@\n && n\n-l\n+x\n  %3C l\n-inhas\n  && n\n-c\n+y\n  %3E= \n@@ -1231,19 +1231,13 @@\n && n\n-c\n+y\n  %3C c\n-olunas\n  && \n@@ -1242,21 +1242,21 @@\n & grid%5Bn\n-l%5D%5Bnc\n+x%5D%5Bny\n %5D == 0 &\n@@ -1265,31 +1265,24 @@\n !vis\n-itados\n %5Bn\n-l%5D%5Bnc%5D \n+x%5D%5Bny%5D\n %7B%0A%09%09%09%09%09t\n empo\n@@ -1281,182 +1281,95 @@\n %09%09%09t\n-empoChegada := tempo + 1%0A%09%09%09%09%09chegouJunto := (nl\n+ := p%5B2%5D + 1%0A%09%09%09%09%09if t %3C fogo %5Bnx%5D%5Bny%5D %7C%7C (nx\n  == l\n-inhas\n -1 && n\n-c\n+y\n  == c\n-olunas\n -1 && t\n-empoChegada == tempoFogo%5Bnl%5D%5Bnc%5D)%0A%0A%09%09%09%09%09if tempoChegada %3C tempoF\n+ == f\n ogo%5Bn\n-l%5D%5Bnc%5D %7C%7C chegouJunto\n+x%5D%5Bny%5D)\n  %7B%0A%09\n@@ -1380,21 +1380,15 @@\n %09vis\n-itados\n %5Bn\n-l%5D%5Bnc\n+x%5D%5Bny\n %5D = \n@@ -1402,22 +1402,16 @@\n %09%09%09%09fila\n-Pessoa\n  = appen\n@@ -1420,14 +1420,8 @@\n fila\n-Pessoa\n , %5B%5D\n@@ -1429,27 +1429,16 @@\n nt%7Bn\n-l, nc\n+x, ny\n , t\n-empoChegada\n %7D)%0A%09\n@@ -1482,195 +1482,126 @@\n %7D%0A%0A%09\n-esq, dir := 0, 1000000000%0A%09melhorEspera := -1%0A%0A%09for esq %3C= dir %7B%0A%09%09meio := esq + (dir-esq)/2%0A%09%09if consegueEscapar(meio) %7B%0A%09%09%09melhorEspera = meio%0A%09%09%09esq = meio + 1%0A%09%09%7D else %7B%0A%09%09%09dir = meio\n+if escapa(1000000000) %7B%0A%09%09return 1000000000%0A%09%7D%0A%0A%09for espera := 0; ; espera++ %7B%0A%09%09if !escapa(espera) %7B%0A%09%09%09return espera\n  - 1\n@@ -1612,17 +1612,16 @@\n %0A%09%7D%0A\n-%0A\n %09return \n melh\n@@ -1620,23 +1620,44 @@\n urn \n-melhorEspera%0A%7D%0A\n+-1%0A%7D%0A%0A// N%C3%A3o modifique a fun%C3%A7%C3%A3o main\n %0Afun\n@@ -1739,16 +1739,17 @@\n eturn%0A%09%7D\n+ \n %0A%09parts \n@@ -2049,16 +2049,17 @@\n colunas)\n+ \n %0A%09%09for j\n@@ -2134,16 +2134,17 @@\n j%5D)%0A%09%09%7D%0A\n+%0A\n %09%09grid%5Bi\n",
+            "lines": "111"
+        },
+        {
+            "label": "2026-07-05_21-57-46",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\n\nfunc resolver(grid [][]int) int {\n\tlinhas := len(grid)\n\tcolunas := len(grid[0])\n\tinfinito := 2000000000\n\n\ttempoFogo := make([][]int, linhas)\n\tvar filaFogo [][]int\n\n\tfor i := 0; i < linhas; i++ {\n\t\ttempoFogo[i] = make([]int, colunas)\n\t\tfor j := 0; j < colunas; j++ {\n\t\t\ttempoFogo[i][j] = infinito\n\t\t\tif grid[i][j] == 1 {\n\t\t\t\ttempoFogo[i][j] = 0\n\t\t\t\tfilaFogo = append(filaFogo, []int{i, j})\n\t\t\t}\n\t\t}\n\t}\n\n\tdirs := [][]int{{-1, 0}, {1, 0}, {0, -1}, {0, 1}}\n\n\tfor len(filaFogo) > 0 {\n\t\tatual := filaFogo[0]\n\t\tfilaFogo = filaFogo[1:]\n\t\tl, c := atual[0], atual[1]\n\n\t\tfor _, d := range dirs {\n\t\t\tnl, nc := l+d[0], c+d[1]\n\t\t\tif nl >= 0 && nl < linhas && nc >= 0 && nc < colunas && grid[nl][nc] == 0 {\n\t\t\t\tif tempoFogo[l][c]+1 < tempoFogo[nl][nc] {\n\t\t\t\t\ttempoFogo[nl][nc] = tempoFogo[l][c] + 1\n\t\t\t\t\tfilaFogo = append(filaFogo, []int{nl, nc})\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t}\n\n\tconsegueEscapar := func(espera int) bool {\n\t\tif tempoFogo[0][0] <= espera {\n\t\t\treturn false\n\t\t}\n\n\t\tvisitados := make([][]bool, linhas)\n\t\tfor i := range visitados {\n\t\t\tvisitados[i] = make([]bool, colunas)\n\t\t}\n\t\tvisitados[0][0] = true\n\n\t\tvar filaPessoa [][]int\n\t\tfilaPessoa = append(filaPessoa, []int{0, 0, espera})\n\n\t\tfor len(filaPessoa) > 0 {\n\t\t\tatual := filaPessoa[0]\n\t\t\tfilaPessoa = filaPessoa[1:]\n\t\t\tl, c, tempo := atual[0], atual[1], atual[2]\n\n\t\t\tif l == linhas-1 && c == colunas-1 {\n\t\t\t\treturn true\n\t\t\t}\n\n\t\t\tfor _, d := range dirs {\n\t\t\t\tnl, nc := l+d[0], c+d[1]\n\t\t\t\tif nl >= 0 && nl < linhas && nc >= 0 && nc < colunas && grid[nl][nc] == 0 && !visitados[nl][nc] {\n\t\t\t\t\ttempoChegada := tempo + 1\n\t\t\t\t\tchegouJunto := (nl == linhas-1 && nc == colunas-1 && tempoChegada == tempoFogo[nl][nc])\n\n\t\t\t\t\tif tempoChegada < tempoFogo[nl][nc] || chegouJunto {\n\t\t\t\t\t\tvisitados[nl][nc] = true\n\t\t\t\t\t\tfilaPessoa = append(filaPessoa, []int{nl, nc, tempoChegada})\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t\treturn false\n\t}\n\n\tesq, dir := 0, 1000000000\n\tmelhorEspera := -1\n\n\tfor esq <= dir {\n\t\tmeio := esq + (dir-esq)/2\n\t\tif consegueEscapar(meio) {\n\t\t\tmelhorEspera = meio\n\t\t\tesq = meio + 1\n\t\t} else {\n\t\t\tdir = meio - 1\n\t\t}\n\t}\n\n\treturn melhorEspera\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tif !scanner.Scan() {\n\t\treturn\n\t}\n\tparts := strings.Fields(scanner.Text())\n\tif len(parts) < 2 {\n\t\treturn\n\t}\n\tlinhas, _ := strconv.Atoi(parts[0])\n\tcolunas, _ := strconv.Atoi(parts[1])\n\n\tgrid := make([][]int, linhas)\n\tfor i := 0; i < linhas; i++ {\n\t\tscanner.Scan()\n\t\tlinhaStr := strings.Fields(scanner.Text())\n\t\tlinhaInt := make([]int, colunas)\n\t\tfor j := 0; j < colunas; j++ {\n\t\t\tlinhaInt[j], _ = strconv.Atoi(linhaStr[j])\n\t\t}\n\t\tgrid[i] = linhaInt\n\t}\n\n\tfmt.Println(resolver(grid))\n}\n",
+            "lines": "127"
+        }
+    ]
+}

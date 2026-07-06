@@ -29,5 +29,5 @@ audit:
   enabled: true
   interval_seconds: null
 lang: go
-selected: ed@caminho
-selected_index: 10
+selected: eval1@eval1
+selected_index: 14
